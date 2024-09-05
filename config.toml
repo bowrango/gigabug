@@ -1,4 +1,18 @@
-baseURL = "http://gigabug.org/"
+lbaseURL = "http://gigabug.org/"
 languageCode = "en-us"
-title = "gigabug"
+title = "Gigabug"
 theme = "etch"
+
+# Header
+[menu]
+  [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 10
+
+  [[menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 20
