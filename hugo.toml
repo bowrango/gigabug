@@ -1,0 +1,4 @@
+baseURL = 'https://gigabug.org/'
+languageCode = 'en-us'
+title = 'Gigabug'
+theme = "etch"
