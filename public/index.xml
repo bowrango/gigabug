@@ -4,25 +4,37 @@
     <title>Gigabug</title>
     <link>http://localhost:1313/</link>
     <description>Recent content on Gigabug</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Sep 2024 23:10:07 -0400</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Workbench</title>
+      <title>workbench</title>
       <link>http://localhost:1313/posts/workbench/</link>
       <pubDate>Wed, 04 Sep 2024 23:10:07 -0400</pubDate>
-      
       <guid>http://localhost:1313/posts/workbench/</guid>
+      <description>&lt;p&gt;I wanted to make an analog computer so first I had to make an electronics workbench. Now I don&amp;rsquo;t have an analog computer but instead a cool workbench.&lt;/p&gt;&#xA;&lt;p&gt;The goal was to reproduce the simplist possible Stochastic Processing Unit (SPU) to learn about various ways physics can be used as a compute medium.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/normal-circuit.png&#34; alt=&#34;abc&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>about</title>
+      <link>http://localhost:1313/about/about/</link>
+      <pubDate>Wed, 04 Sep 2024 21:28:27 -0400</pubDate>
+      <guid>http://localhost:1313/about/about/</guid>
+      <description>&lt;p&gt;Have a bio here&lt;/p&gt;&#xA;&lt;h1 id=&#34;pdf&#34;&gt;PDF&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/about/matt-bowring-resume.pdf&#34;&gt;resume&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA;&lt;div class=&#34;goat svg-container &#34;&gt;&#xA;  &#xA;    &lt;svg&#xA;      xmlns=&#34;http://www.w3.org/2000/svg&#34;&#xA;      font-family=&#34;Menlo,Lucida Console,monospace&#34;&#xA;      &#xA;        viewBox=&#34;0 0 680 121&#34;&#xA;      &gt;&#xA;      &lt;g transform=&#39;translate(8,16)&#39;&gt;&#xA;&lt;path d=&#39;M 440,0 L 464,0&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/pa</description>
+    </item>
+    <item>
+      <title>clash royale</title>
+      <link>http://localhost:1313/posts/clash-royale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/clash-royale/</guid>
       <description></description>
     </item>
-    
-    
-    
-    
+    <item>
+      <title>cool papers</title>
+      <link>http://localhost:1313/posts/cool-papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cool-papers/</guid>
+      <description>&lt;p&gt;A collection of interesting papers I&amp;rsquo;ve read with some notes here and there.&lt;/p&gt;&#xA;&lt;h2 id=&#34;variational-quantum-eigensolver-review&#34;&gt;Variational Quantum Eigensolver Review&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2111.05176&#34;&gt;1&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;best-quantum-compiling-problems&#34;&gt;Best Quantum Compiling Problems&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.05649&#34;&gt;3&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;synthesis-of-quantum-logic-circuits&#34;&gt;Synthesis of Quantum Logic Circuits&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/0406176&#34;&gt;4&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Introduced the Quantum Shannon Decomposition&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;approximate-quantum-compiler-qiskit&#34;&gt;Approximate Quantum Compiler (Qiskit)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiskit.org/documentation/apidoc/synthesis_aqc.html&#34;&gt;5&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;optimization-of-quantum-circuit-mapping-qiskit&#34;&gt;Optimization of Quantum Circuit Mapping (Qiskit)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1907.02686&#34;&gt;6&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;elementary-gates-for-quantum-computation&#34;&gt;Elementary Gates for Quantum Computation&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/9503016&#34;&gt;7&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
