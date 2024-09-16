@@ -4,12 +4,27 @@ title = 'Gigabug'
 theme = "mytheme"
 
 [markup]
+
+  # https://xyproto.github.io/splash/docs/all.html
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'abap'
+    tabWidth = 4
+
   [markup.goldmark]
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
-[params]
-  math = true
+          inline = [['\(', '\)'], ['$', '$']]

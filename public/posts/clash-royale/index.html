@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,10 +12,9 @@
     onload="renderMathInElement(document.body);"></script>
 <title>clash royale | Gigabug</title>
 
-    <link rel="stylesheet" href="/css/main.css">
+      <link rel="stylesheet" href="/css/main.min.5c8cdd1b23b58372f4c0ca4ec1be67024ec7217946ef66719e034e4d9ac80838.css" integrity="sha256-XIzdGyO1g3L0wMpOwb5nAk7HIXlG72ZxngNOTZrICDg=" crossorigin="anonymous">
 
-
-      <script src="/js/main.js"></script>
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -44,9 +43,77 @@
 
   
   
-  <time datetime="0001-01-01T00:00:00&#43;00:00">January 1, 1</time>
+  <time datetime="2024-09-10T00:15:22-04:00">September 10, 2024</time>
 
-  
+  <p>Old data analysis hack project on the Clash Royale mobile game from 2020.</p>
+<p>Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was exploring conditional probability networks and graph attention for edge prediction.</p>
+<p>The goal was to provide utilities for time-series graph analysis of player trends. The project is deprecated, but I dream of reviving it. Here is demo code that worked back in 2020.</p>
+<h1 id="code">code</h1>
+<p>Wrapper on <code>networkx</code> for querying the Clash Royale API. You&rsquo;ll need to <a href="https://developer.clashroyale.com/#/register">create an account</a> to get a token. Edges are undirected and weighted by how many times two cards are used together.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#00f">from</span> <span style="color:#000">RoyaleAPI</span> <span style="color:#00f">import</span> <span style="color:#000">Client</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">import</span> <span style="color:#000">matplotlib.pyplot</span> <span style="color:#00f">as</span> <span style="color:#000">plt</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">with</span> <span style="color:#000">open</span>(<span style="color:#5a2">&#39;RoyaleAPI/key.txt&#39;</span>, <span style="color:#5a2">&#39;r&#39;</span>) <span style="color:#00f">as</span> <span style="color:#000">file</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#000">dev_key</span> = <span style="color:#000">file</span>.<span style="color:#000">read</span>().<span style="color:#000">replace</span>(<span style="color:#5a2">&#39;</span><span style="color:#5a2">\n</span><span style="color:#5a2">&#39;</span>, <span style="color:#5a2">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000">proxy_url</span> = <span style="color:#5a2">&#39;https://proxy.royaleapi.dev/v1&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Sample decks used by the top 10 players in global</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">client</span> = <span style="color:#000">Client</span>(<span style="color:#000">token</span>=<span style="color:#000">dev_key</span>, <span style="color:#000">url</span>=<span style="color:#000">proxy_url</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000">graph</span> = <span style="color:#000">client</span>.<span style="color:#000">create_empty_graph</span>()
+</span></span><span style="display:flex;"><span><span style="color:#000">top10_graph</span> = <span style="color:#000">client</span>.<span style="color:#000">build_graph</span>(<span style="color:#000">graph</span>, <span style="color:#000">depth</span>=<span style="color:#3af">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">nx</span>.<span style="color:#000">draw_circular</span>(<span style="color:#000">top_graph</span>, <span style="color:#000">with_labels</span>=<span style="color:#00f">True</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000">plt</span>.<span style="color:#000">show</span>()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/cards.png" alt=""></p>
+<p>Probabilities are more informative. The normalized attribute matrix has rows that sum to 1. It says that for all edges (u,v), the element A(i,j) is the P(v=types[j] | u=types[i]). Diagonal elements are the probability of the same type being used in a deck. Buildings were only used with other buildings in about 4.4% of decks sampled, a not so popular strategy.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#000">client</span> = <span style="color:#000">Client</span>(<span style="color:#000">token</span>=<span style="color:#000">dev_key</span>, <span style="color:#000">url</span>=<span style="color:#000">proxy_url</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000">graph</span> = <span style="color:#000">client</span>.<span style="color:#000">create_empty_graph</span>()
+</span></span><span style="display:flex;"><span><span style="color:#000">top_graph</span> = <span style="color:#000">client</span>.<span style="color:#000">build_graph</span>(<span style="color:#000">graph</span>, <span style="color:#000">depth</span>=<span style="color:#3af">100</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">types</span> = [<span style="color:#5a2">&#39;Troop&#39;</span>, <span style="color:#5a2">&#39;Spell&#39;</span>, <span style="color:#5a2">&#39;Building&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#000">probs</span> = <span style="color:#000">nx</span>.<span style="color:#000">attr_matrix</span>(<span style="color:#000">top_graph</span>, <span style="color:#000">node_attr</span>=<span style="color:#5a2">&#34;type&#34;</span>, <span style="color:#000">edge_attr</span>=<span style="color:#5a2">&#39;usages&#39;</span>, <span style="color:#000">normalized</span>=<span style="color:#00f">True</span>, <span style="color:#000">rc_order</span>=<span style="color:#000">types</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000">print</span>(<span style="color:#000">probs</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><pre tabindex="0"><code>[[0.45658263 0.41936775 0.12404962]
+ [0.78915663 0.10692771 0.10391566]
+ [0.66098081 0.29424307 0.04477612]]
+</code></pre><p>This image shows how many times each card was used in decks from the top 500 players. There are clear usage hierarchies with an exponential looking dropoff. The game was so fun, and I really wanted to learn trends over time. I should revisit this.</p>
+<p><img src="/deg500.png" alt=""></p>
+<h1 id="disclaimer">Disclaimer</h1>
+<p>This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. For more information see Supercell’s Fan Content Policy: <a href="https://www.supercell.com/fan-content-policy">www.supercell.com/fan-content-policy</a>.</p>
+
   
 
 

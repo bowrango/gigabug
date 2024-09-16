@@ -14,7 +14,6 @@
 
     <link rel="stylesheet" href="/css/main.css">
 
-
       <script src="/js/main.js"></script>
 
 </head>
@@ -47,8 +46,25 @@
   <time datetime="2024-09-04T23:10:07-04:00">September 4, 2024</time>
 
   <p>I wanted to make an analog computer so first I had to make an electronics workbench. Now I don&rsquo;t have an analog computer but instead a cool workbench.</p>
-<p>The goal was to reproduce the simplist possible Stochastic Processing Unit (SPU) to learn about various ways physics can be used as a compute medium.</p>
+<p>The goal was to reproduce the simplist possible Stochastic Processing Unit (SPU) to learn about various ways physics can be used as a compute medium. Curiosity followed Normal Computing and their development of &ldquo;Thermodynamic AI&rdquo;. The unit uses coupled electronic oscillators and leverages noise. Digital compilation and data loading/readout are the major SPU overheads</p>
 <p><img src="/normal-circuit.png" alt="abc"></p>
+<p>This blog documents my experience replicating the paper [1]. I didn&rsquo;t get too far.</p>
+<p>I&rsquo;d read Zach&rsquo;s blog for a great introduction on energy-based computing and players in the field. Building coupled oscillators on a breadboard is the simpliest hardware to work with. But scaling is fundamentally challenging because inductors and capacitors are hard to shrink. Alternatively, oscillators using traditional CMOS logic gates can fit on a ~1 mm2 chip [3][4]. Maybe after the home lab I&rsquo;ll make a home fab.</p>
+<p>First a note on quantum. The quantum approximate optimization algorithm (QAOA) alternates cost and mixer operations to move from ground state of mixer to ground state of cost, yielding candidate solutions. The application times of these operations to transition the state are learned, and increasing the number of repetitions improves the approximation. It can be viewed as a Trotterized (&ldquo;discretized&rdquo;) version of quantum annealing with a parametrized annealing pathway [2]. We&rsquo;re learning the bitter lesson. I&rsquo;ve been reading Normal Computing papers, and saw how the Extropic founders transitioned away from quantum. I&rsquo;ll continue to work on quantum computing software and experiment with these other paradigms as an oppertunity to get closer to hardware.</p>
+<p>I have the basic electrical equipment and need to diagram the whole setup. I&rsquo;ll use Diffrax to model the SDEs of the circuit and compare hardware fluctuations [5] to numerical simulation. The schematic of a single node doesn&rsquo;t look too complicated but coupling the whole system is messy. Best to start as simple as possible but not any simpler.</p>
+<p>Labview transmits the user-defined digital potentiometer values to an Arduino Uno board. The Arduino board then transmits the digital I2C resistors values to the weights. The analog oscillator voltage signals are monitored by the Labview program with a data acquisition board, at a maximum sampling rate of 500 kHz.</p>
+<p>Python on the host PC can send target signals to waveform generator via LAN and interface with Arduino. Diffrax can leverage the onboard 2x NVIDIA A1000 GPUs.</p>
+<h1 id="materials">Materials</h1>
+<p>Power supply, waveform generator, oscilliscope, multimeter
+Capacitors, inductors, resistors, transistors, wires
+Differential summing amplifier (Texas Instruments THS4140)
+Digital potentiometers (Analog Devices AD5272)
+References</p>
+<p>[1] Analog Coupled Oscillator Based Weighted Ising Machine
+[2] Ising machines: Hardware solvers for combinatorial optimization problems
+[3] An Ising solver chip based on coupled ring oscillators with a 48-node all-to-all connected array architecture
+[4] A 1,968-node coupled ring oscillator circuit for combinatorial optimization problem solving
+[5] Thermodynamic AI and the fluctuation frontier</p>
 
   
 

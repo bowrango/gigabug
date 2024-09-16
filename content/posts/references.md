@@ -1,19 +1,18 @@
 +++
-title = 'cool papers'
+title = 'references'
 draft = false
 +++
 
-A collection of interesting papers I've read with some notes here and there.
+Collection of notable words. Central reference for gigabug. One of those "cool things I've seen on the internet" lists.
 
 ## Variational Quantum Eigensolver Review
-[1](https://arxiv.org/abs/2111.05176)
+[Variational Quantum Eigensolver Review](https://arxiv.org/abs/2111.05176)
 
 ## Best Quantum Compiling Problems
 [3](https://arxiv.org/abs/2106.05649)
 
 ## Synthesis of Quantum Logic Circuits
 [4](https://arxiv.org/abs/quant-ph/0406176)
-- Introduced the Quantum Shannon Decomposition
 
 ## Approximate Quantum Compiler (Qiskit)
 [5](https://qiskit.org/documentation/apidoc/synthesis_aqc.html)
@@ -23,8 +22,6 @@ A collection of interesting papers I've read with some notes here and there.
 
 ## Elementary Gates for Quantum Computation
 [7](https://arxiv.org/abs/quant-ph/9503016)
-- Seminal 1995 paper
-- Used these decompositions for work
 
 ## Variational Quantum Factoring Zapata 2018
 [8](https://arxiv.org/pdf/1808.08927.pdf)
@@ -70,7 +67,6 @@ A collection of interesting papers I've read with some notes here and there.
 
 ## On the natural gradient for variational quantum eigensolver
 [25](https://arxiv.org/pdf/1909.05074.pdf)
-- author is quantum lead at Keio University; part of IBMQ Network
 
 ## The power of quantum neural networks
 [26](https://arxiv.org/pdf/2011.00027.pdf)
@@ -101,17 +97,12 @@ A collection of interesting papers I've read with some notes here and there.
 
 ## GRAPE:  Design of NMR Pulse Sequences by Gradient Ascent Algorithms
 [35](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=a7aadf83cb648c3cb2c593e5c7ab7b99b22f2a2b)
-- Original GRAPE paper, there are improvements somewhere. 
 
 ## Construction of Energy Functions for Lattice Heteropolymer Models: A Case Study in Constraint Satisfaction Programming and Adiabatic Quantum Optimization
 [36](https://arxiv.org/pdf/1211.3422.pdf)
-- 2013 paper that recasts to linear-programming, maximum satisfiability, and pseudo-boolean optimization to leverage existing solvers. 
-- I used some of these encoding techniques for my protein example at work.
 
 ## Solving Quantum Chemistry Problems with a D-Wave Quantum Annealer
 [37](https://arxiv.org/pdf/1811.05256.pdf)
-- I linked this 2019 paper on Twitter
-- "To the best of our knowledge, this is the first experimental study of quantum chemistry problems on quantum annealing devices". Wrong -- this is from 2019, whereas the above is from 2013. 
 
 ## t|ket⟩: A Retargetable Compiler for NISQ Devices
 [38](https://arxiv.org/pdf/2003.10611.pdf)
