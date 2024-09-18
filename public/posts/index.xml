@@ -6,8 +6,15 @@
     <description>Recent content on Gigabug</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Sep 2024 00:15:22 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 17 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gigabug.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>image factorization in the brain</title>
+      <link>https://gigabug.org/posts/brain-image-factorization/</link>
+      <pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://gigabug.org/posts/brain-image-factorization/</guid>
+      <description>&lt;p&gt;Interested in perception and signaling systems, particularly in humans. &lt;a href=&#34;https://github.com/bowrango/dashcam-misalignment/tree/main&#34;&gt;Earlier project&lt;/a&gt; using basic RNN to predict dash camera misalignment. Now reading about visual processing models inspired by the brain.&lt;/p&gt;&#xA;&lt;p&gt;todos&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Draw these images myself&lt;/li&gt;&#xA;&lt;li&gt;[6] Section 2.6.2 generating exact solutions to the subset sum problem&lt;/li&gt;&#xA;&lt;li&gt;Note quantum applications using residue numbers. Just saw some factoring papers&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;[1] &lt;a href=&#34;https://www.youtube.com/watch?v=xnhhp916JNU&amp;amp;list=LL&amp;amp;index=18&#34;&gt;Invariance and equivariance in brains and machines&lt;/a&gt;&lt;br&gt;&#xA;[2] &lt;a href=&#34;https://arxiv.org/abs/2012.12071&#34;&gt;Disentangling images with Lie group transformations and sparse coding&lt;/a&gt;&lt;br&gt;&#xA;[3] &lt;a href=&#34;http://www.rctn.org/bruno/public/nature-neuromorphic-talk.pdf&#34;&gt;Analog Memory and High-Dimensional Computation&lt;/a&gt;&lt;br&gt;&#xA;[4] &lt;a href=&#34;https://arxiv.org/pdf/2208.12880&#34;&gt;Neuromorphic Visual Scene Understanding with Resonator Networks&lt;/a&gt;&lt;br&gt;&#xA;[5] &lt;a href=&#34;https://www.youtube.com/watch?v=c2_rnYdUMiM&#34;&gt;Hippocampal memory, cognition, and the role of sleep&lt;/a&gt;&lt;br&gt;&#xA;[6] &lt;a href=&#34;https://www.researchgate.net/publication/375793530_Computing_with_Residue_Numbers_in_High-Dimensional_Representation&#34;&gt;Computing with Residue Numbers in High-Dimensional Representation&lt;/a&gt;&lt;br&gt;&#xA;[7] &lt;a href=&#34;https://redwood.berkeley.edu/wp-content/uploads/2022/11/HDC-scene-analysis-factorization.pdf&#34;&gt;Visual scene analysis via factorization of HD vectors&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>quantum gate decomposition</title>
       <link>https://gigabug.org/posts/gate-decomp/</link>

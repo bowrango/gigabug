@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<title>image factorization in the brain | Gigabug</title>
+
+      <link rel="stylesheet" href="/css/main.min.5c8cdd1b23b58372f4c0ca4ec1be67024ec7217946ef66719e034e4d9ac80838.css" integrity="sha256-XIzdGyO1g3L0wMpOwb5nAk7HIXlG72ZxngNOTZrICDg=" crossorigin="anonymous">
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <header>
+    <h1>Gigabug</h1>
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+  </header>
+  <main>
+    
+  <h1>image factorization in the brain</h1>
+
+  
+  
+  <time datetime="2024-09-17T00:00:00&#43;00:00">September 17, 2024</time>
+
+  <p>Interested in perception and signaling systems, particularly in humans. <a href="https://github.com/bowrango/dashcam-misalignment/tree/main">Earlier project</a> using basic RNN to predict dash camera misalignment. Now reading about visual processing models inspired by the brain.</p>
+<p>todos</p>
+<ul>
+<li>Draw these images myself</li>
+<li>[6] Section 2.6.2 generating exact solutions to the subset sum problem</li>
+<li>Note quantum applications using residue numbers. Just saw some factoring papers</li>
+</ul>
+<p>[1] <a href="https://www.youtube.com/watch?v=xnhhp916JNU&amp;list=LL&amp;index=18">Invariance and equivariance in brains and machines</a><br>
+[2] <a href="https://arxiv.org/abs/2012.12071">Disentangling images with Lie group transformations and sparse coding</a><br>
+[3] <a href="http://www.rctn.org/bruno/public/nature-neuromorphic-talk.pdf">Analog Memory and High-Dimensional Computation</a><br>
+[4] <a href="https://arxiv.org/pdf/2208.12880">Neuromorphic Visual Scene Understanding with Resonator Networks</a><br>
+[5] <a href="https://www.youtube.com/watch?v=c2_rnYdUMiM">Hippocampal memory, cognition, and the role of sleep</a><br>
+[6] <a href="https://www.researchgate.net/publication/375793530_Computing_with_Residue_Numbers_in_High-Dimensional_Representation">Computing with Residue Numbers in High-Dimensional Representation</a><br>
+[7] <a href="https://redwood.berkeley.edu/wp-content/uploads/2022/11/HDC-scene-analysis-factorization.pdf">Visual scene analysis via factorization of HD vectors</a></p>
+<p>The brain computes and represents</p>
+<ul>
+<li>geometric transforms -&gt; equivariance</li>
+<li>shapes independent from variations in pose, motion or lighting -&gt; invariance</li>
+</ul>
+<p>Cones on the back of your eye perceive scene information.</p>
+<p><img src="/eye-cones.png" alt=""></p>
+<p>Set of points lives on nonlinear manifold. Halfway point corresponds to superposition of both patterns at half contrast so manifold has to be curved.</p>
+<p><img src="/image-on-manifold.png" alt=""></p>
+<p>Different patterns trace out different manifolds but importantly the Lie operator is the same. Theory of Lie groups tells us all matrices moving on this manifold belong to same group. Some other examples include the groups of n-dimensional rotations SO(n) (special orthogonal) and rigid motions SE(n) (special Euclidean).</p>
+<p>Images are explained as product of transformation and shape. It is reminiscent of Plato&rsquo;s theory of forms, that physical objects and matter are merely imitations of the non-physical ideas. Elaborate more.</p>
+<p>Formally, [2] combines Lie Group transformation learning and sparse coding within a Bayesian model. Images become a sparse superposition of shape components followed by a transformation that is parameterized by n continuous variables. The generative model is</p>
+$$
+I = T(s) Φα + ε
+$$<ul>
+<li>transformation parameter s ∈ Rn is a random vector with i.i.d elements</li>
+<li>Φ ∈ RD×K is the dictionary with each column having unit L2 norm</li>
+<li>sparse code α ∈ RK is a random vector with i.i.d elements in exponential distribution</li>
+<li>random noise ε is i.i.d.</li>
+</ul>
+<p>The transformations T(s) are parameterized as actions of compact, connected, commutative Lie groups on images. They can be decomposed using Peter-Weyl theorem to get</p>
+$$
+I = e^{A s}Φα + ε
+$$$$
+I = We^{\sum s}W^T Φα + ε
+$$$$
+I = WR(s)W^T Φα + ε
+$$<ul>
+<li>R(s) is the learned block diagonal matrix of complex phasors.</li>
+<li>W is learned orthogonal matrix of the transform group</li>
+</ul>
+<p>This imposes theoretical constraints on learnable transformations, but they can still be approximately learned in practice.</p>
+<ul>
+<li>Compactness enforces the transformations to be periodic</li>
+<li>Connectedness precludes discrete transformations like reflections</li>
+<li>Commutativity excludes non-commutative transformations such as 3D rotations</li>
+</ul>
+<p>The block diagonal structure allows for efficient inference and learning. Reformulate as vector factorization</p>
+$$
+W^TI = R(s)W^T Φα + ε
+$$$$
+\overset{\sim}{I} = z(s) .* \overset{\sim}{O}(\alpha)
+$$<ul>
+<li>equivariant part z(s) is diagonal elements of R. Elements are complex phasors</li>
+<li>invariant part O(\alpha) is shape model</li>
+</ul>
+<p>Can&rsquo;t gradient descent because of too many local minima. Performs gradient ascent on their log-likelihood</p>
+$$
+\nabla_{\theta} \ln P_{\theta}(\mathbf{I}) \approx \mathbb{E}_{s \sim P_{\theta}(s | \mathbf{I}, \hat{\alpha})} \left[ \nabla_{\theta} \ln P_{\theta}(\mathbf{I} | s, \hat{\alpha}) \right]
+$$<p>optimization uses Riemannian ADAM</p>
+<p>Set of values {x} can be represented in weighted superposition. Product(N) to sum(N) representation complexity.</p>
+<p><img src="/mnist-results-sparse-lie.png" alt=""></p>
+
+  
+
+
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>
