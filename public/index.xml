@@ -2,46 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gigabug</title>
-    <link>https://gigabug.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Gigabug</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gigabug.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Sep 2024 13:48:14 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bookshelf</title>
+      <link>http://localhost:1313/posts/bookshelf/</link>
+      <pubDate>Sat, 21 Sep 2024 13:48:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/bookshelf/</guid>
+      <description>&lt;p&gt;Like Goodreads but just a markdown file. These are mostly for reference as I cycle through. Roughly sorted by priority.&lt;/p&gt;&#xA;&lt;h2 id=&#34;off-shelf&#34;&gt;off shelf&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Principles of Neural Design&lt;/li&gt;&#xA;&lt;li&gt;Numerical Linear Algebra&lt;/li&gt;&#xA;&lt;li&gt;Mathematical Game Theory&lt;/li&gt;&#xA;&lt;li&gt;The Entropy Law and Economic Process&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;on-shelf&#34;&gt;on shelf&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Probabilistic Graphical Models&lt;/li&gt;&#xA;&lt;li&gt;Statistical Mechanics&lt;/li&gt;&#xA;&lt;li&gt;Optimal Control and Estimation&lt;/li&gt;&#xA;&lt;li&gt;Statistical Inference&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>reading</title>
+      <link>http://localhost:1313/posts/reading/</link>
+      <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reading/</guid>
+      <description>&lt;p&gt;A collection of papers I&amp;rsquo;ve been interested in, trying my best to include everything.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2111.05176&#34;&gt;Variational Quantum Eigensolver Review&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.05649&#34;&gt;Best Quantum Compiling Problems&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/0406176&#34;&gt;Synthesis of Quantum Logic Circuits&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiskit.org/documentation/apidoc/synthesis_aqc.html&#34;&gt;Approximate Quantum Compiler&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1907.02686&#34;&gt;Optimization of Quantum Circuit Mapping&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/9503016&#34;&gt;Elementary Gates for Quantum Computation&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1808.08927.pdf&#34;&gt;Variational Quantum Factoring&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1708.00006&#34;&gt;Quantum Tensor Networks in a Nutshell&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1812.04011&#34;&gt;Tensor Networks for Complex Systems&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>image factorization in the brain</title>
-      <link>https://gigabug.org/posts/brain-image-factorization/</link>
+      <link>http://localhost:1313/posts/brain-image-factorization/</link>
       <pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://gigabug.org/posts/brain-image-factorization/</guid>
-      <description>&lt;p&gt;Interested in perception and signaling systems, particularly in humans. &lt;a href=&#34;https://github.com/bowrango/dashcam-misalignment/tree/main&#34;&gt;Earlier project&lt;/a&gt; using basic RNN to predict dash camera misalignment. Now reading about visual processing models inspired by the brain.&lt;/p&gt;&#xA;&lt;p&gt;todos&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Draw these images myself&lt;/li&gt;&#xA;&lt;li&gt;[6] Section 2.6.2 generating exact solutions to the subset sum problem&lt;/li&gt;&#xA;&lt;li&gt;Note quantum applications using residue numbers. Just saw some factoring papers&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;[1] &lt;a href=&#34;https://www.youtube.com/watch?v=xnhhp916JNU&amp;amp;list=LL&amp;amp;index=18&#34;&gt;Invariance and equivariance in brains and machines&lt;/a&gt;&lt;br&gt;&#xA;[2] &lt;a href=&#34;https://arxiv.org/abs/2012.12071&#34;&gt;Disentangling images with Lie group transformations and sparse coding&lt;/a&gt;&lt;br&gt;&#xA;[3] &lt;a href=&#34;http://www.rctn.org/bruno/public/nature-neuromorphic-talk.pdf&#34;&gt;Analog Memory and High-Dimensional Computation&lt;/a&gt;&lt;br&gt;&#xA;[4] &lt;a href=&#34;https://arxiv.org/pdf/2208.12880&#34;&gt;Neuromorphic Visual Scene Understanding with Resonator Networks&lt;/a&gt;&lt;br&gt;&#xA;[5] &lt;a href=&#34;https://www.youtube.com/watch?v=c2_rnYdUMiM&#34;&gt;Hippocampal memory, cognition, and the role of sleep&lt;/a&gt;&lt;br&gt;&#xA;[6] &lt;a href=&#34;https://www.researchgate.net/publication/375793530_Computing_with_Residue_Numbers_in_High-Dimensional_Representation&#34;&gt;Computing with Residue Numbers in High-Dimensional Representation&lt;/a&gt;&lt;br&gt;&#xA;[7] &lt;a href=&#34;https://redwood.berkeley.edu/wp-content/uploads/2022/11/HDC-scene-analysis-factorization.pdf&#34;&gt;Visual scene analysis via factorization of HD vectors&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/brain-image-factorization/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m interested in perception and signaling systems, particularly in humans. This post is a hodgepodge of various sources about biological mechanisms for visual processing, and inspired mathematial models. Back in undergraduate, I experimented with &lt;a href=&#34;https://github.com/bowrango/dashcam-misalignment/tree/main&#34;&gt;RNNs to predict dash camera misalignment&lt;/a&gt;, and although a basic model, it got me thinking about factoring objects from their transformations in video. Computer scientists seem to think much of biology operates like machine learning, but the biologists push back. So, what can we learn from the visual data pipeline to the brain?&lt;/p&gt;</description>
     </item>
     <item>
       <title>quantum gate decomposition</title>
-      <link>https://gigabug.org/posts/gate-decomp/</link>
+      <link>http://localhost:1313/posts/gate-decomp/</link>
       <pubDate>Thu, 12 Sep 2024 00:15:22 -0400</pubDate>
-      <guid>https://gigabug.org/posts/gate-decomp/</guid>
-      <description>&lt;p&gt;Quantum circuits are executed using the primitive operations of the quantum computer. The matrices of this primitive set form a basis of the unitary group $U(2^N)$. A general 1 qubit rotation can be decomposed into 3 rotations analgous to Euler rotations. Using the basis set {CX,RY,RZ}, this is the smallest quantum circuit for any unitary transformation on 2 qubits. The circuit uses 3 two-qubit CX gates and 15 single-qubit rotation gates. I find this pattern appealing because the CX gates are orientated as a SWAP gate.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/gate-decomp/</guid>
+      <description>&lt;p&gt;This is my attempt to decompose an arbitrary N-qubit unitary using minimum number of CX gates. This all came about when I wrote &lt;a href=&#34;https://www.mathworks.com/help/matlab/ref/unitarygate.html&#34;&gt;unitaryGate&lt;/a&gt;, which implements the best known method at twice the lower bound. This work explores my thoughts on improving the algorithm. To my knowledge there is no general algorithm for arbitrary matrices using the minimum number of CX gates.&lt;/p&gt;&#xA;&lt;p&gt;Quantum circuits are executed using the primitive operations of the quantum computer. The matrices of this primitive set form a basis of the unitary group $U(2^N)$. Any 1 qubit rotation, a unitary matrix in U(2), can be decomposed into 3 rotations like Euler rotations. The figure below shows the smallest circuit for any 2-qubit unitary in the basis {CX,RY,RZ}. The circuit uses 3 2-qubit CX gates and 15 1-qubit rotation gates.&lt;/p&gt;</description>
     </item>
     <item>
       <title>clash royale</title>
-      <link>https://gigabug.org/posts/clash-royale/</link>
+      <link>http://localhost:1313/posts/clash-royale/</link>
       <pubDate>Tue, 10 Sep 2024 00:15:22 -0400</pubDate>
-      <guid>https://gigabug.org/posts/clash-royale/</guid>
+      <guid>http://localhost:1313/posts/clash-royale/</guid>
       <description>&lt;p&gt;Old data analysis hack project on the Clash Royale mobile game from 2020.&lt;/p&gt;&#xA;&lt;p&gt;Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was exploring conditional probability networks and graph attention for edge prediction.&lt;/p&gt;</description>
     </item>
     <item>
       <title>about</title>
-      <link>https://gigabug.org/about/about/</link>
+      <link>http://localhost:1313/about/about/</link>
       <pubDate>Wed, 04 Sep 2024 21:28:27 -0400</pubDate>
-      <guid>https://gigabug.org/about/about/</guid>
-      <description>&lt;h1 id=&#34;todo&#34;&gt;todo&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;auto center and scale images&lt;/li&gt;&#xA;&lt;li&gt;dark mode toggle&lt;/li&gt;&#xA;&lt;li&gt;menu&lt;/li&gt;&#xA;&lt;li&gt;fix home page with about&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;pdf&#34;&gt;PDF&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://gigabug.org/about/matt-bowring-resume.pdf&#34;&gt;resume&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA;&lt;div class=&#34;goat svg-container &#34;&gt;&#xA;  &#xA;    &lt;svg&#xA;      xmlns=&#34;http://www.w3.org/2000/svg&#34;&#xA;      font-family=&#34;Menlo,Lucida Console,monospace&#34;&#xA;      &#xA;        viewBox=&#34;0 0 680 121&#34;&#xA;      &gt;&#xA;      &lt;g transform=&#39;translate(8,16)&#39;&gt;&#xA;&lt;path d=&#39;M 440,0 L 464,0&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/pa</description>
-    </item>
-    <item>
-      <title>references</title>
-      <link>https://gigabug.org/posts/references/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gigabug.org/posts/references/</guid>
-      <description>&lt;p&gt;Collection of notable words. Central reference for gigabug. One of those &amp;ldquo;cool things I&amp;rsquo;ve seen on the internet&amp;rdquo; lists.&lt;/p&gt;&#xA;&lt;h2 id=&#34;variational-quantum-eigensolver-review&#34;&gt;Variational Quantum Eigensolver Review&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2111.05176&#34;&gt;Variational Quantum Eigensolver Review&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;best-quantum-compiling-problems&#34;&gt;Best Quantum Compiling Problems&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.05649&#34;&gt;3&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;synthesis-of-quantum-logic-circuits&#34;&gt;Synthesis of Quantum Logic Circuits&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/0406176&#34;&gt;4&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;approximate-quantum-compiler-qiskit&#34;&gt;Approximate Quantum Compiler (Qiskit)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiskit.org/documentation/apidoc/synthesis_aqc.html&#34;&gt;5&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;optimization-of-quantum-circuit-mapping-qiskit&#34;&gt;Optimization of Quantum Circuit Mapping (Qiskit)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1907.02686&#34;&gt;6&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;elementary-gates-for-quantum-computation&#34;&gt;Elementary Gates for Quantum Computation&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/9503016&#34;&gt;7&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/about/about/</guid>
+      <description>&lt;p&gt;Gigabug is the website of Matt Bowring. I built this as an expressive outlet to write, earn web development, and share with the world. I work as a software engineer, and spend time reading and staying active. My interests are guided by physics, engineering, economics, and psychology. My work experience is available on my &lt;a href=&#34;http://localhost:1313/about/matt-bowring-resume.pdf&#34;&gt;resume&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This site will undergo changes. I&amp;rsquo;ve done sketching to organize content but not quite happy yet. This uses the default Hugo theme with minor modifications but I like it&amp;rsquo;s simplicity.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

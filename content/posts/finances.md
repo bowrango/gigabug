@@ -1,5 +1,5 @@
 +++
-title = 'investing'
+title = 'finances'
 date = 2024-09-12T21:17:29-04:00
 draft = true
 +++

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,9 +12,9 @@
     onload="renderMathInElement(document.body);"></script>
 <title>image factorization in the brain | Gigabug</title>
 
-      <link rel="stylesheet" href="/css/main.min.5c8cdd1b23b58372f4c0ca4ec1be67024ec7217946ef66719e034e4d9ac80838.css" integrity="sha256-XIzdGyO1g3L0wMpOwb5nAk7HIXlG72ZxngNOTZrICDg=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
 
-      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+      <script src="/js/main.js"></script>
 
 </head>
 <body>
@@ -45,32 +45,18 @@
   
   <time datetime="2024-09-17T00:00:00&#43;00:00">September 17, 2024</time>
 
-  <p>Interested in perception and signaling systems, particularly in humans. <a href="https://github.com/bowrango/dashcam-misalignment/tree/main">Earlier project</a> using basic RNN to predict dash camera misalignment. Now reading about visual processing models inspired by the brain.</p>
-<p>todos</p>
-<ul>
-<li>Draw these images myself</li>
-<li>[6] Section 2.6.2 generating exact solutions to the subset sum problem</li>
-<li>Note quantum applications using residue numbers. Just saw some factoring papers</li>
-</ul>
-<p>[1] <a href="https://www.youtube.com/watch?v=xnhhp916JNU&amp;list=LL&amp;index=18">Invariance and equivariance in brains and machines</a><br>
-[2] <a href="https://arxiv.org/abs/2012.12071">Disentangling images with Lie group transformations and sparse coding</a><br>
-[3] <a href="http://www.rctn.org/bruno/public/nature-neuromorphic-talk.pdf">Analog Memory and High-Dimensional Computation</a><br>
-[4] <a href="https://arxiv.org/pdf/2208.12880">Neuromorphic Visual Scene Understanding with Resonator Networks</a><br>
-[5] <a href="https://www.youtube.com/watch?v=c2_rnYdUMiM">Hippocampal memory, cognition, and the role of sleep</a><br>
-[6] <a href="https://www.researchgate.net/publication/375793530_Computing_with_Residue_Numbers_in_High-Dimensional_Representation">Computing with Residue Numbers in High-Dimensional Representation</a><br>
-[7] <a href="https://redwood.berkeley.edu/wp-content/uploads/2022/11/HDC-scene-analysis-factorization.pdf">Visual scene analysis via factorization of HD vectors</a></p>
-<p>The brain computes and represents</p>
-<ul>
-<li>geometric transforms -&gt; equivariance</li>
-<li>shapes independent from variations in pose, motion or lighting -&gt; invariance</li>
-</ul>
-<p>Cones on the back of your eye perceive scene information.</p>
+  <p>I&rsquo;m interested in perception and signaling systems, particularly in humans. This post is a hodgepodge of various sources about biological mechanisms for visual processing, and inspired mathematial models. Back in undergraduate, I experimented with <a href="https://github.com/bowrango/dashcam-misalignment/tree/main">RNNs to predict dash camera misalignment</a>, and although a basic model, it got me thinking about factoring objects from their transformations in video. Computer scientists seem to think much of biology operates like machine learning, but the biologists push back. So, what can we learn from the visual data pipeline to the brain?</p>
+<p>The brain makes up only 2% of the body&rsquo;s total mass but consumes 20% of its energy.</p>
+<p>Photoreceptors send high dimensional scene signals to ganglion cells of the retina. They  filters noise and redundency to collectively transmit image-forming and non-image forming visual information from the retina via activations to other brain regions. Just to play around, I got the <a href="https://shop.openbci.com/products/ganglion-board">OpenBCI Gangelion board</a> and some electrodes to monitor EEG signals from my brain, but with only 4 channels I won&rsquo;t learn much.</p>
+<p>Cones on the back of your eye perceive scene information from photoreceptors. A cone in daylight captures about 10,000 quanta/s to encode a finely graded voltage (Chapter 11 [3]).</p>
+<p>The image ([1]) below depicts the separation of shape, color and motion from a high dimensional scene signal. The visual cortex has to compute and represent geometric transforms (equivariance) and recognise shapes independent from variations in pose, motion or lighting (invariance).</p>
 <p><img src="/eye-cones.png" alt=""></p>
-<p>Set of points lives on nonlinear manifold. Halfway point corresponds to superposition of both patterns at half contrast so manifold has to be curved.</p>
+<p>A pattern reaching the photoreceptors is compressed by retinal circuits to a single spike of the ganglion neuron cell (Chapter 11 [3]). Mathematically, how can these spikes relate to embeddings of objects and transforms?</p>
+<p>Below I reproduce a digram from [1] explaining how a pattern maps to a unique point on a manifold. The set of points lives on nonlinear manifold. A halfway point corresponds to a superposition of both patterns at half contrast so manifold has to be curved.</p>
 <p><img src="/image-on-manifold.png" alt=""></p>
 <p>Different patterns trace out different manifolds but importantly the Lie operator is the same. Theory of Lie groups tells us all matrices moving on this manifold belong to same group. Some other examples include the groups of n-dimensional rotations SO(n) (special orthogonal) and rigid motions SE(n) (special Euclidean).</p>
-<p>Images are explained as product of transformation and shape. It is reminiscent of Plato&rsquo;s theory of forms, that physical objects and matter are merely imitations of the non-physical ideas. Elaborate more.</p>
-<p>Formally, [2] combines Lie Group transformation learning and sparse coding within a Bayesian model. Images become a sparse superposition of shape components followed by a transformation that is parameterized by n continuous variables. The generative model is</p>
+<p>Images are explained as the product of transformation and shape. It is reminiscent of Plato&rsquo;s theory of forms, that physical objects and matter are merely imitations of the non-physical ideas.</p>
+<p>Formally, [2] combines Lie Group transformation learning and sparse coding within a Bayesian model. Images become a sparse superposition of shape components followed by a transformation that is parameterized by continuous variables. The generative model is</p>
 $$
 I = T(s) Φα + ε
 $$<ul>
@@ -111,13 +97,28 @@ $$
 $$<p>optimization uses Riemannian ADAM</p>
 <p>Set of values {x} can be represented in weighted superposition. Product(N) to sum(N) representation complexity.</p>
 <p><img src="/mnist-results-sparse-lie.png" alt=""></p>
+<h2 id="references">references</h2>
+<p>todos</p>
+<ul>
+<li>Draw these images myself</li>
+<li>[6] Section 2.6.2 generating exact solutions to the subset sum problem</li>
+<li>Note quantum applications using residue numbers. Just saw some factoring papers</li>
+</ul>
+<p>[1] <a href="https://www.youtube.com/watch?v=xnhhp916JNU&amp;list=LL&amp;index=18">Invariance and equivariance in brains and machines</a><br>
+[2] <a href="https://arxiv.org/abs/2012.12071">Disentangling images with Lie group transformations and sparse coding</a><br>
+[3] <a href="https://mitpress.mit.edu/9780262534680/principles-of-neural-design/">Principles of Neural Design</a><br>
+[4] <a href="http://www.rctn.org/bruno/public/nature-neuromorphic-talk.pdf">Analog Memory and High-Dimensional Computation</a><br>
+[5] <a href="https://arxiv.org/pdf/2208.12880">Neuromorphic Visual Scene Understanding with Resonator Networks</a><br>
+[6] <a href="https://www.youtube.com/watch?v=c2_rnYdUMiM">Hippocampal memory, cognition, and the role of sleep</a><br>
+[7] <a href="https://www.researchgate.net/publication/375793530_Computing_with_Residue_Numbers_in_High-Dimensional_Representation">Computing with Residue Numbers in High-Dimensional Representation</a><br>
+[8] <a href="https://redwood.berkeley.edu/wp-content/uploads/2022/11/HDC-scene-analysis-factorization.pdf">Visual scene analysis via factorization of HD vectors</a></p>
 
   
 
 
   </main>
   <footer>
-    <p>Copyright 2024. All rights reserved.</p>
+    <p>Copyright 2024 Gigabug. All rights reserved.</p>
 
   </footer>
 </body>

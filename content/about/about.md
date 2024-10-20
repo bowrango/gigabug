@@ -4,39 +4,6 @@ date = 2024-09-04T21:28:27-04:00
 draft = false
 +++
 
-# todo
-- auto center and scale images
-- dark mode toggle
-- menu
-- fix home page with about
+Gigabug is the website of Matt Bowring. I built this as an expressive outlet to write, earn web development, and share with the world. I work as a software engineer, and spend time reading and staying active. My interests are guided by physics, engineering, economics, and psychology. My work experience is available on my [resume](/about/matt-bowring-resume.pdf).
 
-# PDF
-[resume](/about/matt-bowring-resume.pdf)
-
-# Diagrams
-```goat
-      .               .                .               .--- 1          .-- 1     / 1
-     / \              |                |           .---+            .-+         +
-    /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
-   +     +        |       |        |       |    ---+            ---+          +
-  / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
- /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +
- 1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
-
-```
-
-# Code
-```Python
-x = 1
-```
-
-# LaTeX
-This is an inline equation: \( E = mc^2 \).
-
-This is a block equation:
-\[
-E = mc^2
-\]
-
-# Images
-![abc](/circuit.png)
+This site will undergo changes. I've done sketching to organize content but not quite happy yet. This uses the default Hugo theme with minor modifications but I like it's simplicity.

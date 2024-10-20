@@ -10,7 +10,7 @@ Card decks used by the top players in the world are scraped from the official Cl
 
 The goal was to provide utilities for time-series graph analysis of player trends. The project is deprecated, but I dream of reviving it. Here is demo code that worked back in 2020.
 
-# code
+# Code
 
 Wrapper on `networkx` for querying the Clash Royale API. You'll need to [create an account](https://developer.clashroyale.com/#/register) to get a token. Edges are undirected and weighted by how many times two cards are used together.
 
