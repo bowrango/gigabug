@@ -22,8 +22,8 @@ I have the basic electrical equipment and need to diagram the whole setup. I'll 
 
 # References
 
-[1] Analog Coupled Oscillator Based Weighted Ising Machine
-[2] Ising machines: Hardware solvers for combinatorial optimization problems
-[3] An Ising solver chip based on coupled ring oscillators with a 48-node all-to-all connected array architecture
-[4] A 1,968-node coupled ring oscillator circuit for combinatorial optimization problem solving
+[1] Analog Coupled Oscillator Based Weighted Ising Machine \
+[2] Ising machines: Hardware solvers for combinatorial optimization problems \
+[3] An Ising solver chip based on coupled ring oscillators with a 48-node all-to-all connected array architecture \
+[4] A 1,968-node coupled ring oscillator circuit for combinatorial optimization problem solving \ 
 [5] Thermodynamic AI and the fluctuation frontier

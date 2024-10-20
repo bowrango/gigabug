@@ -6,24 +6,17 @@
     <description>Recent content on Gigabug</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Sep 2024 13:48:14 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 20 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>bookshelf</title>
-      <link>http://localhost:1313/posts/bookshelf/</link>
-      <pubDate>Sat, 21 Sep 2024 13:48:14 -0400</pubDate>
-      <guid>http://localhost:1313/posts/bookshelf/</guid>
-      <description>&lt;p&gt;Like Goodreads but just a markdown file. These are mostly for reference as I cycle through. Roughly sorted by priority.&lt;/p&gt;&#xA;&lt;h2 id=&#34;off-shelf&#34;&gt;off shelf&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Principles of Neural Design&lt;/li&gt;&#xA;&lt;li&gt;Numerical Linear Algebra&lt;/li&gt;&#xA;&lt;li&gt;Mathematical Game Theory&lt;/li&gt;&#xA;&lt;li&gt;The Entropy Law and Economic Process&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;on-shelf&#34;&gt;on shelf&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Probabilistic Graphical Models&lt;/li&gt;&#xA;&lt;li&gt;Statistical Mechanics&lt;/li&gt;&#xA;&lt;li&gt;Optimal Control and Estimation&lt;/li&gt;&#xA;&lt;li&gt;Statistical Inference&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
     <item>
       <title>reading</title>
       <link>http://localhost:1313/posts/reading/</link>
       <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/reading/</guid>
-      <description>&lt;p&gt;A collection of papers I&amp;rsquo;ve been interested in, trying my best to include everything.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2111.05176&#34;&gt;Variational Quantum Eigensolver Review&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.05649&#34;&gt;Best Quantum Compiling Problems&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/0406176&#34;&gt;Synthesis of Quantum Logic Circuits&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiskit.org/documentation/apidoc/synthesis_aqc.html&#34;&gt;Approximate Quantum Compiler&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1907.02686&#34;&gt;Optimization of Quantum Circuit Mapping&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/9503016&#34;&gt;Elementary Gates for Quantum Computation&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1808.08927.pdf&#34;&gt;Variational Quantum Factoring&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1708.00006&#34;&gt;Quantum Tensor Networks in a Nutshell&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1812.04011&#34;&gt;Tensor Networks for Complex Systems&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;A collection of interesting papers, trying my best to include everything, but often I forget.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2111.05176&#34;&gt;Variational Quantum Eigensolver Review&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.05649&#34;&gt;Best Quantum Compiling Problems&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/0406176&#34;&gt;Synthesis of Quantum Logic Circuits&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiskit.org/documentation/apidoc/synthesis_aqc.html&#34;&gt;Approximate Quantum Compiler&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1907.02686&#34;&gt;Optimization of Quantum Circuit Mapping&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/9503016&#34;&gt;Elementary Gates for Quantum Computation&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1808.08927.pdf&#34;&gt;Variational Quantum Factoring&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1708.00006&#34;&gt;Quantum Tensor Networks in a Nutshell&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1812.04011&#34;&gt;Tensor Networks for Complex Systems&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>image factorization in the brain</title>
+      <title>brain image processing (?)</title>
       <link>http://localhost:1313/posts/brain-image-factorization/</link>
       <pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/brain-image-factorization/</guid>
@@ -41,14 +34,21 @@
       <link>http://localhost:1313/posts/clash-royale/</link>
       <pubDate>Tue, 10 Sep 2024 00:15:22 -0400</pubDate>
       <guid>http://localhost:1313/posts/clash-royale/</guid>
-      <description>&lt;p&gt;Old data analysis hack project on the Clash Royale mobile game from 2020.&lt;/p&gt;&#xA;&lt;p&gt;Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was exploring conditional probability networks and graph attention for edge prediction.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Data analysis project from 2020 on the Clash Royale mobile game.&lt;/p&gt;&#xA;&lt;p&gt;Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was also exploring conditional probability networks and graph attention for edge prediction. The goal was to provide utilities for time-series graph analysis of player trends. The project is deprecated but I dream of reviving it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>thoughts on quantum</title>
+      <link>http://localhost:1313/posts/quantum-algo-thoughts/</link>
+      <pubDate>Wed, 04 Sep 2024 23:10:07 -0400</pubDate>
+      <guid>http://localhost:1313/posts/quantum-algo-thoughts/</guid>
+      <description>&lt;p&gt;Some perspective on quantum computing, and how I got interested in the adjacent field of thermodynamic computing.&lt;/p&gt;&#xA;&lt;p&gt;Quantum computing either looks like textbook algorithms (Shor, HHL, AA, etc.), or mimics deep learning. The former are direct algorithms with their own theoretical advantage, and the latter focuses on training parameterized models where advantage is fuzzy. Of course, there is much research exploring ways to combine these approaches. However, since textbooks algorithms are too large for modern hardware, these smaller parameterized models are hoped to learn despite noise. I wrote a &lt;a href=&#34;https://github.com/mathworks/Quantum-Computing-MATLAB/tree/main/examples/machine-learning/classifiers/mnist&#34;&gt;basic example that trains a quantum model to predict MNIST digits&lt;/a&gt;. Training quantum models in this way opens a can of worms. My point being, does this even make sense? Why should we expect quantum models to be more expressive than classical models, especially for non-quantum data like digits or whatever.&lt;/p&gt;</description>
     </item>
     <item>
       <title>about</title>
       <link>http://localhost:1313/about/about/</link>
       <pubDate>Wed, 04 Sep 2024 21:28:27 -0400</pubDate>
       <guid>http://localhost:1313/about/about/</guid>
-      <description>&lt;p&gt;Gigabug is the website of Matt Bowring. I built this as an expressive outlet to write, earn web development, and share with the world. I work as a software engineer, and spend time reading and staying active. My interests are guided by physics, engineering, economics, and psychology. My work experience is available on my &lt;a href=&#34;http://localhost:1313/about/matt-bowring-resume.pdf&#34;&gt;resume&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This site will undergo changes. I&amp;rsquo;ve done sketching to organize content but not quite happy yet. This uses the default Hugo theme with minor modifications but I like it&amp;rsquo;s simplicity.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Gigabug is the website of Matt Bowring. I built it as an expressive outlet to write, learn web development, and share with the world. I work as a software engineer, and spend time reading and staying active. My interests are guided by physics, engineering, economics, and psychology. Work experience is available on my &lt;a href=&#34;http://localhost:1313/about/matt-bowring-resume.pdf&#34;&gt;resume&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This site will undergo changes. I&amp;rsquo;ve done sketching to organize content, but I&amp;rsquo;m sticking with the default theme template for now.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

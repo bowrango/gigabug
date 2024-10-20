@@ -4,7 +4,7 @@ date = 2024-09-20
 draft = false
 +++
 
-A collection of papers I've been interested in, trying my best to include everything.
+A collection of interesting papers, trying my best to include everything, but often I forget.
 
 [Variational Quantum Eigensolver Review](https://arxiv.org/abs/2111.05176)
 

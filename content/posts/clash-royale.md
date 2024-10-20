@@ -4,11 +4,9 @@ date = 2024-09-10T00:15:22-04:00
 draft = false
 +++
 
-Old data analysis hack project on the Clash Royale mobile game from 2020. 
+Data analysis project from 2020 on the Clash Royale mobile game. 
 
-Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was exploring conditional probability networks and graph attention for edge prediction.
-
-The goal was to provide utilities for time-series graph analysis of player trends. The project is deprecated, but I dream of reviving it. Here is demo code that worked back in 2020.
+Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was also exploring conditional probability networks and graph attention for edge prediction. The goal was to provide utilities for time-series graph analysis of player trends. The project is deprecated but I dream of reviving it.
 
 # Code
 
@@ -50,7 +48,7 @@ print(probs)
  [0.66098081 0.29424307 0.04477612]]
 ```
 
-This image shows how many times each card was used in decks from the top 500 players. There are clear usage hierarchies with an exponential looking dropoff. The game was so fun, and I really wanted to learn trends over time. I should revisit this.
+This image shows how many times each card was used in decks from the top 500 players. There are clear usage hierarchies with an exponential looking dropoff. The game was so fun and I really wanted to learn trends over time. I should revisit this.
 
 ![](/deg500.png)
 

@@ -54,10 +54,10 @@
 <p>I planed to replicate [1] but didn&rsquo;t get too far. I&rsquo;d read Zach&rsquo;s blog for a great introduction on energy-based computing and players in the field. Building coupled oscillators on a breadboard is the simpliest hardware to work with. But scaling is fundamentally challenging because inductors and capacitors are hard to shrink. Alternatively, oscillators using traditional CMOS logic gates can fit on a ~1 mm2 chip [3][4]. Maybe after the home lab I&rsquo;ll make a home fab.</p>
 <p>I have the basic electrical equipment and need to diagram the whole setup. I&rsquo;ll use Diffrax to model the SDEs of the circuit and compare hardware fluctuations [5] to numerical simulation. The schematic of a single node doesn&rsquo;t look too complicated but coupling the whole system is messy. Labview transmits the user-defined digital potentiometer values to an Arduino Uno board. The Arduino board then transmits the digital I2C resistors values to the weights. The analog oscillator voltage signals are monitored by the Labview program with a data acquisition board, at a maximum sampling rate of 500 kHz. Python on the host PC can send target signals to waveform generator via LAN and interface with Arduino.</p>
 <h1 id="references">References</h1>
-<p>[1] Analog Coupled Oscillator Based Weighted Ising Machine
-[2] Ising machines: Hardware solvers for combinatorial optimization problems
-[3] An Ising solver chip based on coupled ring oscillators with a 48-node all-to-all connected array architecture
-[4] A 1,968-node coupled ring oscillator circuit for combinatorial optimization problem solving
+<p>[1] Analog Coupled Oscillator Based Weighted Ising Machine <br>
+[2] Ising machines: Hardware solvers for combinatorial optimization problems <br>
+[3] An Ising solver chip based on coupled ring oscillators with a 48-node all-to-all connected array architecture <br>
+[4] A 1,968-node coupled ring oscillator circuit for combinatorial optimization problem solving \
 [5] Thermodynamic AI and the fluctuation frontier</p>
 
   
