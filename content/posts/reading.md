@@ -121,3 +121,5 @@ A collection of interesting papers, trying my best to include everything, but of
 [Variational quantum optimization with multibasis encodings](https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.4.033142)
 
 [Statistical Physics of Self-Replication](https://arxiv.org/abs/1209.1179)
+
+[Transmit LoRa Frames Without a Radio](https://github.com/cnlohr/lolra?tab=readme-ov-file))

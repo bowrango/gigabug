@@ -6,8 +6,15 @@
     <description>Recent content on Gigabug</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Oct 2024 21:05:44 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>anduril bolt</title>
+      <link>http://localhost:1313/posts/bolt/</link>
+      <pubDate>Thu, 24 Oct 2024 21:05:44 -0400</pubDate>
+      <guid>http://localhost:1313/posts/bolt/</guid>
+      <description>&lt;p&gt;Notes on Anduril&amp;rsquo;s Bolt drone. Shouldn&amp;rsquo;t be hard to estimate battery and motor requirements.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.forbes.com/sites/davidhambling/2024/10/16/andurils-bolt-m-is-the-future-for-us-forces-if-they-can-afford-it/&#34;&gt;“In round numbers, typical Bolt configurations are in the low tens of thousands of dollars, depending on the exact payload and configuration.&amp;quot;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Swappable batteries for extending flight time&lt;/li&gt;&#xA;&lt;li&gt;Intelligence, Surveillance &amp;amp; Reconnaissance (ISR)&lt;/li&gt;&#xA;&lt;li&gt;Search &amp;amp; Rescue (SAR).&lt;/li&gt;&#xA;&lt;li&gt;Rectangular frame makes sense to accommodate larger battery. X frames are more common to FPV racing drones because of their similar rotational inertias.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bolt&lt;/strong&gt; &lt;br&gt;&#xA;+20km range &lt;br&gt;&#xA;+45min endurance &lt;br&gt;&#xA;~12lbs weight &lt;br&gt;&#xA;&lt;strong&gt;Bolt-M&lt;/strong&gt; &lt;br&gt;&#xA;+20km &lt;br&gt;&#xA;+40min &lt;br&gt;&#xA;13-15lbs (Payload Dependent)&lt;/p&gt;</description>
+    </item>
     <item>
       <title>reading</title>
       <link>http://localhost:1313/posts/reading/</link>
@@ -35,13 +42,6 @@
       <pubDate>Tue, 10 Sep 2024 00:15:22 -0400</pubDate>
       <guid>http://localhost:1313/posts/clash-royale/</guid>
       <description>&lt;p&gt;Data analysis project from 2020 on the Clash Royale mobile game.&lt;/p&gt;&#xA;&lt;p&gt;Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was also exploring conditional probability networks and graph attention for edge prediction. The goal was to provide utilities for time-series graph analysis of player trends. The project is deprecated but I dream of reviving it.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>thoughts on quantum</title>
-      <link>http://localhost:1313/posts/quantum-algo-thoughts/</link>
-      <pubDate>Wed, 04 Sep 2024 23:10:07 -0400</pubDate>
-      <guid>http://localhost:1313/posts/quantum-algo-thoughts/</guid>
-      <description>&lt;p&gt;Some perspective on quantum computing, and how I got interested in the adjacent field of thermodynamic computing.&lt;/p&gt;&#xA;&lt;p&gt;Quantum computing either looks like textbook algorithms (Shor, HHL, AA, etc.), or mimics deep learning. The former are direct algorithms with their own theoretical advantage, and the latter focuses on training parameterized models where advantage is fuzzy. Of course, there is much research exploring ways to combine these approaches. However, since textbooks algorithms are too large for modern hardware, these smaller parameterized models are hoped to learn despite noise. I wrote a &lt;a href=&#34;https://github.com/mathworks/Quantum-Computing-MATLAB/tree/main/examples/machine-learning/classifiers/mnist&#34;&gt;basic example that trains a quantum model to predict MNIST digits&lt;/a&gt;. Training quantum models in this way opens a can of worms. My point being, does this even make sense? Why should we expect quantum models to be more expressive than classical models, especially for non-quantum data like digits or whatever.&lt;/p&gt;</description>
     </item>
     <item>
       <title>about</title>
