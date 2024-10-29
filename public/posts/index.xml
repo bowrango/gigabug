@@ -23,18 +23,18 @@
       <description>&lt;p&gt;A collection of interesting papers, trying my best to include everything, but often I forget.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2111.05176&#34;&gt;Variational Quantum Eigensolver Review&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.05649&#34;&gt;Best Quantum Compiling Problems&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/0406176&#34;&gt;Synthesis of Quantum Logic Circuits&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiskit.org/documentation/apidoc/synthesis_aqc.html&#34;&gt;Approximate Quantum Compiler&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1907.02686&#34;&gt;Optimization of Quantum Circuit Mapping&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/9503016&#34;&gt;Elementary Gates for Quantum Computation&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1808.08927.pdf&#34;&gt;Variational Quantum Factoring&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1708.00006&#34;&gt;Quantum Tensor Networks in a Nutshell&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1812.04011&#34;&gt;Tensor Networks for Complex Systems&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>brain image processing (?)</title>
+      <title>visual image processing</title>
       <link>http://localhost:1313/posts/brain-image-factorization/</link>
       <pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/brain-image-factorization/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m interested in perception and signaling systems, particularly in humans. This post is a hodgepodge of various sources about biological mechanisms for visual processing, and inspired mathematial models. Back in undergraduate, I experimented with &lt;a href=&#34;https://github.com/bowrango/dashcam-misalignment/tree/main&#34;&gt;RNNs to predict dash camera misalignment&lt;/a&gt;, and although a basic model, it got me thinking about factoring objects from their transformations in video. Computer scientists seem to think much of biology operates like machine learning, but the biologists push back. So, what can we learn from the visual data pipeline to the brain?&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;m interested in perception and signaling systems, particularly in humans. This post is a hodgepodge of various sources about biological mechanisms for visual processing, and inspired mathematial models. Back in undergraduate, I experimented with &lt;a href=&#34;https://github.com/bowrango/dashcam-misalignment/tree/main&#34;&gt;RNNs to predict dash camera misalignment&lt;/a&gt;, and although a basic model, it got me thinking about factoring objects from their transformations in video. Computer scientists seem to think much of biology operates like machine learning, but the biologists push back. What can we learn from the visual data pipeline to the brain?&lt;/p&gt;</description>
     </item>
     <item>
       <title>quantum gate decomposition</title>
       <link>http://localhost:1313/posts/gate-decomp/</link>
       <pubDate>Thu, 12 Sep 2024 00:15:22 -0400</pubDate>
       <guid>http://localhost:1313/posts/gate-decomp/</guid>
-      <description>&lt;p&gt;This is my attempt to decompose an arbitrary N-qubit unitary using minimum number of CX gates. This all came about when I wrote &lt;a href=&#34;https://www.mathworks.com/help/matlab/ref/unitarygate.html&#34;&gt;unitaryGate&lt;/a&gt;, which implements the best known method at twice the lower bound. This work explores my thoughts on improving the algorithm. To my knowledge there is no general algorithm for arbitrary matrices using the minimum number of CX gates.&lt;/p&gt;&#xA;&lt;p&gt;Quantum circuits are executed using the primitive operations of the quantum computer. The matrices of this primitive set form a basis of the unitary group $U(2^N)$. Any 1 qubit rotation, a unitary matrix in U(2), can be decomposed into 3 rotations like Euler rotations. The figure below shows the smallest circuit for any 2-qubit unitary in the basis {CX,RY,RZ}. The circuit uses 3 2-qubit CX gates and 15 1-qubit rotation gates.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is my attempt to decompose an arbitrary N-qubit unitary using the minimum number of CX gates. It&amp;rsquo;s been my puzzle since I wrote &lt;a href=&#34;https://www.mathworks.com/help/matlab/ref/unitarygate.html&#34;&gt;unitaryGate&lt;/a&gt;, which implements the best known method that uses twice the lower bound. This work explores my thoughts on improving the algorithm. To my knowledge there is no general algorithm for arbitrary matrices using the minimum number of CX gates.&lt;/p&gt;&#xA;&lt;p&gt;Quantum circuits are executed using the primitive operations of the quantum computer. The matrices of this primitive set form a basis of the unitary group $U(2^N)$. Any 1 qubit rotation, a unitary matrix in U(2), can be decomposed into 3 rotations like Euler rotations. The figure below shows the smallest circuit for any 2-qubit unitary in the basis {CX,RY,RZ}. The circuit uses 3 2-qubit CX gates and 15 1-qubit rotation gates.&lt;/p&gt;</description>
     </item>
     <item>
       <title>clash royale</title>
@@ -42,6 +42,13 @@
       <pubDate>Tue, 10 Sep 2024 00:15:22 -0400</pubDate>
       <guid>http://localhost:1313/posts/clash-royale/</guid>
       <description>&lt;p&gt;Data analysis project from 2020 on the Clash Royale mobile game.&lt;/p&gt;&#xA;&lt;p&gt;Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was also exploring conditional probability networks and graph attention for edge prediction. The goal was to provide utilities for time-series graph analysis of player trends. The project is deprecated but I dream of reviving it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>thoughts on quantum software</title>
+      <link>http://localhost:1313/posts/quantum-algo-thoughts/</link>
+      <pubDate>Wed, 04 Sep 2024 23:10:07 -0400</pubDate>
+      <guid>http://localhost:1313/posts/quantum-algo-thoughts/</guid>
+      <description>&lt;p&gt;Software design for quantum computing and thermodynamic hardware.&lt;/p&gt;&#xA;&lt;p&gt;Modern quantum computing software follows deep learning and wants to train models. The model learns a parameterized quantum state that minimizes a cost expectation. The variational quantum eigensolver (VQE) is the dubbed algorithm for this procedure. The cost Hamiltonian is a Hermitian matrix, expressed as a weighted sum of projective measurements. The model is a parameterized quantum circuit $U$, and optimized to find the eigenstate&#xA;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

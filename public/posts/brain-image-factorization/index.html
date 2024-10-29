@@ -10,7 +10,7 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
 onload="renderMathInElement(document.body);"></script>
-<title>brain image processing (?) | Gigabug</title>
+<title>visual image processing | Gigabug</title>
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -42,19 +42,18 @@ onload="renderMathInElement(document.body);"></script>
   </header>
   <main>
     
-  <h1>brain image processing (?)</h1>
+  <h1>visual image processing</h1>
 
   
   
   <time datetime="2024-09-17T00:00:00&#43;00:00">September 17, 2024</time>
 
-  <p>I&rsquo;m interested in perception and signaling systems, particularly in humans. This post is a hodgepodge of various sources about biological mechanisms for visual processing, and inspired mathematial models. Back in undergraduate, I experimented with <a href="https://github.com/bowrango/dashcam-misalignment/tree/main">RNNs to predict dash camera misalignment</a>, and although a basic model, it got me thinking about factoring objects from their transformations in video. Computer scientists seem to think much of biology operates like machine learning, but the biologists push back. So, what can we learn from the visual data pipeline to the brain?</p>
-<p>Photoreceptors send high dimensional scene signals to ganglion cells of the retina. They  filters noise and redundency to collectively transmit image-forming and non-image forming visual information via activations to other brain regions. Just for fun, I bought the <a href="https://shop.openbci.com/products/ganglion-board">OpenBCI Gangelion board</a> and some electrodes to monitor EEG signals from my brain, but with only 4 channels I won&rsquo;t learn much. The cones on the back of the eye perceive scene information from the photoreceptors. The image ([1]) below depicts the separation of shape, color and motion from a high dimensional scene signal. The visual cortex has to compute and represent geometric transforms (equivariance) and recognise shapes independent from variations in pose, motion or lighting (invariance).</p>
+  <p>I&rsquo;m interested in perception and signaling systems, particularly in humans. This post is a hodgepodge of various sources about biological mechanisms for visual processing, and inspired mathematial models. Back in undergraduate, I experimented with <a href="https://github.com/bowrango/dashcam-misalignment/tree/main">RNNs to predict dash camera misalignment</a>, and although a basic model, it got me thinking about factoring objects from their transformations in video. Computer scientists seem to think much of biology operates like machine learning, but the biologists push back. What can we learn from the visual data pipeline to the brain?</p>
+<p>Photoreceptors send high dimensional scene signals to ganglion cells of the retina. They  filters noise and redundency to collectively transmit image-forming and non-image forming visual information via activations to other brain regions. Just for fun, I bought the <a href="https://shop.openbci.com/products/ganglion-board">OpenBCI Gangelion board</a> and some electrodes to monitor EEG signals from my brain, but with only 4 channels I won&rsquo;t learn much. That will likely be a separate post. The cones on the back of the eye perceive scene information from the photoreceptors. The image ([1]) below depicts the separation of shape, color and motion from a high dimensional scene signal. The visual cortex has to compute and represent geometric transforms (equivariance) and recognise shapes independent from variations in pose, motion or lighting (invariance).</p>
 <p><img src="/eye-cones.png" alt=""></p>
-<p>A pattern reaching the photoreceptors is compressed by retinal circuits to a single spike of the ganglion neuron cell (Chapter 11 [3]). Mathematically, how can these spikes relate to embeddings of objects and transforms?</p>
-<p>Below I reproduce a digram from [1] explaining how a pattern maps to a unique point on a manifold. The set of points lives on nonlinear manifold. A halfway point corresponds to a superposition of both patterns at half contrast so manifold has to be curved.</p>
+<p>A pattern reaching the photoreceptors is compressed by retinal circuits to a single spike of the ganglion neuron cell (Chapter 11 [3]). Mathematically, how can these spikes relate to embeddings of objects and transforms? Below I reproduce a digram from [1] explaining how a pattern maps to a unique point on a manifold. The set of points lives on nonlinear manifold. A halfway point corresponds to a superposition of both patterns at half contrast so manifold has to be curved.</p>
 <p><img src="/image-on-manifold.png" alt=""></p>
-<p>Different patterns trace out different manifolds but importantly the Lie operator is the same. The theory of Lie groups says all matrices moving on this manifold belong to same group. Some other examples include the groups of n-dimensional rotations SO(n) (special orthogonal) and rigid motions SE(n) (special Euclidean). The images are explained as the product of transformation and shape. It is reminiscent of Plato&rsquo;s theory of forms, that physical objects and matter are merely imitations of the non-physical ideas.</p>
+<p>The theory of Lie groups says all matrices moving on this manifold belong to same group. Different patterns trace out different manifolds but importantly the Lie operator is the same. Some other examples include the groups of n-dimensional rotations SO(n) (special orthogonal) and rigid motions SE(n) (special Euclidean). The images are explained as the product of transformation and shape. It is reminiscent of Plato&rsquo;s theory of forms, that physical objects are merely imitations of the non-physical ideas.</p>
 <p>Formally, [2] combines Lie Group transformation learning and sparse coding within a Bayesian model. The images become a sparse superposition of shape components followed by a transformation that is parameterized by continuous variables. The generative model is</p>
 $$
 I = T(s) Φα + ε
@@ -95,10 +94,9 @@ $$
 \nabla_{\theta} \ln P_{\theta}(\mathbf{I}) \approx \mathbb{E}_{s \sim P_{\theta}(s | \mathbf{I}, \hat{\alpha})} \left[ \nabla_{\theta} \ln P_{\theta}(\mathbf{I} | s, \hat{\alpha}) \right]
 $$<p>The paper uses a Riemannian ADAM optimizer. The set of values {x} can be represented in weighted superposition. We get sum(N) representational complexity instead of product(N). Here I reproduce the figure from [2], showing the method applied to MNIST digits.</p>
 <p><img src="/mnist-results-sparse-lie.png" alt=""></p>
-<p>Other bits to discuss</p>
+<p>Future reading:</p>
 <ul>
-<li>Section 2.6.2 [6] generating exact solutions to the subset sum problem</li>
-<li>Quantum applications using residue numbers. Just saw some factoring papers</li>
+<li>Section 2.6.2 [7] covers exact solutions to the subset sum problem. Extendn to quantum applications using residue numbers? I&rsquo;ve just seen factoring papers.</li>
 </ul>
 <h2 id="references">References</h2>
 <p>[1] <a href="https://www.youtube.com/watch?v=xnhhp916JNU&amp;list=LL&amp;index=18">Invariance and equivariance in brains and machines</a><br>
