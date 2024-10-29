@@ -1,0 +1,17 @@
+img {
+  display: block !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  max-width: 50% !important;
+}
+
+.flex-container {
+  display: flex !important;
+  align-items: center !important; /* Vertically aligns items */
+}
+
+.flex-container img {
+  margin-left: 15px !important; /* Adds space between image and text */
+  width: 30% !important; /* Adjust as needed */
+}
+

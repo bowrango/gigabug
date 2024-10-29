@@ -10,3 +10,5 @@ onload="renderMathInElement(document.body);"></script>
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
