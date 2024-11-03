@@ -123,3 +123,21 @@ A collection of interesting papers, trying my best to include everything, but of
 [Statistical Physics of Self-Replication](https://arxiv.org/abs/1209.1179)
 
 [Transmit LoRa Frames Without a Radio](https://github.com/cnlohr/lolra?tab=readme-ov-file))
+
+[Decomposition Pipeline for Large-Scale Portfolio Optimization with Applications to Near-Term Quantum Computing](https://arxiv.org/pdf/2409.10301)
+
+[Building a simple oscillator based Ising machine for research and education](https://arxiv.org/pdf/2410.00523)
+
+[Geometric Deep Learning Grids, Groups, Graphs, Geodesics, and Gauges](https://arxiv.org/pdf/2104.13478)
+
+[FABLE: Fast Approximate Quantum Circuits for Block-Encodings](https://arxiv.org/abs/2205.00081)
+
+[Braindrop: A Mixed-Signal Neuromorphic Architecture With a Dynamical Systems-Based Programming Model](https://web.stanford.edu/group/brainsinsilicon/documents/ANeckar2019.pdf)
+
+[Noise-injected analog Ising machines enable ultrafast statistical sampling and machine learning](https://www.nature.com/articles/s41467-022-33441-3)
+
+[Natural gradient and parameter estimation for quantum Boltzmann machines](https://arxiv.org/pdf/2410.24058)
+
+[The Purely Functional Software Deployment Model](https://edolstra.github.io/pubs/phd-thesis.pdf)
+
+[Tensor Algebra on an Optoelectronic Microchip](https://arxiv.org/pdf/2208.06749)

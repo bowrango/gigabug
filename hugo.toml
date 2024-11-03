@@ -3,8 +3,10 @@ languageCode = 'en-us'
 title = 'Gigabug'
 theme = "mytheme"
 
-[markup]
+[params.meta]
+  favicon = false
 
+[markup]
   # https://xyproto.github.io/splash/docs/all.html
   [markup.highlight]
     anchorLineNos = false

@@ -34,13 +34,13 @@ This process can be emulated on a quantum gate-based hardware by discretizing
 $$
 U = e^{-i(A + B)t} = \left( e^{-iAt/p} e^{-iBt/p} \right)^p
 $$
-in small steps. This is known as a Trotter decomposition. Here enters the quantum approximate optimization algorithm (QAOA). It is a special case of VQE with a circuit structure applying $U$ above. [Scott Aaronson gives a recent take on complexity of QAOA](https://scottaaronson.blog/?p=8375). The algorithm learns a parameterized quantum state
+in small steps. This is known as a Trotter decomposition. Here enters the quantum approximate optimization algorithm (QAOA). It is a special case of VQE with a circuit structure applying $U$ above. The algorithm learns a parameterized quantum state
 $$
 |\psi(\gamma, \beta)\rangle = e^{-i\beta_p \hat{H}_M} e^{-i\gamma_p \hat{H}_C} \cdots e^{-i\beta_1 \hat{H}_M} e^{-i\gamma_1 \hat{H}_C} |s\rangle.
 $$
 to minimize the expectation value. The learned parameters $\gamma$ and $\beta$ are application times for the cost and mixer operations. The number of repetitions $p$ truncates the approximation. The algorithm can be viewed as a discretized version of quantum annealing with a parametrized annealing pathway. The model basically learns an adiabatic path evolution from a known ground state to the ground state of the cost Hamiltonian, and upon measurement yields candidate solutions to the original (binary) optimization problem.
 
-But the path destination is more important than the journey. It is not fundamentally necessary for the model to learn the path in order to solve the optimization problem.
+But the destination is more important than the journey, I think. It is not fundamentally necessary for the model to learn the path in order to solve the optimization problem. Or rather, we should allow physics to find the path instead. [Scott Aaronson put out a recent blog about](https://scottaaronson.blog/?p=8375). The trouble with QAOA, and more generally "quantum machine learning", is  
 
 These models are trained unsupervised and suffer from barren plateaus in the cost function landscape.
 I wrote a basic XOR classification model using parameter-shift to compute gradients.
