@@ -4,11 +4,13 @@ date = 2024-09-20
 draft = false
 +++
 
-A collection of interesting papers, trying my best to include everything, but often I forget.
+A collection of interesting papers, mostly for myself to keep track. 
 
 [Variational Quantum Eigensolver Review](https://arxiv.org/abs/2111.05176)
+- big review
 
 [Best Quantum Compiling Problems](https://arxiv.org/abs/2106.05649)
+- compressed quantum shannon decomposition to lowest CX count with lasso
 
 [Synthesis of Quantum Logic Circuits](https://arxiv.org/abs/quant-ph/0406176)
 
@@ -83,12 +85,16 @@ A collection of interesting papers, trying my best to include everything, but of
 [Foundational Patterns for Efficient Quantum Computing](https://arxiv.org/pdf/1907.11513.pdf)
 
 [Thermodynamic AI and the Fluctuation Frontier](https://arxiv.org/pdf/2302.06584.pdf)
+- another classic. This one got me into probabilistic bits.
 
 [Thermodynamic Linear Algebra](https://arxiv.org/abs/2308.05660)
+
+[Compiling machine learning programs via high-level tracing](https://cs.stanford.edu/~rfrostig/pubs/jax-mlsys2018.pdf)
 
 [Thermodynamic Matrix Exponentials and Thermodynamic Parallelism](https://arxiv.org/abs/2311.12759)
 
 [Invariance and equivariance in brains and machines](https://www.youtube.com/watch?v=xnhhp916JNU&list=LL&index=18)
+- really interesting. I got quite distracted for a week or so reading out this and bought an EEG board.
 
 [Disentangling images with Lie group transformations and sparse coding](https://arxiv.org/abs/2012.12071)
 
@@ -101,6 +107,7 @@ A collection of interesting papers, trying my best to include everything, but of
 [Hippocampal memory, cognition, and the role of sleep](https://www.youtube.com/watch?v=c2_rnYdUMiM)
 
 [Computing with Residue Numbers in High-Dimensional Representation](https://www.researchgate.net/publication/375793530_Computing_with_Residue_Numbers_in_High-Dimensional_Representation)
+- curious about residue numbers in quantum. This or another paper had application for subset sum, but I can't remember
 
 [Visual scene analysis via factorization of HD vectors](https://redwood.berkeley.edu/wp-content/uploads/2022/11/HDC-scene-analysis-factorization.pdf)
 
@@ -135,9 +142,141 @@ A collection of interesting papers, trying my best to include everything, but of
 [Braindrop: A Mixed-Signal Neuromorphic Architecture With a Dynamical Systems-Based Programming Model](https://web.stanford.edu/group/brainsinsilicon/documents/ANeckar2019.pdf)
 
 [Noise-injected analog Ising machines enable ultrafast statistical sampling and machine learning](https://www.nature.com/articles/s41467-022-33441-3)
+- discusses leveraging Ising-machine-based Boltzmann sampling
 
 [Natural gradient and parameter estimation for quantum Boltzmann machines](https://arxiv.org/pdf/2410.24058)
 
 [The Purely Functional Software Deployment Model](https://edolstra.github.io/pubs/phd-thesis.pdf)
 
 [Tensor Algebra on an Optoelectronic Microchip](https://arxiv.org/pdf/2208.06749)
+
+[Probabilistic Machine Learning: Advanced Topics](https://probml.github.io/pml-book/book2.html)
+
+[The story of PX4 and Pixhawk](https://auterion.com/company/the-history-of-pixhawk/)
+
+[Analog Paradigm](https://analogparadigm.com/index.html)
+
+[Running Markov Chain Monte Carlo on Modern Hardware and Software](https://arxiv.org/pdf/2411.04260)
+
+[Oscillator-based Ising Machine](https://arxiv.org/pdf/1709.08102)
+- Tianshi Wang and Jaijeet Roychowdhury (2017)
+
+[OIM: Oscillator-based Ising Machines for Solving Combinatorial Optimisation Problems](https://arxiv.org/pdf/1903.07163)
+- Tianshi Wang and Jaijeet Roychowdhury (2019)
+
+[Solving combinatorial optimisation problems using oscillator based Ising machines](https://jaijeet.github.io/research/PDFs/2021-05-05-Springer-Natural-Computing--Wang-Wu-Nobel-Roychowdhury--OIM--invited.pdf)
+- Tianshi Wang and Jaijeet Roychowdhury (2021)
+
+[Deep Differentiable Logic Gate Networks](https://arxiv.org/pdf/2210.08277)
+
+[Convolutional Differentiable Logic Gate Networks](https://arxiv.org/abs/2411.04732v1)
+
+[Thermodynamic Natural Gradient Descent](https://arxiv.org/pdf/2405.13817v1)
+
+[Thermodynamic Computing System for AI Applications](https://arxiv.org/pdf/2312.04836)
+
+[An Elementary Introduction to Kalman Filtering](https://arxiv.org/pdf/1710.04055)
+
+[The Hardware Lottery](https://arxiv.org/pdf/2009.06489)
+
+[Coupled-Oscillator Models: State-Space & Dynamics](https://csc.ucdavis.edu/~chaos/courses/poci/Projects2013/Warner/Coupled_Oscillators_NCASO.pdf)
+
+[State Space Approach to Solving RLC circuits](https://web.mit.edu/16.unified/www/FALL/signalssystems/Lecture13.pdf)
+- nice exercise
+
+[On the State Space Geometry of the Kuramoto–Sivashinsky Flow in a Periodic Domain](https://cns.gatech.edu/~predrag/papers/SCD07.pdf)
+
+[Circuit Synthesis and Electrical Interpretation of Synchronization in the Kuramoto Model](https://ieeexplore.ieee.org/document/8904942)
+
+[Generative models of cortical oscillations: neurobiological implications of the Kuramoto model](https://pmc.ncbi.nlm.nih.gov/articles/PMC2995481/pdf/fnhum-04-00190.pdf)
+
+[A Survey of Spiking Neural Network Accelerator on FPGA](https://arxiv.org/pdf/2307.03910)
+
+[Lyapunov function for the Kuramoto model of nonlinearly coupled oscillators](https://link.springer.com/article/10.1007/BF01048044)
+- original paper, 1993
+
+[Novel Computing Paradigms using Oscillators](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12.pdf)
+- one of my favorite papers
+
+[Solving combinatorial optimisation problems using oscillator based Ising machines](https://jaijeet.github.io/research/PDFs/2021-05-05-Springer-Natural-Computing--Wang-Wu-Nobel-Roychowdhury--OIM--invited.pdf)
+
+[Use of the CMOS Unbuffered Inverter in Oscillator Circuits](https://www.ti.com/lit/an/szza043/szza043.pdf?ts=1732197694421&ref_url=https%253A%252F%252Fwww.google.com%252F)
+
+[Harmonic Oscillators in CMOS—A Tutorial Overview](https://ieeexplore.ieee.org/document/9530265)
+- IEEE (2021)
+- overview of noise models
+
+[Autonomous Probabilistic Coprocessing with Petaflips per Second](https://arxiv.org/pdf/1907.09664)
+- Purdue
+- clockless circuit represents asynchronous parallelism to realize Boltzmann Machines in hardware
+- no asymptotic guarantees for convergence
+- MATLAB MEX interface to AWS FPGA
+
+[Hardware-Aware In Situ Learning Based on Stochastic Magnetic Tunnel Junctions](https://journals.aps.org/prapplied/pdf/10.1103/PhysRevApplied.17.014016)
+
+[Roadmap for unconventional computing with nanotechnology](https://iopscience.iop.org/article/10.1088/2399-1984/ad299a/pdf)
+
+[A Reliable and Efficient Procedure for Oscillator PPV Computation, With Phase Noise Macromodeling Applications](https://www.researchgate.net/publication/3224937_A_reliable_and_efficient_procedure_for_oscillator_PPV_computation_with_phase_noise_macromodeling_applications)
+- Jaijeet Roychowdhury
+
+[A Modern Primer on Processing in Memory](https://arxiv.org/pdf/2012.03112)
+- good reads
+
+[A Simplified Phase Model for Oscillator Based Computing](https://arxiv.org/pdf/1508.00051)
+
+[Analysis and design of sub-harmonically injection locked oscillators](https://www.researchgate.net/publication/254023694_Analysis_and_design_of_sub-harmonically_injection_locked_oscillators)
+- Jaijeet Roychowdhury (2013?)
+
+[Synchronization in Complex Networks of Phase Oscillators: A Survey](http://motion.me.ucsb.edu/pdf/2013b-db.pdf)
+
+[Rigorous Q Factor Formulation and Characterization for Nonlinear Oscillators](https://arxiv.org/pdf/1710.02015)
+- Tianshi Wang and Jaijeet Roychowdhury (2017)
+
+[Methods for Computing Periodic Steady-State - Part II](https://ocw.mit.edu/courses/6-336j-introduction-to-numerical-simulation-sma-5211-fall-2003/fe6022ba6c3ca191675836d3bb5d4fcd_lec16.pdf)
+
+[Notes on Oscillators](https://people.engr.tamu.edu/s-sanchez/665%20Oscillators.pdf)
+
+[An integrated coupled oscillator network to solve optimization problems](https://www.nature.com/articles/s44172-024-00261-w)
+- MATLAB
+- nice overview table
+- programmable all-to-all
+
+[Analyzing Oscillators using Describing Functions](https://arxiv.org/pdf/1710.02000)
+- Tianshi Wang (2017)
+- tf analysis of phase perturbation and locking
+- stability condition
+
+[Thermodynamic Algorithms for Quadratic Programming](https://arxiv.org/pdf/2411.14224)
+
+[A coherent Ising machine for 2000-node optimization problems](https://www.researchgate.net/publication/309323862_A_coherent_Ising_machine_for_2000-node_optimization_problems)
+- optical pumps
+- overview of experimental setup
+
+[Dependence of LC VCO Oscillation Frequency on Bias Current](https://web.engr.oregonstate.edu/~moon/research/files/iscas06_lc.pdf)
+- more notes on cross-coupled LC CMOS
+
+[Digitally Synthesized Stochastic Flash ADC Using Only Standard Digital Cells](https://www.benjamin.hershberg.com/wp-content/papercite-data/papers/2011-vlsi-stochastic-adc.pdf)
+- simple way to use digital gates to perform AD conversion, which usually requires analog components. 
+
+[An Ising solver chip based on coupled ring oscillators with a 48-node all-to-all connected array architecture](https://www.nature.com/articles/s41928-023-01021-y)
+- 1.2V
+- integer weights
+- cross bar arrays
+
+[Analog Coupled Oscillator Based Weighted Ising Machine](https://www.nature.com/articles/s41598-019-49699-5)
+- MIT Lincoln Lab, 2019
+- breadboard, 4 nodes fully connected with cross bar array of digital pots
+- no feedback
+- get phases from a moving window Fourier transform on time-domain amplitude
+- time-to-solution scales with the oscillator frequency
+- voltage amplitudes of each oscillator are shifted by 10 V to help distinguish
+
+[Provable bounds for noise-free expectation values computed from noisy samples](https://arxiv.org/abs/2312.00733)
+- Talked to IBM about CVaR
+
+[A Rigorous Graphical Technique for Predicting Sub-harmonic Injection Locking in LC Oscillators](https://jaijeet.github.io/research/PDFs//2014-06-DAC-Bhushan-Graphical-SHIL.pdf)
+- (2014)
+- MATLAB
+
+[Design Issues in CMOS Differential LC Oscillators](http://smirc.stanford.edu/papers/JSSC99MAY-ali.pdf)
+- (1999)

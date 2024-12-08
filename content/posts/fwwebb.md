@@ -1,11 +1,11 @@
 +++
-title = 'highschool engineering'
+title = 'high school engineer'
 date = 2024-10-29T19:13:53-04:00
-draft = true
+draft = false
 +++
 
-Recalling on some work I did in highschool. 
+I started CAD before programming. Highschool lunches were spent in the computer lab.
 
-I did some programming but didn't truly start until college. I mostly made CAD models. 
+Freelance design for fiber optic layouts of an F.W. Webb warehouse. 
 
-Designed a fiber optic cable layout for an F.W. Webb warehouse. Const
+That led to a summer gig designing HVAC layouts for residential and commerical. I got caught playing the balloons tower defense stratedy game and got banished to the warehouse for a couple days. It was fun painting the office, though. Once I stacked up extra cardboard and took a nap underneath the staircase. 
