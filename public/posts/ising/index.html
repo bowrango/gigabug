@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -10,11 +10,11 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
 onload="renderMathInElement(document.body);"></script>
-<title>ising machines | Gigabug</title>
+<title>ising machine | Gigabug</title>
 
-      <link rel="stylesheet" href="/css/main.min.5c8cdd1b23b58372f4c0ca4ec1be67024ec7217946ef66719e034e4d9ac80838.css" integrity="sha256-XIzdGyO1g3L0wMpOwb5nAk7HIXlG72ZxngNOTZrICDg=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
 
-      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+      <script src="/js/main.js"></script>
 
 
 <link rel="stylesheet" href="/css/custom.css">
@@ -42,86 +42,106 @@ onload="renderMathInElement(document.body);"></script>
   </header>
   <main>
     
-  <h1>ising machines</h1>
+  <h1>ising machine</h1>
 
   
   
   <time datetime="2024-10-31T20:04:35-04:00">October 31, 2024</time>
 
-  <p>An &ldquo;Ising machine&rdquo; is a physic device to solve NP Ising problems</p>
-<p>This is my design moodboard for an electric oscillator network to study probabilistic bits.</p>
-<p>Its particularly inspired by <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf">current research</a>. Lyapunov theory is applied to the generalized Kurumoto model to contruct an &ldquo;energy function&rdquo; for stability analysis of chaotic coupled oscillators. A control input synchronizes the oscillations to a &ldquo;low energy&rdquo; steady state, and induces locking to binarize the phases.</p>
-<p><img src="/phase-lock-devices.png" alt=""></p>
-<p>Spread in oscillators natural frequency contributes a linear term in the global Lyapunov function</p>
-<p>This is what Normal Computing predicts
-<img src="/normal-roadmap.png" alt=""></p>
-<h3 id="overview-and-results-from-another-machine">Overview and results from another machine</h3>
-<ul>
-<li>1440 oscillators, 11,724 couplings; 2584 are freely routable, rest are locally fixed</li>
-<li>MATLAB for test management, OIM configuration, timing scheduling, and analysis</li>
-<li>AMD Threadripper Pro 5965WX 24-core, 256GB RAM took ~4.67 hours per problem</li>
-</ul>
-<p><img src="/matlab-ising-pcb.png" alt=""></p>
-<ul>
-<li>MIT Lincoln Lab</li>
-<li>breadboard, 4 nodes fully connected with cross bar array of digital pots</li>
-<li>no feedback</li>
-<li>get phases from a moving window Fourier transform on time-domain amplitude</li>
-<li>time-to-solution scales with the oscillator frequency</li>
-<li>voltage amplitudes of each oscillator are shifted by 10 V to help distinguish
-<img src="/mit-breadboard-lc.png" alt="">
-<img src="/ising-projection.png" alt="">]
-<img src="/circ-graph-comparison.png" alt="">]</li>
-</ul>
-<p><img src="/clk-freq-impact.png" alt=""></p>
-<p><img src="/oim-comparison-tbl.png" alt=""></p>
-<p>Computation is in-memory</p>
-<p>This is also done with photonic oscillators. The phase of pump and signal should be locked for amplitude (Figure from Stanford CIM).</p>
-<p>The injection locking signal, and its application in the context of LC-oscillator systems is mathematically similar to the case of the degenerate optical parametric oscillator used in previous optical Ising machines12,13, where optical pump pulses at twice the optical oscillation frequency are used to create binary phase values.</p>
-<p><img src="/phaselock.png" alt=""></p>
-<h3 id="software">Software</h3>
+  <p>An &ldquo;Ising machine&rdquo; is a physic device to solve NP-complete combinatorial problems mapped to the Ising model</p>
+<p>power grid -&gt; scheduling problem -&gt; combinatorial objective -&gt; Ising machine -&gt; coupled oscillators -&gt; power grid</p>
+<p>complex systems are self-similar at across time and length scales</p>
+<p>This is my design moodboard for an electric oscillator network to study probabilistic bits. Probably photonics are end game, but a breadbroad is shippable.</p>
+<p>This project is particularly inspired by <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf">current research</a>. Lyapunov theory is applied to the generalized Kurumoto model to contruct an &ldquo;energy function&rdquo; for stability analysis of chaotic coupled oscillators. A control input synchronizes the oscillations to a &ldquo;low energy&rdquo; steady state, and induces locking to binarize the phases.</p>
+<p>In-memory computation. Different fundamental architecture
+Spread in oscillators natural frequency contributes a linear term in the global Lyapunov function</p>
+<p>Direct SPICE-level simulation of network is inefficient and inaccurate.
+How to determine gain schedule and sync input?</p>
 <ul>
 <li>Waveform generator and oscilliscope interface with MATLAB. It can generate and flash C++ to the Arduino.</li>
 <li>Use <code>diffrax</code> and <code>thermox</code> for GPU acceleration. Jobs will be sent to local server.</li>
 </ul>
-<p>Code for this project is on <a href="https://github.com/bowrango/ising-machine">my Github</a>. The maxcut value improves when the node voltage signals are phase locked.</p>
-<p><img src="/kuramoto.png" alt=""></p>
-<ul>
-<li></li>
-</ul>
-<p>Direct SPICE-level simulation of network is inefficient and inaccurate.</p>
-<p>How to determine gain schedule and sync input?</p>
-<h3 id="hardware">Hardware</h3>
-<p>Take design inspiration from photonics and current electric chips. Moodboard.</p>
-<p><img src="/normal-chip-2023.png" alt=""></p>
-<p>There are two main components</p>
-<p><strong>Oscillator</strong>.</p>
-<ul>
-<li>
-<p>Complementary cross-coupled CMOS LC oscillator. Implemented with</p>
-</li>
-<li>
-<p>~5V Vdd</p>
-</li>
-<li>
-<p>OIM8/OIM32 use 33lH inductors with 30pF capacitors for 5MHz natural frequency</p>
-</li>
-<li>
-<p>OIM64/OIM240 use digital potentiometer (AD5206), reduced to 1MHz</p>
-</li>
-<li>
-<p>cross-coupled inverter (TI SN74HC04N), fixed inductor, trimmer capacitor; XOR gate (TI SN74HC86N ) for readout</p>
-</li>
-<li>
-<p>sync at GND to induce locking</p>
-</li>
-</ul>
-<p><strong>Coupler</strong>.</p>
-<ul>
-<li>coupling resistors with conductances Jij/100kΩ</li>
-<li>OIM32/240 chimera, OIM64 grid. Consider if synchronization connection should be dedicated</li>
-</ul>
+<p>Code for this project is on <a href="https://github.com/bowrango/ising-machine">my Github</a>. The maxcut value improves when the node voltage signals are phase locked.
+<img src="/kuramoto.png" alt="">
+<img src="/phase-lock-devices.png" alt=""></p>
 <p>Quality factor and PPV analysis</p>
+<p>Arduino needs to control many potentiometers -&gt; expand digital IO</p>
+<ul>
+<li>SPI port expander (MCP23S17); takes MOSI, MISO, SCLK, and a CS</li>
+<li>3 hardware pins for 8 devices on bus</li>
+</ul>
+<h3 id="existing-pcbs">Existing PCBS</h3>
+<ul>
+<li>there is a lot out there
+<img src="/tech-for-ising-machines.png" alt=""></li>
+</ul>
+<p><img src="/fig334.png" alt=""></p>
+<ul>
+<li>8 grid-connected nodes</li>
+<li>transistor arrays (ALD1106/ALD1107), 10m inductors, 6.8nF capacitors for ~10kHz</li>
+<li>SYNC input at 20kHz</li>
+<li>fixed inductors and rotary potentiometers</li>
+</ul>
+<p><img src="/fig480.png" alt=""></p>
+<ul>
+<li>8 grid-connected nodes</li>
+<li>cross-coupled inverters (TI SN74HC04N), fixed 33μH inductors, trimmer capacitors (tuned ~30pF), 5V single supply</li>
+<li>SYNC supplied to GND of inverter chips</li>
+<li>manually plug in resistors and potentiometers for different problems</li>
+<li>why are pots only used for diagonal edges?</li>
+<li>fixed inductors and rotary potentiometers</li>
+<li>read the oscillator phases using xor gates (TI SN74HC86N)</li>
+<li>5MHz</li>
+</ul>
+<p><img src="/fig490.png" alt=""></p>
+<ul>
+<li>32 Chimera-connected nodes</li>
+<li>cross-coupled inverters (TI SN74HC04N), fixed inductors, trimmer capacitors, 5V single supply</li>
+<li>rotary potentiometer for coupling; each one has male pin connectors to set polarity by shorting different pins</li>
+<li>5MHz</li>
+</ul>
+<p><img src="/fig414.png" alt=""></p>
+<ul>
+<li>64 grid-connected nodes; 4 per PCB</li>
+<li>cross-coupled inverters (TI SN74HC04N), fixed inductors, trimmer capacitors, 5V single supply</li>
+<li>digital potentiometer (AD5206) for coupling; each one uses one channel and single pole double throw on-off-on switch for polarity</li>
+<li>192 couplings?</li>
+<li>1MHz</li>
+</ul>
+<p><img src="/fig415.png" alt=""></p>
+<ul>
+<li>240 nodes; 12 dense-connected per PCB with 1200 couplings</li>
+<li>cross-coupled inverters (TI SN74HC04N), fixed inductors, trimmer capacitors, 5V single supply</li>
+<li>digital potentiometer (AD5206) for coupling; uses wiper position to switch polarity and eliminate switches</li>
+<li>motherboard edge connects 20 PCBs in 4-by-5 toroidal grid</li>
+<li>1MHz</li>
+<li>∼5W for all nodes and peripheral circuitry, excluding ony LEDs</li>
+</ul>
+<p><img src="/normal-chip-2023.png" alt="">
+<img src="/normal-roadmap.png" alt=""></p>
+<ul>
+<li>Normal Computing &hellip; thought I saw a green chip at some point</li>
+</ul>
+<p><img src="/matlab-ising-pcb.png" alt="">
+<img src="/clk-freq-impact.png" alt="">
+<img src="/oim-comparison-tbl.png" alt=""></p>
+<ul>
+<li>1440 nodes, 11,724 couplings; 2584 are freely routable, rest are locally fixed</li>
+<li>MATLAB for test management, OIM configuration, timing scheduling, and analysis</li>
+<li>AMD Threadripper Pro 5965WX 24-core, 256GB RAM took ~4.67 hours per problem</li>
+</ul>
+<p><img src="/mit-breadboard-lc.png" alt="">
+<img src="/ising-projection.png" alt="">
+<img src="/circ-graph-comparison.png" alt=""></p>
+<ul>
+<li>MIT Lincoln Lab</li>
+<li>4 fully-connected nodes with cross bar array of digital pots</li>
+<li>no feedback</li>
+<li>get phases from a moving window Fourier transform on time-domain amplitude</li>
+<li>time-to-solution scales with the oscillator frequency</li>
+</ul>
+<p>The injection locking signal, and its application in the context of LC-oscillator systems is mathematically similar to the case of the degenerate optical parametric oscillator used in previous optical Ising machines12,13, where optical pump pulses at twice the optical oscillation frequency are used to create binary phase values. The phase of pump and signal should be locked for amplitude (Figure from Stanford CIM).
+<img src="/phaselock.png" alt=""></p>
 
   
 

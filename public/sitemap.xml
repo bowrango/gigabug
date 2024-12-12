@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://gigabug.org/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-12-07T23:04:13-05:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-12-07T23:04:13-05:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/posts/ising/</loc>
+    <loc>http://localhost:1313/posts/ising/</loc>
     <lastmod>2024-10-31T20:04:35-04:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/posts/fwwebb/</loc>
+    <loc>http://localhost:1313/posts/fwwebb/</loc>
     <lastmod>2024-10-29T19:13:53-04:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/posts/bolt/</loc>
+    <loc>http://localhost:1313/posts/bolt/</loc>
     <lastmod>2024-10-24T21:05:44-04:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/posts/reading/</loc>
+    <loc>http://localhost:1313/posts/reading/</loc>
     <lastmod>2024-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/posts/brain-image-factorization/</loc>
+    <loc>http://localhost:1313/posts/brain-image-factorization/</loc>
     <lastmod>2024-09-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/posts/gate-decomp/</loc>
+    <loc>http://localhost:1313/posts/gate-decomp/</loc>
     <lastmod>2024-09-12T00:15:22-04:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/posts/clash-royale/</loc>
+    <loc>http://localhost:1313/posts/clash-royale/</loc>
     <lastmod>2024-09-10T00:15:22-04:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/posts/quantum-algo-thoughts/</loc>
+    <loc>http://localhost:1313/posts/quantum-algo-thoughts/</loc>
     <lastmod>2024-09-04T23:10:07-04:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/about/about/</loc>
+    <loc>http://localhost:1313/about/about/</loc>
     <lastmod>2024-09-04T21:28:27-04:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-09-04T21:28:27-04:00</lastmod>
   </url><url>
-    <loc>https://gigabug.org/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://gigabug.org/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

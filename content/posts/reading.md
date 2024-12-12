@@ -9,16 +9,24 @@ A collection of interesting papers, mostly for myself to keep track.
 [Variational Quantum Eigensolver Review](https://arxiv.org/abs/2111.05176)
 - big review
 
+[A variational eigenvalue solver on a quantum processor](https://arxiv.org/pdf/1304.3061)
+- original VQE paper (2013)
+
 [Best Quantum Compiling Problems](https://arxiv.org/abs/2106.05649)
 - compressed quantum shannon decomposition to lowest CX count with lasso
 
 [Synthesis of Quantum Logic Circuits](https://arxiv.org/abs/quant-ph/0406176)
+- proposed the Quantum Shannon Decomposition for arbitrary unitary matrix
+- referenced this paper and other implementing unitaryGate for MATLAB
+- had some puzzles about the additional optimizations, emailed Shende and he got back!
 
 [Approximate Quantum Compiler](https://qiskit.org/documentation/apidoc/synthesis_aqc.html)
 
 [Optimization of Quantum Circuit Mapping](https://arxiv.org/pdf/1907.02686)
 
 [Elementary Gates for Quantum Computation](https://arxiv.org/abs/quant-ph/9503016)
+- certified classic (1995)
+- designed several functions from this
 
 [Variational Quantum Factoring](https://arxiv.org/pdf/1808.08927.pdf)
 
@@ -27,22 +35,25 @@ A collection of interesting papers, mostly for myself to keep track.
 [Tensor Networks for Complex Systems](https://arxiv.org/abs/1812.04011)
 
 [Optimal Qubit Assignment and Routing via Integer Programming (Qiskit)](https://arxiv.org/abs/2106.06446)
+- so ironic qubit mapping is already NP-complete
 
 [CS 269Q Lecture Notes](https://cs269q.stanford.edu/lectures/lecture12.pdf)
 
 [Graph-Coupled Oscillator Networks](https://arxiv.org/abs/2202.02296)
+- see how the Kuromoto/Adler equations fit into this framework
 
 [Graph Neural Diffusion](https://arxiv.org/abs/2106.10934)
 
 [Quantum Approximate Optimization Algorithm](https://arxiv.org/abs/1411.4028)
+- the QAOA paper (2014)
 
 [Gradients of Parameterized Quantum Gates Using the Parameter-Shift Rule](https://arxiv.org/pdf/1905.13311.pdf)
+- Gavin E. Crooks (2019)
 
 [Variational Quantum Algorithms](https://arxiv.org/abs/2012.09265)
 
-[Machine Learning Compilation of Quantum Circuits – Experiments](https://idnm.github.io/blog/qiskit/jax/machine%20learning/compilation/2021/12/13/Machine-learning-compilation-of-quantum-circuits-experiments.html#3-qubit-example)
-
 [Quantum Natural Gradients](https://arxiv.org/abs/1909.02108)
+- algorithm is for computing a block-diagonal approximation to Fubini-Study metric tensor for parametrized quantum circuits
 
 [Quantum Natural Gradient Demo (Pennylane)](https://pennylane.ai/qml/demos/tutorial_quantum_natural_gradient.html)
 
@@ -259,6 +270,7 @@ A collection of interesting papers, mostly for myself to keep track.
 - simple way to use digital gates to perform AD conversion, which usually requires analog components. 
 
 [An Ising solver chip based on coupled ring oscillators with a 48-node all-to-all connected array architecture](https://www.nature.com/articles/s41928-023-01021-y)
+- (2023)
 - 1.2V
 - integer weights
 - cross bar arrays
@@ -280,3 +292,47 @@ A collection of interesting papers, mostly for myself to keep track.
 
 [Design Issues in CMOS Differential LC Oscillators](http://smirc.stanford.edu/papers/JSSC99MAY-ali.pdf)
 - (1999)
+
+[Ising machines: Hardware solvers for combinatorial optimization problems](https://arxiv.org/pdf/2204.00276)
+- (2022)
+
+[Experimental investigation of performance differences between Co- herent Ising Machines and a quantum annealer](https://arxiv.org/pdf/1805.05217)
+- (2019)
+
+[Equivalence of coupled parametric oscillator dynamics to Lagrange multiplier primal-dual optimization](https://arxiv.org/pdf/2204.02472)
+- MIT, Sandia National Labs, UC Berkeley (2022)
+- MATLAB, nice appendix with derivations and plots
+- area consumption of all-to-all scales O(N^2), time-to-solution scales as O(2^√N)
+
+[A unifying framework for mean-field theories of asymmetric kinetic Ising systems](https://www.nature.com/articles/s41467-021-20890-5)
+- (2021)
+
+[Nonequilibrium thermodynamics of the asymmetric Sherrington-Kirkpatrick model](https://www.nature.com/articles/s41467-023-39107-y)
+- (2023)
+
+[Late Breaking Results: New Computational Results and Hardware Prototypes for Oscillator-based Ising Machines](https://arxiv.org/pdf/1904.10211)
+- Tianshi Wang and Jaijeet Roychowdhury (2019)
+- lots of overlap with other papers but I got more clues
+
+[QCLAB++: Simulating Quantum Circuits on GPUs](https://arxiv.org/abs/2303.00123)
+- bitshift masks for state vector simulation
+- ran some benchmarking
+
+[Explicit Quantum Circuits for Block Encodings of Certain Sparse Matrices](https://arxiv.org/abs/2203.10236)
+- O(poly(n)) elementary quantum gates for n qubits
+
+[FABLE: Fast Approximate Quantum Circuits for Block-Encodings](https://arxiv.org/abs/2205.00081)
+- some of the quantum gates in MATLAB have this feature
+- curious about how this proof applies to unitaryGate
+
+[An algebraic quantum circuit compression algorithm for Hamiltonian simulation](https://arxiv.org/pdf/2108.03283)
+
+[QASMTrans: A QASM based Quantum Transpiler Framework for NISQ Devices](https://arxiv.org/abs/2308.07581)
+- integrated this with MATLAB
+- does sabre with a modified lookahead heuristic
+- t|ket> would be better but has complicated license 
+
+[Stability and decay of Bloch oscillations in presence of time-dependent nonlinearity](https://arxiv.org/pdf/1109.2798)
+
+[Recent Advances in Coupled Oscillator Theory](https://arxiv.org/abs/2001.10620)
+
