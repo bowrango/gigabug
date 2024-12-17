@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gigabug</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://gigabug.org/posts/</link>
     <description>Recent content on Gigabug</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 31 Oct 2024 20:04:35 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gigabug.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ising machine</title>
-      <link>http://localhost:1313/posts/ising/</link>
+      <link>https://gigabug.org/posts/ising/</link>
       <pubDate>Thu, 31 Oct 2024 20:04:35 -0400</pubDate>
-      <guid>http://localhost:1313/posts/ising/</guid>
-      <description>&lt;p&gt;An &amp;ldquo;Ising machine&amp;rdquo; is a physic device to solve NP-complete combinatorial problems mapped to the Ising model&lt;/p&gt;&#xA;&lt;p&gt;power grid -&amp;gt; scheduling problem -&amp;gt; combinatorial objective -&amp;gt; Ising machine -&amp;gt; coupled oscillators -&amp;gt; power grid&lt;/p&gt;&#xA;&lt;p&gt;complex systems are self-similar at across time and length scales&lt;/p&gt;&#xA;&lt;p&gt;This is my design moodboard for an electric oscillator network to study probabilistic bits. Probably photonics are end game, but a breadbroad is shippable.&lt;/p&gt;</description>
+      <guid>https://gigabug.org/posts/ising/</guid>
+      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;&#xA;&lt;p&gt;The Ising model is of fundamental computational interest because any problem in the&#xA;complexity class NP can be formulated as an Ising problem with polynomial complexity.&lt;/p&gt;&#xA;$$&#xA;FIXME&#xA;H = \sum_{(i, j)} J_{ij}s_i s_j - h \sum_i s_i&#xA;$$&lt;p&gt;where $\textbf{J}$ is the weight matrix and $\textbf{h}$ is the bias. The state probability is then determined by the Boltzmann distribution&lt;/p&gt;&#xA;$$&#xA;P(E) = \frac{e^{-E/k_BT}}{\sum_{i} e^{-E_i / k_B T}}&#xA;$$&lt;p&gt;An Ising machine is a physic device obeying this distribution. It represents probablistic logic and has general applications across optimization and generative machine learning.&lt;/p&gt;</description>
     </item>
     <item>
       <title>high school engineer</title>
-      <link>http://localhost:1313/posts/fwwebb/</link>
+      <link>https://gigabug.org/posts/fwwebb/</link>
       <pubDate>Tue, 29 Oct 2024 19:13:53 -0400</pubDate>
-      <guid>http://localhost:1313/posts/fwwebb/</guid>
+      <guid>https://gigabug.org/posts/fwwebb/</guid>
       <description>&lt;p&gt;I started CAD before programming. Highschool lunches were spent in the computer lab.&lt;/p&gt;&#xA;&lt;p&gt;Freelance design for fiber optic layouts of an F.W. Webb warehouse.&lt;/p&gt;&#xA;&lt;p&gt;That led to a summer gig designing HVAC layouts for residential and commerical. I got caught playing the balloons tower defense stratedy game and got banished to the warehouse for a couple days. It was fun painting the office, though. Once I stacked up extra cardboard and took a nap underneath the staircase.&lt;/p&gt;</description>
     </item>
     <item>
       <title>anduril bolt</title>
-      <link>http://localhost:1313/posts/bolt/</link>
+      <link>https://gigabug.org/posts/bolt/</link>
       <pubDate>Thu, 24 Oct 2024 21:05:44 -0400</pubDate>
-      <guid>http://localhost:1313/posts/bolt/</guid>
-      <description>&lt;p&gt;Notes on the Anduril Bolt drone for estimating battery and motor requirements.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.forbes.com/sites/davidhambling/2024/10/16/andurils-bolt-m-is-the-future-for-us-forces-if-they-can-afford-it/&#34;&gt;“In round numbers, typical Bolt configurations are in the low tens of thousands of dollars, depending on the exact payload and configuration.&amp;quot;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Intended for intelligence, surveillance, reconnaissance, search and rescue&lt;/li&gt;&#xA;&lt;li&gt;Swappable batteries for extending flight time&lt;/li&gt;&#xA;&lt;li&gt;Rectangular frame makes sense to accommodate larger battery. X frames are more common to FPV racing drones because of their similar rotational inertias.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/bolt.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+      <guid>https://gigabug.org/posts/bolt/</guid>
+      <description>&lt;p&gt;Notes on the Anduril Bolt drone for estimating battery and motor requirements.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.forbes.com/sites/davidhambling/2024/10/16/andurils-bolt-m-is-the-future-for-us-forces-if-they-can-afford-it/&#34;&gt;“In round numbers, typical Bolt configurations are in the low tens of thousands of dollars, depending on the exact payload and configuration.&amp;quot;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Intended for intelligence, surveillance, reconnaissance, search and rescue&lt;/li&gt;&#xA;&lt;li&gt;Swappable batteries for extending flight time&lt;/li&gt;&#xA;&lt;li&gt;Rectangular frame makes sense to accommodate larger battery. X frames are more common to FPV racing drones because of their similar rotational inertias.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://gigabug.org/bolt.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>reading</title>
-      <link>http://localhost:1313/posts/reading/</link>
+      <link>https://gigabug.org/posts/reading/</link>
       <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/reading/</guid>
+      <guid>https://gigabug.org/posts/reading/</guid>
       <description>&lt;p&gt;A collection of interesting papers, mostly for myself to keep track.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2111.05176&#34;&gt;Variational Quantum Eigensolver Review&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;big review&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1304.3061&#34;&gt;A variational eigenvalue solver on a quantum processor&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;original VQE paper (2013)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.05649&#34;&gt;Best Quantum Compiling Problems&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;compressed quantum shannon decomposition to lowest CX count with lasso&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/0406176&#34;&gt;Synthesis of Quantum Logic Circuits&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;proposed the Quantum Shannon Decomposition for arbitrary unitary matrix&lt;/li&gt;&#xA;&lt;li&gt;referenced this paper and other implementing unitaryGate for MATLAB&lt;/li&gt;&#xA;&lt;li&gt;had some puzzles about the additional optimizations, emailed Shende and he got back!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiskit.org/documentation/apidoc/synthesis_aqc.html&#34;&gt;Approximate Quantum Compiler&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>visual image processing</title>
-      <link>http://localhost:1313/posts/brain-image-factorization/</link>
+      <link>https://gigabug.org/posts/brain-image-factorization/</link>
       <pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/brain-image-factorization/</guid>
+      <guid>https://gigabug.org/posts/brain-image-factorization/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m interested in perception and signaling systems, particularly in humans. This post is a hodgepodge of various sources about biological mechanisms for visual processing, and inspired mathematial models. Back in undergraduate, I experimented with &lt;a href=&#34;https://github.com/bowrango/dashcam-misalignment/tree/main&#34;&gt;RNNs to predict dash camera misalignment&lt;/a&gt;, and although a basic model, it got me thinking about factoring objects from their transformations in video. Computer scientists seem to think much of biology operates like machine learning, but the biologists push back. What can we learn from the visual data pipeline to the brain?&lt;/p&gt;</description>
     </item>
     <item>
       <title>quantum gate decomposition</title>
-      <link>http://localhost:1313/posts/gate-decomp/</link>
+      <link>https://gigabug.org/posts/gate-decomp/</link>
       <pubDate>Thu, 12 Sep 2024 00:15:22 -0400</pubDate>
-      <guid>http://localhost:1313/posts/gate-decomp/</guid>
+      <guid>https://gigabug.org/posts/gate-decomp/</guid>
       <description>&lt;p&gt;This is my attempt to decompose an arbitrary N-qubit unitary using the minimum number of CX gates. It&amp;rsquo;s been my puzzle since I wrote &lt;a href=&#34;https://www.mathworks.com/help/matlab/ref/unitarygate.html&#34;&gt;unitaryGate&lt;/a&gt;, which implements the best known method that uses twice the lower bound. This work explores my thoughts on improving the algorithm. To my knowledge there is no general algorithm for arbitrary matrices using the minimum number of CX gates.&lt;/p&gt;&#xA;&lt;p&gt;Quantum circuits are executed using the primitive operations of the quantum computer. The matrices of this primitive set form a basis of the unitary group $U(2^N)$. Any 1 qubit rotation, a unitary matrix in U(2), can be decomposed into 3 rotations like Euler rotations. The figure below shows the smallest circuit for any 2-qubit unitary in the basis {CX,RY,RZ}. The circuit uses 3 2-qubit CX gates and 15 1-qubit rotation gates.&lt;/p&gt;</description>
     </item>
     <item>
       <title>clash royale</title>
-      <link>http://localhost:1313/posts/clash-royale/</link>
+      <link>https://gigabug.org/posts/clash-royale/</link>
       <pubDate>Tue, 10 Sep 2024 00:15:22 -0400</pubDate>
-      <guid>http://localhost:1313/posts/clash-royale/</guid>
+      <guid>https://gigabug.org/posts/clash-royale/</guid>
       <description>&lt;p&gt;Data analysis project from 2020 on the Clash Royale mobile game.&lt;/p&gt;&#xA;&lt;p&gt;Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was also exploring conditional probability networks and graph attention for edge prediction. The goal was to provide utilities for time-series graph analysis of player trends. The project is deprecated but I dream of reviving it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>thoughts on quantum software</title>
-      <link>http://localhost:1313/posts/quantum-algo-thoughts/</link>
+      <link>https://gigabug.org/posts/quantum-algo-thoughts/</link>
       <pubDate>Wed, 04 Sep 2024 23:10:07 -0400</pubDate>
-      <guid>http://localhost:1313/posts/quantum-algo-thoughts/</guid>
+      <guid>https://gigabug.org/posts/quantum-algo-thoughts/</guid>
       <description>&lt;p&gt;Software design for quantum computing and thermodynamic hardware.&lt;/p&gt;&#xA;&lt;p&gt;Modern quantum computing software follows deep learning and wants to train models. The model learns a parameterized quantum state that minimizes a cost expectation. The variational quantum eigensolver (VQE) is the dubbed algorithm for this procedure. The cost Hamiltonian is a Hermitian matrix, expressed as a weighted sum of projective measurements. The model is a parameterized quantum circuit $U$, and optimized to find the eigenstate&#xA;&lt;/p&gt;</description>
     </item>
   </channel>

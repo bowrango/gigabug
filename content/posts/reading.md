@@ -153,6 +153,7 @@ A collection of interesting papers, mostly for myself to keep track.
 [Braindrop: A Mixed-Signal Neuromorphic Architecture With a Dynamical Systems-Based Programming Model](https://web.stanford.edu/group/brainsinsilicon/documents/ANeckar2019.pdf)
 
 [Noise-injected analog Ising machines enable ultrafast statistical sampling and machine learning](https://www.nature.com/articles/s41467-022-33441-3)
+- feature enhancement for Zach's DIMPLE project
 - discusses leveraging Ising-machine-based Boltzmann sampling
 
 [Natural gradient and parameter estimation for quantum Boltzmann machines](https://arxiv.org/pdf/2410.24058)
@@ -198,6 +199,8 @@ A collection of interesting papers, mostly for myself to keep track.
 [On the State Space Geometry of the Kuramoto–Sivashinsky Flow in a Periodic Domain](https://cns.gatech.edu/~predrag/papers/SCD07.pdf)
 
 [Circuit Synthesis and Electrical Interpretation of Synchronization in the Kuramoto Model](https://ieeexplore.ieee.org/document/8904942)
+- wave digital model
+- no hardware experiments
 
 [Generative models of cortical oscillations: neurobiological implications of the Kuramoto model](https://pmc.ncbi.nlm.nih.gov/articles/PMC2995481/pdf/fnhum-04-00190.pdf)
 
@@ -336,3 +339,51 @@ A collection of interesting papers, mostly for myself to keep track.
 
 [Recent Advances in Coupled Oscillator Theory](https://arxiv.org/abs/2001.10620)
 
+[Creating electronic oscillator-based Ising machines without external injection locking](https://www.nature.com/articles/s41598-021-04057-2)
+- engineered feedback to generate two decay time constants which effectively generates 2nd harmonic internally; implemented using P-MOS (ALD1107)
+- used opamp based Schmitt trigger (LM741) stabilized with negative feedback
+- coupled using discrete capacitors 
+- 8V
+
+[Oscillator-based optimization: design, emulation, and implementation](https://link.springer.com/article/10.1140/epjb/s10051-023-00644-6)
+- MATLAB, 2024
+- 20 oscillators on large PCB coupled with resistors on separate breadboard
+- parallel algo for wave digital simulation
+- details on technical implementation
+
+[An Ising Hamiltonian solver based on coupled stochastic phase-transition nano-oscillators](https://www.nature.com/articles/s41928-021-00616-7)
+- A. Raychowdhury and Datta (2021)
+- 8 fully-connected node prototype, cross-bar arrays
+- comparison table
+- MATLAB
+- 2.56 mW
+
+[CMOS-Compatible Ising Machines built using Bistable Latches Coupled through Ferroelectric Transistor Arrays](https://arxiv.org/pdf/2205.14729)
+- comparison table
+
+[Spintronic devices as next-generation computation accelerators](https://arxiv.org/pdf/2403.13564v1)
+- comparison table
+- MTJ p-bits a strong competitor in the world
+
+[Silicon microring resonators](https://www.photonics.intec.ugent.be/download/pub_3105.pdf)
+- suggested by twitter mutual
+
+[On computational capabilities of Ising machines based on nonlinear oscillators](https://arxiv.org/abs/2105.07591)
+- the Kuramoto model where we assume all oscillators have same period is the same as classic ferromagnetic XY model, which is rank-2 semidefinite programming problem (BZM)
+- two important results
+    - Kuramoto systems are identical to BZM so we know they converge to 0.87 of optimal in polynomial time
+    - Rounding problem requires correctly choosing phase direction to get 0.87. The anisotropic state can be destroyed by methods used to stabilize Kuramoto systems (like SHIL!)
+
+[Self-contained relaxation-based dynamical Ising machines](https://arxiv.org/abs/2305.06414)
+- proposes model to solve Kuramoto rounding problem. No matter which spin orientation it will always be the optimal rounding.
+- stochastic perturbations will converge to the optimal solution almost surely in superpolynomial time
+- DIMPLE fits this model
+
+[Custom CMOS Ising Machine Based on Relaxed Burer-Monteiro-Zhang Heuristic](https://ieeexplore.ieee.org/document/10187692)
+- Instead of forcing close-to-binary states, focus on computational capability of the dynamical model driving the machine
+
+[Ising machines as hardware solvers of combinatorial optimization problems](https://arxiv.org/abs/2204.00276)
+- comparison table
+
+[Augmenting an electronic Ising machine to effectively solve boolean satisfiability](https://www.nature.com/articles/s41598-023-49966-6.pdf)
+- extra layer for cubic terms

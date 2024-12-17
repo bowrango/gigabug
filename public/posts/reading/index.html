@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,9 +12,9 @@
 onload="renderMathInElement(document.body);"></script>
 <title>reading | Gigabug</title>
 
-    <link rel="stylesheet" href="/css/main.css">
+      <link rel="stylesheet" href="/css/main.min.5c8cdd1b23b58372f4c0ca4ec1be67024ec7217946ef66719e034e4d9ac80838.css" integrity="sha256-XIzdGyO1g3L0wMpOwb5nAk7HIXlG72ZxngNOTZrICDg=" crossorigin="anonymous">
 
-      <script src="/js/main.js"></script>
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 
 <link rel="stylesheet" href="/css/custom.css">
@@ -158,6 +158,7 @@ onload="renderMathInElement(document.body);"></script>
 <p><a href="https://web.stanford.edu/group/brainsinsilicon/documents/ANeckar2019.pdf">Braindrop: A Mixed-Signal Neuromorphic Architecture With a Dynamical Systems-Based Programming Model</a></p>
 <p><a href="https://www.nature.com/articles/s41467-022-33441-3">Noise-injected analog Ising machines enable ultrafast statistical sampling and machine learning</a></p>
 <ul>
+<li>feature enhancement for Zach&rsquo;s DIMPLE project</li>
 <li>discusses leveraging Ising-machine-based Boltzmann sampling</li>
 </ul>
 <p><a href="https://arxiv.org/pdf/2410.24058">Natural gradient and parameter estimation for quantum Boltzmann machines</a></p>
@@ -192,6 +193,10 @@ onload="renderMathInElement(document.body);"></script>
 </ul>
 <p><a href="https://cns.gatech.edu/~predrag/papers/SCD07.pdf">On the State Space Geometry of the Kuramoto–Sivashinsky Flow in a Periodic Domain</a></p>
 <p><a href="https://ieeexplore.ieee.org/document/8904942">Circuit Synthesis and Electrical Interpretation of Synchronization in the Kuramoto Model</a></p>
+<ul>
+<li>wave digital model</li>
+<li>no hardware experiments</li>
+</ul>
 <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2995481/pdf/fnhum-04-00190.pdf">Generative models of cortical oscillations: neurobiological implications of the Kuramoto model</a></p>
 <p><a href="https://arxiv.org/pdf/2307.03910">A Survey of Spiking Neural Network Accelerator on FPGA</a></p>
 <p><a href="https://link.springer.com/article/10.1007/BF01048044">Lyapunov function for the Kuramoto model of nonlinearly coupled oscillators</a></p>
@@ -343,6 +348,69 @@ onload="renderMathInElement(document.body);"></script>
 </ul>
 <p><a href="https://arxiv.org/pdf/1109.2798">Stability and decay of Bloch oscillations in presence of time-dependent nonlinearity</a></p>
 <p><a href="https://arxiv.org/abs/2001.10620">Recent Advances in Coupled Oscillator Theory</a></p>
+<p><a href="https://www.nature.com/articles/s41598-021-04057-2">Creating electronic oscillator-based Ising machines without external injection locking</a></p>
+<ul>
+<li>engineered feedback to generate two decay time constants which effectively generates 2nd harmonic internally; implemented using P-MOS (ALD1107)</li>
+<li>used opamp based Schmitt trigger (LM741) stabilized with negative feedback</li>
+<li>coupled using discrete capacitors</li>
+<li>8V</li>
+</ul>
+<p><a href="https://link.springer.com/article/10.1140/epjb/s10051-023-00644-6">Oscillator-based optimization: design, emulation, and implementation</a></p>
+<ul>
+<li>MATLAB, 2024</li>
+<li>20 oscillators on large PCB coupled with resistors on separate breadboard</li>
+<li>parallel algo for wave digital simulation</li>
+<li>details on technical implementation</li>
+</ul>
+<p><a href="https://www.nature.com/articles/s41928-021-00616-7">An Ising Hamiltonian solver based on coupled stochastic phase-transition nano-oscillators</a></p>
+<ul>
+<li>A. Raychowdhury and Datta (2021)</li>
+<li>8 fully-connected node prototype, cross-bar arrays</li>
+<li>comparison table</li>
+<li>MATLAB</li>
+<li>2.56 mW</li>
+</ul>
+<p><a href="https://arxiv.org/pdf/2205.14729">CMOS-Compatible Ising Machines built using Bistable Latches Coupled through Ferroelectric Transistor Arrays</a></p>
+<ul>
+<li>comparison table</li>
+</ul>
+<p><a href="https://arxiv.org/pdf/2403.13564v1">Spintronic devices as next-generation computation accelerators</a></p>
+<ul>
+<li>comparison table</li>
+<li>MTJ p-bits a strong competitor in the world</li>
+</ul>
+<p><a href="https://www.photonics.intec.ugent.be/download/pub_3105.pdf">Silicon microring resonators</a></p>
+<ul>
+<li>suggested by twitter mutual</li>
+</ul>
+<p><a href="https://arxiv.org/abs/2105.07591">On computational capabilities of Ising machines based on nonlinear oscillators</a></p>
+<ul>
+<li>the Kuramoto model where we assume all oscillators have same period is the same as classic ferromagnetic XY model, which is rank-2 semidefinite programming problem (BZM)</li>
+<li>two important results
+<ul>
+<li>Kuramoto systems are identical to BZM so we know they converge to 0.87 of optimal in polynomial time</li>
+<li>Rounding problem requires correctly choosing phase direction to get 0.87. The anisotropic state can be destroyed by methods used to stabilize Kuramoto systems (like SHIL!)</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://arxiv.org/abs/2305.06414">Self-contained relaxation-based dynamical Ising machines</a></p>
+<ul>
+<li>proposes model to solve Kuramoto rounding problem. No matter which spin orientation it will always be the optimal rounding.</li>
+<li>stochastic perturbations will converge to the optimal solution almost surely in superpolynomial time</li>
+<li>DIMPLE fits this model</li>
+</ul>
+<p><a href="https://ieeexplore.ieee.org/document/10187692">Custom CMOS Ising Machine Based on Relaxed Burer-Monteiro-Zhang Heuristic</a></p>
+<ul>
+<li>Instead of forcing close-to-binary states, focus on computational capability of the dynamical model driving the machine</li>
+</ul>
+<p><a href="https://arxiv.org/abs/2204.00276">Ising machines as hardware solvers of combinatorial optimization problems</a></p>
+<ul>
+<li>comparison table</li>
+</ul>
+<p><a href="https://www.nature.com/articles/s41598-023-49966-6.pdf">Augmenting an electronic Ising machine to effectively solve boolean satisfiability</a></p>
+<ul>
+<li>extra layer for cubic terms</li>
+</ul>
 
   
 

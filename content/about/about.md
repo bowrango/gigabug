@@ -4,12 +4,11 @@ date = 2024-09-04T21:28:27-04:00
 draft = false
 +++
 
-Gigabug is the operating tradename and website of Matt Bowring. It's a creative project to have fun with software in a new fun way. Get your friends and make something cool.
+Gigabug is the operating tradename and website of Matt Bowring. It's a creative project to have fun with software and share with friends.
 
-I'm exploring analog probabilistic logic for computing applications. It will be the primary focus of my graduate study. See more.
+I'm an engineer, graduate student, do'er of things, and currently developing an [Ising machine](https://gigabug.org/posts/ising/) to study analog probabilistic logic. See my [resume](/about/matt-bowring-resume.pdf) for work experience.
 
-I'm also an engineer, (soon) graduate student, and do'er of things. See [resume](/about/matt-bowring-resume.pdf) for career experience. I have many other hobbies and try to write about them here. 
-
+Stay tuned for more.
 ```
 
 

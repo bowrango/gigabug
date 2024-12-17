@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on Gigabug</title>
-    <link>http://localhost:1313/about/</link>
+    <link>https://gigabug.org/about/</link>
     <description>Recent content in Abouts on Gigabug</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Sep 2024 21:28:27 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gigabug.org/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>about</title>
-      <link>http://localhost:1313/about/about/</link>
+      <link>https://gigabug.org/about/about/</link>
       <pubDate>Wed, 04 Sep 2024 21:28:27 -0400</pubDate>
-      <guid>http://localhost:1313/about/about/</guid>
-      <description>&lt;p&gt;Gigabug is the operating tradename and website of Matt Bowring. It&amp;rsquo;s a creative project to have fun with software in a new fun way. Get your friends and make something cool.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m exploring analog probabilistic logic for computing applications. It will be the primary focus of my graduate study. See more.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m also an engineer, (soon) graduate student, and do&amp;rsquo;er of things. See &lt;a href=&#34;http://localhost:1313/about/matt-bowring-resume.pdf&#34;&gt;resume&lt;/a&gt; for career experience. I have many other hobbies and try to write about them here.&lt;/p&gt;</description>
+      <guid>https://gigabug.org/about/about/</guid>
+      <description>&lt;p&gt;Gigabug is the operating tradename and website of Matt Bowring. It&amp;rsquo;s a creative project to have fun with software and share with friends.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m an engineer, graduate student, do&amp;rsquo;er of things, and currently developing an &lt;a href=&#34;https://gigabug.org/posts/ising/&#34;&gt;Ising machine&lt;/a&gt; to study analog probabilistic logic. See my &lt;a href=&#34;https://gigabug.org/about/matt-bowring-resume.pdf&#34;&gt;resume&lt;/a&gt; for work experience.&lt;/p&gt;&#xA;&lt;p&gt;Stay tuned for more.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&#xA;&#xA;                     .&#xA;     .-o&amp;#34;88b.      .&amp;#39;&#xA;    o    `8,8;   .&amp;#39; .&amp;#39;&#xA;   :   o .\\  _.&amp;#39; .:-&amp;#34;&#xA;   :O  .&amp;#39;\_\`&amp;#34;  &amp;#39;  ._.&#xA;    \.&amp;#34;|-| | .  _.-&amp;#34;&#xA;  _.-&amp;#34; | `  _.-&amp;#34;&#xA;-&amp;#34; `.   _.-&amp;#34;&#xA;&amp;#39; . _.-&amp;#34;&#xA;l42&amp;#34;&#xA;&lt;/code&gt;&lt;/pr</description>
     </item>
   </channel>
 </rss>
