@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,12 +12,28 @@
 onload="renderMathInElement(document.body);"></script>
 <title>ising machine | Gigabug</title>
 
-      <link rel="stylesheet" href="/css/main.min.5c8cdd1b23b58372f4c0ca4ec1be67024ec7217946ef66719e034e4d9ac80838.css" integrity="sha256-XIzdGyO1g3L0wMpOwb5nAk7HIXlG72ZxngNOTZrICDg=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
 
-      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+      <script src="/js/main.js"></script>
 
 
 <link rel="stylesheet" href="/css/custom.css">
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+  </h1>
+</body>
+</html>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 <body>
@@ -32,12 +48,11 @@ onload="renderMathInElement(document.body);"></script>
     <li>
       <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
     </li>
-    <li>
-      <a href="/tags/">Tags</a>
-    </li>
     </ul>
   </nav>
 
+
+<input type="checkbox" value="light" class="toggle theme-controller" />
 
   </header>
   <main>
@@ -49,27 +64,18 @@ onload="renderMathInElement(document.body);"></script>
   <time datetime="2024-10-31T20:04:35-04:00">October 31, 2024</time>
 
   <h1 id="overview">Overview</h1>
-<p>The Ising model is of fundamental computational interest because any problem in the
-complexity class NP can be formulated as an Ising problem with polynomial complexity.</p>
+<p>An &ldquo;Ising machine&rdquo; is hardware to realize the mathematical Ising model, which extends to NP-hard problems in general.
+</p>
 $$
-FIXME
-H = \sum_{(i, j)} J_{ij}s_i s_j - h \sum_i s_i
-$$<p>where $\textbf{J}$ is the weight matrix and $\textbf{h}$ is the bias. The state probability is then determined by the Boltzmann distribution</p>
-$$
-P(E) = \frac{e^{-E/k_BT}}{\sum_{i} e^{-E_i / k_B T}}
-$$<p>An Ising machine is a physic device obeying this distribution. It represents probablistic logic and has general applications across optimization and generative machine learning.</p>
-<p>Objective (binary) -&gt; Ising Model (spin) -&gt; Ising Machine (voltage)</p>
-<p>This post documents my development of an Ising machine. My plan is to open-source and ship a PCB that plugs into your laptop to solve combinatorial problems. This will encourage further hardware and software research to make these machines competitive.</p>
-<p>Quality of obtained solutions remains an open problem.</p>
-<p>This project is particularly inspired by <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf">current research</a>. Lyapunov theory is applied to the generalized Kurumoto model to contruct an &ldquo;energy function&rdquo; for stability analysis of chaotic coupled oscillators. A control input synchronizes the oscillations to a &ldquo;low energy&rdquo; steady state, and induces locking to binarize the phases.</p>
-<p>Implemented as a network of coupled electric oscillators.
-Oscillator network has the natural tendency of minimizing dissipated power by minimizing the amount of interactions between oscillators.</p>
+H(s) = -s^{T}Js + -s^{T}h
+$$<p>
+This post documents my development of such an Ising machine. I aim to open-source and ship a PCB that plugs into your laptop to solve general combinatorial problems using analog voltage signals. These signals model the spin variables s, and represent continous probablistic bits. Lyapunov theory is applied to the generalized Kurumoto model to contruct an &ldquo;energy function&rdquo; for stability analysis of the network. A control input synchronizes the oscillations and induces locking to binarize the phases. An oscillator network has the natural tendency to minimize dissipated power by minimizing the amount of interactions.</p>
+<p>There are exciting research oppertunities because these machines are low energy consumption and have vast applications in machine learning and beyond. While promising, provable solution quality remains an open problem which drives the need for algorithmic development (e.g., synchronization scheduling and programmatic coupling). This project is a shippable testbed to encourage this research. I develop quantum computing software for work and want to build electronics in my living room.</p>
+<h1 id="ising-machine">Ising Machine</h1>
+<p><a href="https://github.com/bowrango/ising-machine">This project</a> is in early development. The Kuramoto model can be formulated as a stochastic differential equation with a coupling and synchronization term. The simulated voltage phases converge to discrete values as the maxcut value increases.
+<img src="/kuramoto.png" alt=""></p>
 <p>In-memory computation. Different fundamental architecture
 Spread in oscillators natural frequency contributes a linear term in the global Lyapunov function</p>
-<p><img src="/phase-lock-devices.png" alt=""></p>
-<h1 id="ising-machine">Ising Machine</h1>
-<p>Code for this project is on <a href="https://github.com/bowrango/ising-machine">my Github</a>. The simulated Kuramoto oscillator converges to the maxcut when applied with square wave.
-<img src="/kuramoto.png" alt=""></p>
 <p>Developing locally on Macbook. Simulation jobs will be sent to my local Linux server.</p>
 <ul>
 <li>MATLAB interface to the Arduino, waveform generator, oscilloscope, etc.</li>
@@ -101,9 +107,9 @@ Encode problem weights coefficien the tendencies of the network
 Map binary optimization problems to synchronization tendencies to encode problem.
 Sub-harmonic Injection Locking (SHIL) external signal. Some prototypes converge naturally.</p>
 <h1 id="references">References</h1>
-<p>There are many physical realizations of Ising-like hardware seen in the literature.
-<img src="/tech-for-ising-machines.png" alt=""></p>
-<p>These are some particular ones of interest.</p>
+<p>There are many designs in the literature. However, I&rsquo;m focused on electronic oscillators mainly for their ease of fabrication. Ising machines are a <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf">novel computing architecture</a> so there are open questions and strong research oppertunities.</p>
+<p><img src="/tech-for-ising-machines.png" alt="">
+<img src="/phase-lock-devices.png" alt=""></p>
 <p><img src="/mit-breadboard-lc.png" alt="">
 <img src="/ising-projection.png" alt="">
 <img src="/circ-graph-comparison.png" alt=""></p>
@@ -122,7 +128,8 @@ Sub-harmonic Injection Locking (SHIL) external signal. Some prototypes converge 
 <li>SYNC input at 20kHz</li>
 <li>fixed inductors and rotary potentiometers</li>
 </ul>
-<p><img src="/fig480.png" alt=""></p>
+<p><img src="/fig480.png" alt="">
+<img src="/oscillator-wang.png" alt=""></p>
 <ul>
 <li>8 grid-connected nodes</li>
 <li>cross-coupled inverters (TI SN74HC04N), fixed 33μH inductors, trimmer capacitors (tuned ~30pF), 5V single supply</li>
@@ -158,10 +165,23 @@ Sub-harmonic Injection Locking (SHIL) external signal. Some prototypes converge 
 <li>∼5W for all nodes and peripheral circuitry, excluding ony LEDs</li>
 </ul>
 <p><img src="/normal-chip-2023.png" alt="">
-<img src="/normal-roadmap.png" alt=""></p>
+<img src="/normal-roadmap.png" alt="">
+<img src="/normal-hardware.png" alt=""></p>
 <ul>
 <li>Normal Computing</li>
+<li>(weight diffuser) ↔ (diffusion process) ↔ (s-mode device)</li>
+<li>(posterior drift network) ↔ (score network) ↔ (Maxwell’s demon device)</li>
+<li>(auxiliary SDE) ↔ (s-mode device)</li>
+<li>(optimization ODE) ↔ (latent variable evolution in Maxwell’s demon device)</li>
+<li>analog or digital-analog score network architecture for less latency</li>
 <li>Thought I saw a green chip at some point</li>
+</ul>
+<p><img src="/beattieFig17.png" alt="">
+<img src="/beattieFig3.png" alt=""></p>
+<ul>
+<li>simulates wave-digital system of equations (MATLAB)</li>
+<li>bread boards are used with</li>
+<li>&ldquo;we observe higher power dissipation, when SHIL is used. However, since anti-phase synchronization still minimizes power dissipation, we see that the oscilla- tors assume this states nonetheless. This phenomenon is very important and has not been pointed out in litera- ture so far.&rdquo;</li>
 </ul>
 <p><img src="/matlab-ising-pcb.png" alt="">
 <img src="/clk-freq-impact.png" alt="">
@@ -170,6 +190,28 @@ Sub-harmonic Injection Locking (SHIL) external signal. Some prototypes converge 
 <li>1440 nodes with 11,724 couplings; 2584 are freely routable, rest are locally fixed</li>
 <li>MATLAB for test management, OIM configuration, timing scheduling, and analysis</li>
 <li>AMD Threadripper Pro 5965WX 24-core, 256GB RAM took ~4.67 hours per problem</li>
+</ul>
+<p><img src="/brim.png" alt="">
+<img src="/tmb.png" alt=""></p>
+<ul>
+<li>
+<p>adds support for cubic interactions</p>
+</li>
+<li>
+<p>proposes &ldquo;tanh-make-break&rdquo; heuristic; incoming current at each node is related to its M and B</p>
+</li>
+<li>
+<p>allows multiple nodes to flip in parallel without synchronization</p>
+</li>
+<li>
+<p>DIMPLE</p>
+</li>
+<li>
+<p>FPGA emulation of ising machine for FPGA, runs on AWS</p>
+</li>
+<li>
+<p>&ldquo;One important part of this system that I haven&rsquo;t thought about at all is how to actually write software to leverage this design&rdquo;</p>
+</li>
 </ul>
 <p>The injection locking signal, and its application in the context of LC-oscillator systems is mathematically similar to the case of the degenerate optical parametric oscillator used in optical Ising machines. The optical pump pulses at twice the optical oscillation frequency to binarize phases. The phase of pump and signal should be locked for amplitude (Figure from Stanford CIM).
 <img src="/phaselock.png" alt=""></p>

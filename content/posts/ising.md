@@ -6,42 +6,21 @@ draft = false
 
 # Overview
 
-The Ising model is of fundamental computational interest because any problem in the 
-complexity class NP can be formulated as an Ising problem with polynomial complexity. 
-
+An "Ising machine" is hardware to realize the mathematical Ising model, which extends to NP-hard problems in general. 
 $$
-FIXME
-H = \sum_{(i, j)} J_{ij}s_i s_j - h \sum_i s_i
+H(s) = -s^{T}Js + -s^{T}h
 $$
+This post documents my development of such an Ising machine. I aim to open-source and ship a PCB that plugs into your laptop to solve general combinatorial problems using analog voltage signals. These signals model the spin variables s, and represent continous probablistic bits. Lyapunov theory is applied to the generalized Kurumoto model to contruct an "energy function" for stability analysis of the network. A control input synchronizes the oscillations and induces locking to binarize the phases. An oscillator network has the natural tendency to minimize dissipated power by minimizing the amount of interactions.
 
-where $\textbf{J}$ is the weight matrix and $\textbf{h}$ is the bias. The state probability is then determined by the Boltzmann distribution
-
-$$
-P(E) = \frac{e^{-E/k_BT}}{\sum_{i} e^{-E_i / k_B T}}
-$$
-
-An Ising machine is a physic device obeying this distribution. It represents probablistic logic and has general applications across optimization and generative machine learning.
-
-Objective (binary) -> Ising Model (spin) -> Ising Machine (voltage) 
-
-This post documents my development of an Ising machine. My plan is to open-source and ship a PCB that plugs into your laptop to solve combinatorial problems. This will encourage further hardware and software research to make these machines competitive.
-
-Quality of obtained solutions remains an open problem. 
-
-This project is particularly inspired by [current research](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf). Lyapunov theory is applied to the generalized Kurumoto model to contruct an "energy function" for stability analysis of chaotic coupled oscillators. A control input synchronizes the oscillations to a "low energy" steady state, and induces locking to binarize the phases.
-
-Implemented as a network of coupled electric oscillators.
-Oscillator network has the natural tendency of minimizing dissipated power by minimizing the amount of interactions between oscillators.
-
-In-memory computation. Different fundamental architecture
-Spread in oscillators natural frequency contributes a linear term in the global Lyapunov function
-
-![](/phase-lock-devices.png)
+There are exciting research oppertunities because these machines are low energy consumption and have vast applications in machine learning and beyond. While promising, provable solution quality remains an open problem which drives the need for algorithmic development (e.g., synchronization scheduling and programmatic coupling). This project is a shippable testbed to encourage this research. I develop quantum computing software for work and want to build electronics in my living room.
 
 # Ising Machine
 
-Code for this project is on [my Github](https://github.com/bowrango/ising-machine). The simulated Kuramoto oscillator converges to the maxcut when applied with square wave. 
+[This project](https://github.com/bowrango/ising-machine) is in early development. The Kuramoto model can be formulated as a stochastic differential equation with a coupling and synchronization term. The simulated voltage phases converge to discrete values as the maxcut value increases.
 ![](/kuramoto.png)
+
+In-memory computation. Different fundamental architecture
+Spread in oscillators natural frequency contributes a linear term in the global Lyapunov function
 
 Developing locally on Macbook. Simulation jobs will be sent to my local Linux server.
 
@@ -73,10 +52,11 @@ Map binary optimization problems to synchronization tendencies to encode problem
 Sub-harmonic Injection Locking (SHIL) external signal. Some prototypes converge naturally.
 
 # References
-There are many physical realizations of Ising-like hardware seen in the literature.
-![](/tech-for-ising-machines.png)
 
-These are some particular ones of interest.
+There are many designs in the literature. However, I'm focused on electronic oscillators mainly for their ease of fabrication. Ising machines are a [novel computing architecture](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf) so there are open questions and strong research oppertunities.
+
+![](/tech-for-ising-machines.png)
+![](/phase-lock-devices.png)
 
 ![](/mit-breadboard-lc.png)
 ![](/ising-projection.png)
@@ -95,6 +75,7 @@ These are some particular ones of interest.
 - fixed inductors and rotary potentiometers
 
 ![](/fig480.png)
+![](/oscillator-wang.png)
 - 8 grid-connected nodes
 - cross-coupled inverters (TI SN74HC04N), fixed 33μH inductors, trimmer capacitors (tuned ~30pF), 5V single supply
 - SYNC supplied to GND of inverter chips
@@ -127,8 +108,20 @@ These are some particular ones of interest.
 
 ![](/normal-chip-2023.png)
 ![](/normal-roadmap.png)
+![](/normal-hardware.png)
 - Normal Computing
+- (weight diffuser) ↔ (diffusion process) ↔ (s-mode device)
+- (posterior drift network) ↔ (score network) ↔ (Maxwell’s demon device)
+- (auxiliary SDE) ↔ (s-mode device)
+- (optimization ODE) ↔ (latent variable evolution in Maxwell’s demon device)
+- analog or digital-analog score network architecture for less latency
 - Thought I saw a green chip at some point
+
+![](/beattieFig17.png)
+![](/beattieFig3.png)
+- simulates wave-digital system of equations (MATLAB) 
+- bread boards are used with
+- "we observe higher power dissipation, when SHIL is used. However, since anti-phase synchronization still minimizes power dissipation, we see that the oscilla- tors assume this states nonetheless. This phenomenon is very important and has not been pointed out in litera- ture so far."
 
 ![](/matlab-ising-pcb.png)
 ![](/clk-freq-impact.png)
@@ -136,6 +129,16 @@ These are some particular ones of interest.
 - 1440 nodes with 11,724 couplings; 2584 are freely routable, rest are locally fixed
 - MATLAB for test management, OIM configuration, timing scheduling, and analysis
 - AMD Threadripper Pro 5965WX 24-core, 256GB RAM took ~4.67 hours per problem
+
+![](/brim.png)
+![](/tmb.png)
+- adds support for cubic interactions
+- proposes "tanh-make-break" heuristic; incoming current at each node is related to its M and B
+- allows multiple nodes to flip in parallel without synchronization 
+
+- DIMPLE
+- FPGA emulation of ising machine for FPGA, runs on AWS
+- "One important part of this system that I haven't thought about at all is how to actually write software to leverage this design"
 
 The injection locking signal, and its application in the context of LC-oscillator systems is mathematically similar to the case of the degenerate optical parametric oscillator used in optical Ising machines. The optical pump pulses at twice the optical oscillation frequency to binarize phases. The phase of pump and signal should be locked for amplitude (Figure from Stanford CIM). 
 ![](/phaselock.png)

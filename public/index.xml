@@ -2,74 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gigabug</title>
-    <link>https://gigabug.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Gigabug</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Oct 2024 20:04:35 -0400</lastBuildDate>
-    <atom:link href="https://gigabug.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Dec 2024 13:09:49 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hikes</title>
+      <link>http://localhost:1313/posts/hikes/</link>
+      <pubDate>Sun, 29 Dec 2024 13:09:49 -0500</pubDate>
+      <guid>http://localhost:1313/posts/hikes/</guid>
+      <description>&lt;div class=&#34;gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4&#34;&gt;&#xA;  &#xA;  &#xA;  &lt;div class=&#34;relative group overflow-hidden rounded-lg shadow-lg&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/montana1.png&#34; &#xA;      alt=&#34;Gallery image&#34; &#xA;      class=&#34;w-full h-full object-cover transition-transform duration-300 group-hover:scale-110&#34;&#xA;    /&gt;&#xA;    &#xA;    &lt;div class=&#34;absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-sm p-4&#34;&gt;&#xA;      Hills in Montana&#xA;    &lt;/div&gt;&#xA;    &#xA;  &lt;/div&gt;&#xA;  &#xA;  &lt;div class=&#34;relative group overflow-hidden rounded-lg shadow-lg&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/panama1.png&#34; &#xA;      alt=&#34;Gallery image&#34; &#xA;      class=&#34;w-full h-full object-cover transition-transform duration-300 group-hover:scale-110&#34;&#xA;    /&gt;&#xA;    &#xA;    &lt;div class=&#34;absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-sm p-4&#34;&gt;&#xA;      Forest outside Panama City&#xA;    &lt;/div&gt;&#xA;    &#xA;  &lt;/div&gt;&#xA;  &#xA;  &lt;div class=&#34;relative group overflow-hidden rounded-lg shadow-lg&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/lafayette.png&#34; &#xA;      alt=&#34;Gallery image&#34; &#xA;      class=&#34;w-full h-full object-cover transition-transform duration-300 group-hover:scale-110&#34;&#xA;    /&gt;&#xA;    &#xA;    &lt;div class=&#34;absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-sm p-4&#34;&gt;&#xA;      Mount Lafayette&#xA;    &lt;/div&gt;&#xA;    &#xA;  &lt;/div&gt;&#xA;  &#xA;  &lt;div class=&#34;relative group overflow-hidden rounded-lg shadow-lg&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/barharbor.png&#34; &#xA;      alt=&#34;Gallery image&#34; &#xA;      class=&#34;w-full h-full object-cover transition-transform duration-300 group-hover:scale-110&#34;&#xA;    /&gt;&#xA;    &#xA;    &lt;div class=&#34;absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-sm p-4&#34;&gt;&#xA;      Bar Harbor&#xA;    &lt;/div&gt;&#xA;    &#xA;  &lt;/div&gt;&#xA;  &#xA;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>ising machine</title>
-      <link>https://gigabug.org/posts/ising/</link>
+      <link>http://localhost:1313/posts/ising/</link>
       <pubDate>Thu, 31 Oct 2024 20:04:35 -0400</pubDate>
-      <guid>https://gigabug.org/posts/ising/</guid>
-      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;&#xA;&lt;p&gt;The Ising model is of fundamental computational interest because any problem in the&#xA;complexity class NP can be formulated as an Ising problem with polynomial complexity.&lt;/p&gt;&#xA;$$&#xA;FIXME&#xA;H = \sum_{(i, j)} J_{ij}s_i s_j - h \sum_i s_i&#xA;$$&lt;p&gt;where $\textbf{J}$ is the weight matrix and $\textbf{h}$ is the bias. The state probability is then determined by the Boltzmann distribution&lt;/p&gt;&#xA;$$&#xA;P(E) = \frac{e^{-E/k_BT}}{\sum_{i} e^{-E_i / k_B T}}&#xA;$$&lt;p&gt;An Ising machine is a physic device obeying this distribution. It represents probablistic logic and has general applications across optimization and generative machine learning.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/ising/</guid>
+      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;&#xA;&lt;p&gt;An &amp;ldquo;Ising machine&amp;rdquo; is hardware to realize the mathematical Ising model, which extends to NP-hard problems in general.&#xA;&lt;/p&gt;&#xA;$$&#xA;H(s) = -s^{T}Js + -s^{T}h&#xA;$$&lt;p&gt;&#xA;This post documents my development of such an Ising machine. I aim to open-source and ship a PCB that plugs into your laptop to solve general combinatorial problems using analog voltage signals. These signals model the spin variables s, and represent continous probablistic bits. Lyapunov theory is applied to the generalized Kurumoto model to contruct an &amp;ldquo;energy function&amp;rdquo; for stability analysis of the network. A control input synchronizes the oscillations and induces locking to binarize the phases. An oscillator network has the natural tendency to minimize dissipated power by minimizing the amount of interactions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>high school engineer</title>
-      <link>https://gigabug.org/posts/fwwebb/</link>
+      <link>http://localhost:1313/posts/fwwebb/</link>
       <pubDate>Tue, 29 Oct 2024 19:13:53 -0400</pubDate>
-      <guid>https://gigabug.org/posts/fwwebb/</guid>
+      <guid>http://localhost:1313/posts/fwwebb/</guid>
       <description>&lt;p&gt;I started CAD before programming. Highschool lunches were spent in the computer lab.&lt;/p&gt;&#xA;&lt;p&gt;Freelance design for fiber optic layouts of an F.W. Webb warehouse.&lt;/p&gt;&#xA;&lt;p&gt;That led to a summer gig designing HVAC layouts for residential and commerical. I got caught playing the balloons tower defense stratedy game and got banished to the warehouse for a couple days. It was fun painting the office, though. Once I stacked up extra cardboard and took a nap underneath the staircase.&lt;/p&gt;</description>
     </item>
     <item>
       <title>anduril bolt</title>
-      <link>https://gigabug.org/posts/bolt/</link>
+      <link>http://localhost:1313/posts/bolt/</link>
       <pubDate>Thu, 24 Oct 2024 21:05:44 -0400</pubDate>
-      <guid>https://gigabug.org/posts/bolt/</guid>
-      <description>&lt;p&gt;Notes on the Anduril Bolt drone for estimating battery and motor requirements.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.forbes.com/sites/davidhambling/2024/10/16/andurils-bolt-m-is-the-future-for-us-forces-if-they-can-afford-it/&#34;&gt;“In round numbers, typical Bolt configurations are in the low tens of thousands of dollars, depending on the exact payload and configuration.&amp;quot;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Intended for intelligence, surveillance, reconnaissance, search and rescue&lt;/li&gt;&#xA;&lt;li&gt;Swappable batteries for extending flight time&lt;/li&gt;&#xA;&lt;li&gt;Rectangular frame makes sense to accommodate larger battery. X frames are more common to FPV racing drones because of their similar rotational inertias.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://gigabug.org/bolt.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/bolt/</guid>
+      <description>&lt;p&gt;Notes on the Anduril Bolt drone for estimating battery and motor requirements.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.forbes.com/sites/davidhambling/2024/10/16/andurils-bolt-m-is-the-future-for-us-forces-if-they-can-afford-it/&#34;&gt;“In round numbers, typical Bolt configurations are in the low tens of thousands of dollars, depending on the exact payload and configuration.&amp;quot;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Intended for intelligence, surveillance, reconnaissance, search and rescue&lt;/li&gt;&#xA;&lt;li&gt;Swappable batteries for extending flight time&lt;/li&gt;&#xA;&lt;li&gt;Rectangular frame makes sense to accommodate larger battery. X frames are more common to FPV racing drones because of their similar rotational inertias.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/bolt.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>reading</title>
-      <link>https://gigabug.org/posts/reading/</link>
+      <link>http://localhost:1313/posts/reading/</link>
       <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://gigabug.org/posts/reading/</guid>
+      <guid>http://localhost:1313/posts/reading/</guid>
       <description>&lt;p&gt;A collection of interesting papers, mostly for myself to keep track.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2111.05176&#34;&gt;Variational Quantum Eigensolver Review&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;big review&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1304.3061&#34;&gt;A variational eigenvalue solver on a quantum processor&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;original VQE paper (2013)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.05649&#34;&gt;Best Quantum Compiling Problems&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;compressed quantum shannon decomposition to lowest CX count with lasso&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/quant-ph/0406176&#34;&gt;Synthesis of Quantum Logic Circuits&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;proposed the Quantum Shannon Decomposition for arbitrary unitary matrix&lt;/li&gt;&#xA;&lt;li&gt;referenced this paper and other implementing unitaryGate for MATLAB&lt;/li&gt;&#xA;&lt;li&gt;had some puzzles about the additional optimizations, emailed Shende and he got back!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiskit.org/documentation/apidoc/synthesis_aqc.html&#34;&gt;Approximate Quantum Compiler&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>visual image processing</title>
-      <link>https://gigabug.org/posts/brain-image-factorization/</link>
+      <link>http://localhost:1313/posts/brain-image-factorization/</link>
       <pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://gigabug.org/posts/brain-image-factorization/</guid>
+      <guid>http://localhost:1313/posts/brain-image-factorization/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m interested in perception and signaling systems, particularly in humans. This post is a hodgepodge of various sources about biological mechanisms for visual processing, and inspired mathematial models. Back in undergraduate, I experimented with &lt;a href=&#34;https://github.com/bowrango/dashcam-misalignment/tree/main&#34;&gt;RNNs to predict dash camera misalignment&lt;/a&gt;, and although a basic model, it got me thinking about factoring objects from their transformations in video. Computer scientists seem to think much of biology operates like machine learning, but the biologists push back. What can we learn from the visual data pipeline to the brain?&lt;/p&gt;</description>
     </item>
     <item>
       <title>quantum gate decomposition</title>
-      <link>https://gigabug.org/posts/gate-decomp/</link>
+      <link>http://localhost:1313/posts/gate-decomp/</link>
       <pubDate>Thu, 12 Sep 2024 00:15:22 -0400</pubDate>
-      <guid>https://gigabug.org/posts/gate-decomp/</guid>
+      <guid>http://localhost:1313/posts/gate-decomp/</guid>
       <description>&lt;p&gt;This is my attempt to decompose an arbitrary N-qubit unitary using the minimum number of CX gates. It&amp;rsquo;s been my puzzle since I wrote &lt;a href=&#34;https://www.mathworks.com/help/matlab/ref/unitarygate.html&#34;&gt;unitaryGate&lt;/a&gt;, which implements the best known method that uses twice the lower bound. This work explores my thoughts on improving the algorithm. To my knowledge there is no general algorithm for arbitrary matrices using the minimum number of CX gates.&lt;/p&gt;&#xA;&lt;p&gt;Quantum circuits are executed using the primitive operations of the quantum computer. The matrices of this primitive set form a basis of the unitary group $U(2^N)$. Any 1 qubit rotation, a unitary matrix in U(2), can be decomposed into 3 rotations like Euler rotations. The figure below shows the smallest circuit for any 2-qubit unitary in the basis {CX,RY,RZ}. The circuit uses 3 2-qubit CX gates and 15 1-qubit rotation gates.&lt;/p&gt;</description>
     </item>
     <item>
       <title>clash royale</title>
-      <link>https://gigabug.org/posts/clash-royale/</link>
+      <link>http://localhost:1313/posts/clash-royale/</link>
       <pubDate>Tue, 10 Sep 2024 00:15:22 -0400</pubDate>
-      <guid>https://gigabug.org/posts/clash-royale/</guid>
+      <guid>http://localhost:1313/posts/clash-royale/</guid>
       <description>&lt;p&gt;Data analysis project from 2020 on the Clash Royale mobile game.&lt;/p&gt;&#xA;&lt;p&gt;Card decks used by the top players in the world are scraped from the official Clash Royale API. Each card is a node, and together form deck graphs that model strategy. Deck observations can be clustered by attribute (e.g. troops, buildings, spells, etc.). The original code used node2vec as feature embedding, but I was also exploring conditional probability networks and graph attention for edge prediction. The goal was to provide utilities for time-series graph analysis of player trends. The project is deprecated but I dream of reviving it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>thoughts on quantum software</title>
-      <link>https://gigabug.org/posts/quantum-algo-thoughts/</link>
+      <link>http://localhost:1313/posts/quantum-algo-thoughts/</link>
       <pubDate>Wed, 04 Sep 2024 23:10:07 -0400</pubDate>
-      <guid>https://gigabug.org/posts/quantum-algo-thoughts/</guid>
+      <guid>http://localhost:1313/posts/quantum-algo-thoughts/</guid>
       <description>&lt;p&gt;Software design for quantum computing and thermodynamic hardware.&lt;/p&gt;&#xA;&lt;p&gt;Modern quantum computing software follows deep learning and wants to train models. The model learns a parameterized quantum state that minimizes a cost expectation. The variational quantum eigensolver (VQE) is the dubbed algorithm for this procedure. The cost Hamiltonian is a Hermitian matrix, expressed as a weighted sum of projective measurements. The model is a parameterized quantum circuit $U$, and optimized to find the eigenstate&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>about</title>
-      <link>https://gigabug.org/about/about/</link>
+      <link>http://localhost:1313/about/about/</link>
       <pubDate>Wed, 04 Sep 2024 21:28:27 -0400</pubDate>
-      <guid>https://gigabug.org/about/about/</guid>
-      <description>&lt;p&gt;Gigabug is the operating tradename and website of Matt Bowring. It&amp;rsquo;s a creative project to have fun with software and share with friends.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m an engineer, graduate student, do&amp;rsquo;er of things, and currently developing an &lt;a href=&#34;https://gigabug.org/posts/ising/&#34;&gt;Ising machine&lt;/a&gt; to study analog probabilistic logic. See my &lt;a href=&#34;https://gigabug.org/about/matt-bowring-resume.pdf&#34;&gt;resume&lt;/a&gt; for work experience.&lt;/p&gt;&#xA;&lt;p&gt;Stay tuned for more.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&#xA;&#xA;                     .&#xA;     .-o&amp;#34;88b.      .&amp;#39;&#xA;    o    `8,8;   .&amp;#39; .&amp;#39;&#xA;   :   o .\\  _.&amp;#39; .:-&amp;#34;&#xA;   :O  .&amp;#39;\_\`&amp;#34;  &amp;#39;  ._.&#xA;    \.&amp;#34;|-| | .  _.-&amp;#34;&#xA;  _.-&amp;#34; | `  _.-&amp;#34;&#xA;-&amp;#34; `.   _.-&amp;#34;&#xA;&amp;#39; . _.-&amp;#34;&#xA;l42&amp;#34;&#xA;&lt;/code&gt;&lt;/pr</description>
+      <guid>http://localhost:1313/about/about/</guid>
+      <description>&lt;p&gt;Gigabug is the operating tradename and website of Matt Bowring. It&amp;rsquo;s a creative project to have fun with software and share with friends.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m an engineer, graduate student, do&amp;rsquo;er of things, and currently developing an &lt;a href=&#34;https://gigabug.org/posts/ising/&#34;&gt;Ising machine&lt;/a&gt; to study analog probabilistic logic. See my &lt;a href=&#34;http://localhost:1313/about/matt-bowring-resume.pdf&#34;&gt;resume&lt;/a&gt; for work experience.&lt;/p&gt;&#xA;&lt;p&gt;Stay tuned for more.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&#xA;&#xA;                     .&#xA;     .-o&amp;#34;88b.      .&amp;#39;&#xA;    o    `8,8;   .&amp;#39; .&amp;#39;&#xA;   :   o .\\  _.&amp;#39; .:-&amp;#34;&#xA;   :O  .&amp;#39;\_\`&amp;#34;  &amp;#39;  ._.&#xA;    \.&amp;#34;|-| | .  _.-&amp;#34;&#xA;  _.-&amp;#34; | `  _.-&amp;#34;&#xA;-&amp;#34; `.   _.-&amp;#34;&#xA;&amp;#39; . _.-&amp;#34;&#xA;l42&amp;#34;&#xA;&lt;/code&gt;&lt;/pr</description>
     </item>
   </channel>
 </rss>

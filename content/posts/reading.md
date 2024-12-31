@@ -386,4 +386,22 @@ A collection of interesting papers, mostly for myself to keep track.
 - comparison table
 
 [Augmenting an electronic Ising machine to effectively solve boolean satisfiability](https://www.nature.com/articles/s41598-023-49966-6.pdf)
-- extra layer for cubic terms
+- cross-bar arrays for cubic terms
+
+[100,000-spin coherent Ising machine](https://www.science.org/doi/epdf/10.1126/sciadv.abh0952) 
+
+[A moment-based approach to the dynamical solution of the Kuramoto model](https://iopscience.iop.org/article/10.1088/0305-4470/30/23/010/pdf)
+
+[Stability diagram for the forced Kuramoto model](https://arxiv.org/pdf/0807.4717)
+
+[Quantum collective motion of macroscopic mechanical oscillators](https://arxiv.org/pdf/2407.02453)
+-  first time for macroscopic mechanical oscillators to be put in quantum ground state (?)
+
+[All-to-all reconfigurability with sparse and higher-order Ising machines](https://arxiv.org/pdf/2312.08748)
+- Kerem Y. Camsari (2024)
+- adaptive parallel tempering algorithm demonstrates competitive algorithmic and prefactor advantages
+
+[Electrical and Wave Digital Modeling of CMOS-Based Ring Oscillators](https://www.researchgate.net/profile/Bakr-Al-Beattie/publication/377312212_Electrical_and_Wave_Digital_Modeling_of_CMOS-Based_Ring_Oscillators/links/65a5190ed5ce0e3f94cc5c26/Electrical-and-Wave-Digital-Modeling-of-CMOS-Based-Ring-Oscillators.pdf)
+
+[Deriving Dense Linear Algebra Libraries](https://www.cs.utexas.edu/~flame/pubs/FAC.pdf)
+- MATLAB triangular Lyapunov example
