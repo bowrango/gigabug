@@ -12,8 +12,6 @@ Notes on the Anduril Bolt drone for estimating battery and motor requirements.
 - Swappable batteries for extending flight time
 - Rectangular frame makes sense to accommodate larger battery. X frames are more common to FPV racing drones because of their similar rotational inertias.
 
-![](/bolt.png)
-
 **Bolt** \
 +20 km range \
 +45 min endurance \

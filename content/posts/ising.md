@@ -14,6 +14,8 @@ This post documents my development of such an Ising machine. I aim to open-sourc
 
 There are exciting research oppertunities because these machines are low energy consumption and have vast applications in machine learning and beyond. While promising, provable solution quality remains an open problem which drives the need for algorithmic development (e.g., synchronization scheduling and programmatic coupling). This project is a shippable testbed to encourage this research. I develop quantum computing software for work and want to build electronics in my living room.
 
+The injection locking signal, and its application in the context of LC-oscillator systems is mathematically similar to the case of the degenerate optical parametric oscillator used in optical Ising machines.
+
 # Ising Machine
 
 [This project](https://github.com/bowrango/ising-machine) is in early development. The Kuramoto model can be formulated as a stochastic differential equation with a coupling and synchronization term. The simulated voltage phases converge to discrete values as the maxcut value increases.
@@ -53,7 +55,7 @@ Sub-harmonic Injection Locking (SHIL) external signal. Some prototypes converge 
 
 # References
 
-There are many designs in the literature. However, I'm focused on electronic oscillators mainly for their ease of fabrication. Ising machines are a [novel computing architecture](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf) so there are open questions and strong research oppertunities.
+There are many designs in the literature. However, I'm focused on electronic oscillators mainly for their ease of fabrication. Ising machines are a [novel computing architecture](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf) so there is much to explore.
 
 ![](/tech-for-ising-machines.png)
 ![](/phase-lock-devices.png)
@@ -68,14 +70,16 @@ There are many designs in the literature. However, I'm focused on electronic osc
 - get phases from a moving window Fourier transform on time-domain amplitude
 - time-to-solution scales with the oscillator frequency
 
-![](/fig334.png)
-- 8 grid-connected nodes
+![](/wangFig334.png)
+![](/wangFig331.png)
+-  full adder using cross-coupled
+CMOS LC oscillators
 - transistor arrays (ALD1106/ALD1107), 10m inductors, 6.8nF capacitors for ~10kHz
 - SYNC input at 20kHz
 - fixed inductors and rotary potentiometers
 
-![](/fig480.png)
-![](/oscillator-wang.png)
+![](/wangFig480.png)
+![](/wangFig8.png)
 - 8 grid-connected nodes
 - cross-coupled inverters (TI SN74HC04N), fixed 33μH inductors, trimmer capacitors (tuned ~30pF), 5V single supply
 - SYNC supplied to GND of inverter chips
@@ -85,20 +89,20 @@ There are many designs in the literature. However, I'm focused on electronic osc
 - read the oscillator phases using xor gates (TI SN74HC86N)
 - 5MHz
 
-![](/fig490.png)
+![](/wangFig490.png)
 - 32 Chimera-connected nodes
 - cross-coupled inverters (TI SN74HC04N), fixed inductors, trimmer capacitors, 5V single supply
 - rotary potentiometer for coupling; each one has male pin connectors to set polarity by shorting different pins
 - 5MHz
 
-![](/fig414.png)
+![](/wangFig414.png)
 - 64 grid-connected nodes; 4 per PCB
 - cross-coupled inverters (TI SN74HC04N), fixed inductors, trimmer capacitors, 5V single supply
 - digital potentiometer (AD5206) for coupling; each one uses one channel and single pole double throw on-off-on switch for polarity
 - 192 couplings?
 - 1MHz
 
-![](/fig415.png)
+![](/wangFig415.png)
 - 240 nodes; 12 dense-connected per PCB with 1200 couplings
 - cross-coupled inverters (TI SN74HC04N), fixed inductors, trimmer capacitors, 5V single supply
 - digital potentiometer (AD5206) for coupling; uses wiper position to switch polarity and eliminate switches
@@ -130,6 +134,19 @@ There are many designs in the literature. However, I'm focused on electronic osc
 - MATLAB for test management, OIM configuration, timing scheduling, and analysis
 - AMD Threadripper Pro 5965WX 24-core, 256GB RAM took ~4.67 hours per problem
 
+![](/delacourTable1.png)
+![](/delacourTable3.png)
+![](/delacourFig5.png)
+- 0.878-approx for maxcut with log computation time scaling
+- OP-amp Schmidt trigger oscillator
+
+![](/moyTable1.png)
+![](/moyFig2.png)
+- 
+
+![](/graberTable1.png)
+![](/graberFig8.png)
+
 ![](/brim.png)
 ![](/tmb.png)
 - adds support for cubic interactions
@@ -140,5 +157,3 @@ There are many designs in the literature. However, I'm focused on electronic osc
 - FPGA emulation of ising machine for FPGA, runs on AWS
 - "One important part of this system that I haven't thought about at all is how to actually write software to leverage this design"
 
-The injection locking signal, and its application in the context of LC-oscillator systems is mathematically similar to the case of the degenerate optical parametric oscillator used in optical Ising machines. The optical pump pulses at twice the optical oscillation frequency to binarize phases. The phase of pump and signal should be locked for amplitude (Figure from Stanford CIM). 
-![](/phaselock.png)

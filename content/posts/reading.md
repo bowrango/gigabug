@@ -10,7 +10,7 @@ A collection of interesting papers, mostly for myself to keep track.
 - big review
 
 [A variational eigenvalue solver on a quantum processor](https://arxiv.org/pdf/1304.3061)
-- original VQE paper (2013)
+- (2013)
 
 [Best Quantum Compiling Problems](https://arxiv.org/abs/2106.05649)
 - compressed quantum shannon decomposition to lowest CX count with lasso
@@ -155,6 +155,7 @@ A collection of interesting papers, mostly for myself to keep track.
 [Noise-injected analog Ising machines enable ultrafast statistical sampling and machine learning](https://www.nature.com/articles/s41467-022-33441-3)
 - feature enhancement for Zach's DIMPLE project
 - discusses leveraging Ising-machine-based Boltzmann sampling
+- code available
 
 [Natural gradient and parameter estimation for quantum Boltzmann machines](https://arxiv.org/pdf/2410.24058)
 
@@ -405,3 +406,40 @@ A collection of interesting papers, mostly for myself to keep track.
 
 [Deriving Dense Linear Algebra Libraries](https://www.cs.utexas.edu/~flame/pubs/FAC.pdf)
 - MATLAB triangular Lyapunov example
+
+[A Performance Study of the 2D Ising Model on GPUs](https://arxiv.org/abs/1906.06297)
+
+[A mixed-signal oscillatory neural network for scalable analog computations in phase domain](https://iopscience.iop.org/article/10.1088/2634-4386/ace9f5/pdf)
+- "Due to area constraints, we only implement negative weights that we program by placing discrete capacitors Cij manually.
+
+[Non-binary dynamical Ising machines for combinatorial optimization](https://arxiv.org/pdf/2412.08481)
+- 2024
+- This work aims to revisit the notion of whether continuous spins, as internal vari-
+ables of Ising machines, need to converge to binary values at all, and, consequently, to
+identify dynamical continuous-spin systems that can solve inherently discrete problems
+without converging to binary states.
+
+[Limits of CMOS and Prospects for Adiabatic/Reversible CMOS](https://www.sandia.gov/app/uploads/sites/210/2023/11/Comet23-slides_SAND.pdf)
+- 2023
+- Vaire Computing, Micheal Frank
+
+[Quantum Boltzmann machine learning of ground-state energies](https://arxiv.org/pdf/2410.12935)
+- 2024
+
+[A Versatile & Adjustable 400 Node CMOS Oscillator Based Ising Machine to Investigate and Optimize the Internal Computing Principle](https://ieeexplore.ieee.org/document/9908118)
+- 2022
+
+[A 1,968-node coupled ring oscillator circuit for combinatorial optimization problem solving](https://www.nature.com/articles/s41928-022-00749-3)
+- 2022
+
+[Experimental investigation of the dynamics of coupled oscillators as Ising machines](https://ieeexplore.ieee.org/document/9598867)
+- 2021
+
+[A Novel Oscillator Ising Machine Coupling Scheme for High-Quality Optimization](https://link.springer.com/chapter/10.1007/978-3-031-63742-1_15)
+- 2024
+- Sampling coupler injects a current that depends on the phase diﬀerence between interacting oscillators. We prove analytically that using sampling couplers leads to idealized OIMs, abstracting away
+the waveforms and innate phase sensitivities of the oscillators.
+
+[Self-contained relaxation-based dynamical Ising machines](https://arxiv.org/pdf/2305.06414)
+- 2024
+- V2 model
