@@ -465,3 +465,9 @@ the waveforms and innate phase sensitivities of the oscillators.
 
 [Power-efficient combinatorial optimization using intrinsic noise in memristor Hopfield neural networks](https://link-springer-com.ezproxy.lib.purdue.edu/content/pdf/10.1038/s41928-020-0436-6)
 - 2020
+
+[A 2×30k-Spin Multichip Scalable Annealing Processor Based on a Processing-In-Memory Approach for Solving Large-Scale Combinatorial Optimization Problems](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8662517)
+- Takemoto 2019
+
+[A 144Kb Annealing System Composed of 9×16Kb Annealing Processor Chips with Scalable Chip-to-Chip Connections for Large-Scale Combinatorial Optimization Problems](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9365748)
+- Takemoto 2021

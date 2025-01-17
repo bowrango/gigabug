@@ -92,9 +92,9 @@ FPGA
 
 ![](/tech-for-ising-machines.png)
 ![](/phase-lock-devices.png)
+![](/mohseniFig1.png)
 
 - State of the art survey
-![](/mohseniFig1.png)
 ![](/mohseniFig2.png)
 ![](/mohseniTable1.png)
 
@@ -196,4 +196,10 @@ FPGA
 - Coupled ring oscillator (ROSC)-based scalable probabilistic Ising computer
 ![](/ahmedFig10.png)
 ![](/ahmedTable1.png)
+
+- Spin operator (processing local memory) which provides coefficients with
+expandable bit width and fast parallel spin updates according to the Gibbs distribution
+- Low-latency inter-chip interface connecting two Ising chips
+![](/takemotoFig267.png)
+![](/takemotoFig467.png)
 
