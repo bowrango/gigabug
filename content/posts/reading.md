@@ -347,9 +347,9 @@ A collection of interesting papers, mostly for myself to keep track.
 - 8V
 
 [Oscillator-based optimization: design, emulation, and implementation](https://link.springer.com/article/10.1140/epjb/s10051-023-00644-6)
-- MATLAB, 2024
+- 2024
 - 20 oscillators on large PCB coupled with resistors on separate breadboard
-- parallel algo for wave digital simulation
+- parallel algo for MATLAB wave digital simulation
 - details on technical implementation
 
 [An Ising Hamiltonian solver based on coupled stochastic phase-transition nano-oscillators](https://www.nature.com/articles/s41928-021-00616-7)
@@ -422,14 +422,19 @@ identify dynamical continuous-spin systems that can solve inherently discrete pr
 without converging to binary states.
 
 [Limits of CMOS and Prospects for Adiabatic/Reversible CMOS](https://www.sandia.gov/app/uploads/sites/210/2023/11/Comet23-slides_SAND.pdf)
-- 2023
-- Vaire Computing, Micheal Frank
+- Vaire Computing, Micheal Frank (2023)
+
+[A 1,968-node coupled ring oscillator circuit for combinatorial optimization problem solving](http://www.ee.umn.edu/groups/VLSIresearch/papers/2022/NatureElectronics22_Ising.pdf)
+- Moy 2024
+
+[A Probabilistic Compute Fabric Based on Coupled Ring Oscillators for Solving Combinatorial Optimization Problems](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9377463)
+- Ahmed 2021
 
 [Quantum Boltzmann machine learning of ground-state energies](https://arxiv.org/pdf/2410.12935)
 - 2024
 
 [A Versatile & Adjustable 400 Node CMOS Oscillator Based Ising Machine to Investigate and Optimize the Internal Computing Principle](https://ieeexplore.ieee.org/document/9908118)
-- 2022
+- Graber 2022
 
 [A 1,968-node coupled ring oscillator circuit for combinatorial optimization problem solving](https://www.nature.com/articles/s41928-022-00749-3)
 - 2022
@@ -453,7 +458,7 @@ the waveforms and innate phase sensitivities of the oscillators.
 - 2003
 
 [Ising Machines: Theory and Practice](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2023/EECS-2023-138.pdf)
-- 2023
+- Sagan and Roychowdhury (2023)
 - Uses low-rank decomposition for artifical dense connectivity
 - Sparsification of Coupling Matrices from MU-MIMO
     - MATLAB ```scatteringchannelmtx```

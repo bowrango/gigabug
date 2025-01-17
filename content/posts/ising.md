@@ -83,7 +83,7 @@ Sub-Harmonic Injection Locking (SHIL)
 
 # References
 
-Interest in FPGA emulations
+FPGA
 - Purdue P
     - Trying to obtain MATLAB code
 - DIMPLE
@@ -93,30 +93,26 @@ Interest in FPGA emulations
 ![](/tech-for-ising-machines.png)
 ![](/phase-lock-devices.png)
 
+- State of the art survey
 ![](/mohseniFig1.png)
 ![](/mohseniFig2.png)
 ![](/mohseniTable1.png)
 
-![](/ising-projection.png)
-![](/circ-graph-comparison.png)
-
-![](/mit-breadboard-lc.png)
 - MIT Lincoln Lab
 - 4 fully-connected nodes with cross bar array of digital pots (AD5272)
 - coupling polarity controlled by output polarity of the differential summing amplifier(THS4140)
 - no feedback
 - get phases from a moving window Fourier transform on time-domain amplitude
 - time-to-solution scales with the oscillator frequency
+![](/mit-breadboard-lc.png)
 
-![](/wangFig334.png)
-![](/wangFig331.png)
 -  full adder using cross-coupled CMOS LC oscillators
 - transistor arrays (ALD1106/ALD1107), 10m inductors, 6.8nF capacitors for ~10kHz
 - SYNC input at 20kHz
 - fixed inductors and rotary potentiometers
+![](/wangFig334.png)
+![](/wangFig331.png)
 
-![](/wangFig480.png)
-![](/wangFig8.png)
 - 8 grid-connected nodes
 - cross-coupled inverters (TI SN74HC04N), fixed 33μH inductors, trimmer capacitors (tuned ~30pF), 5V single supply
 - SYNC supplied to GND of inverter chips
@@ -125,72 +121,79 @@ Interest in FPGA emulations
 - fixed inductors and rotary potentiometers
 - read the oscillator phases using xor gates (TI SN74HC86N)
 - 5MHz
+![](/wangFig480.png)
+![](/wangFig8.png)
 
-![](/wangFig490.png)
 - 32 Chimera-connected nodes
 - cross-coupled inverters (TI SN74HC04N), fixed inductors, trimmer capacitors, 5V single supply
 - rotary potentiometer for coupling; each one has male pin connectors to set polarity by shorting different pins
 - 5MHz
+![](/wangFig490.png)
 
-![](/wangFig414.png)
 - 64 grid-connected nodes; 4 per PCB
 - cross-coupled inverters (TI SN74HC04N), fixed inductors, trimmer capacitors, 5V single supply
 - digital potentiometer (AD5206) for coupling; each one uses one channel and single pole double throw on-off-on switch for polarity
 - 192 couplings?
 - 1MHz
+![](/wangFig414.png)
 
-![](/wangFig415.png)
 - 240 nodes; 12 dense-connected per PCB with 1200 couplings
 - cross-coupled inverters (TI SN74HC04N), fixed inductors, trimmer capacitors, 5V single supply
 - digital potentiometer (AD5206) for coupling; uses wiper position to switch polarity and eliminate switches
 - motherboard edge connects 20 PCBs in 4-by-5 toroidal grid
 - 1MHz
 - ∼5W for all nodes and peripheral circuitry, excluding ony LEDs
+![](/wangFig415.png)
 
-![](/normal-chip-2023.png)
-![](/normal-roadmap.png)
-![](/normal-hardware.png)
-- Normal Computing
+- Normal Computing (2023)
 - (weight diffuser) ↔ (diffusion process) ↔ (s-mode device)
 - (posterior drift network) ↔ (score network) ↔ (Maxwell’s demon device)
 - (auxiliary SDE) ↔ (s-mode device)
 - (optimization ODE) ↔ (latent variable evolution in Maxwell’s demon device)
 - analog or digital-analog score network architecture for less latency
 - Thought I saw a green chip at some point
+![](/normal-chip-2023.png)
+![](/normal-roadmap.png)
+![](/normal-hardware.png)
 
-![](/beattieFig17.png)
-![](/beattieFig3.png)
 - simulates wave-digital system of equations (MATLAB) 
 - bread boards are used with
 - "we observe higher power dissipation, when SHIL is used. However, since anti-phase synchronization still minimizes power dissipation, we see that the oscilla- tors assume this states nonetheless. This phenomenon is very important and has not been pointed out in litera- ture so far."
+![](/beattieFig17.png)
+![](/beattieFig3.png)
 
-![](/matlab-ising-pcb.png)
-![](/clk-freq-impact.png)
-![](/oim-comparison-tbl.png)
 - 1440 nodes with 11,724 couplings; 2584 are freely routable, rest are locally fixed
 - MATLAB for test management, OIM configuration, timing scheduling, and analysis
 - AMD Threadripper Pro 5965WX 24-core, 256GB RAM took ~4.67 hours per problem
+![](/graberFig2c.png)
+![](/graberFig4.png)
+![](/graberTable1-2024.png)
 
+- 0.878-approx for maxcut with log computation time scaling
+- OP-amp Schmidt trigger oscillator
 ![](/delacourTable1.png)
 ![](/delacourTable3.png)
 ![](/delacourFig5.png)
-- 0.878-approx for maxcut with log computation time scaling
-- OP-amp Schmidt trigger oscillator
 
+- Scalable ring-oscillator-based integrated circuit
 ![](/moyTable1.png)
 ![](/moyFig2.png)
 
+- Proposed system is intended to provide a flexible experimental platform for further research of the internal mechanisms.
 ![](/graberTable1.png)
 ![](/graberFig8.png)
 
-![](/sharmaFig3.png)
-![](/tmb.png)
-- Supports cubic interactions
 - Proposes "tanh-make-break" annealing heuristic; incoming current at each node is related to its M and B
-- Allows multiple nodes to flip in parallel without synchronization 
+- Allows multiple nodes to flip in parallel without synchronization
+- Supports cubic interactions
+![](/sharmaFig3.png)
 
+- Uses intrinsic noise in memristor Hopfield neural network
 ![](/caiFig1.png)
 ![](/caiFig3.png)
-![](/caiTable.png)
-- uses intrinsic noise in memristor Hopfield neural network
+![](/caiTable1.png)
+
+- Coupled ring oscillator (ROSC)-based scalable probabilistic Ising computer
+![](/ahmedFig10.png)
+![](/ahmedTable1.png)
 
