@@ -10,59 +10,97 @@ An "Ising machine" is hardware to realize the mathematical Ising model, which ex
 $$
 H(s) = -s^{T}Js + -s^{T}h
 $$
-This post documents my development of such an Ising machine. I aim to open-source and ship a PCB that plugs into your laptop to solve general combinatorial problems using analog voltage signals. These signals model the spin variables s, and represent continous probablistic bits. Lyapunov theory is applied to the generalized Kurumoto model to contruct an "energy function" for stability analysis of the network. A control input synchronizes the oscillations and induces locking to binarize the phases. An oscillator network has the natural tendency to minimize dissipated power by minimizing the amount of interactions.
+This post documents my development of such an Ising machine. I aim to open-source and ship a PCB that plugs into your laptop to solve general combinatorial problems using analog voltage signals. These signals model the spin variables s, and represent continuous probablistic bits. Lyapunov theory is applied to the generalized Kurumoto model to contruct an "energy function" for stability analysis of the network. A control input synchronizes the oscillations and induces locking to binarize the phases. An oscillator network has the natural tendency to minimize dissipated power by minimizing the amount of interactions.
 
-There are exciting research oppertunities because these machines are low energy consumption and have vast applications in machine learning and beyond. While promising, provable solution quality remains an open problem which drives the need for algorithmic development (e.g., synchronization scheduling and programmatic coupling). This project is a shippable testbed to encourage this research. I develop quantum computing software for work and want to build electronics in my living room.
-
-The injection locking signal, and its application in the context of LC-oscillator systems is mathematically similar to the case of the degenerate optical parametric oscillator used in optical Ising machines.
+These devices are natural physics-inspired solvers that operate at room-temperature and low power. While promising, their scale and programmability are limited. But they haven't been given enough attention. These machines are not used in practice because modern classic computing has been pushed so far. But as [Moore's law comes to an end](https://ieeexplore.ieee.org/document/7878935) they come back to light.
 
 # Ising Machine
 
-[This project](https://github.com/bowrango/ising-machine) is in early development. The Kuramoto model can be formulated as a stochastic differential equation with a coupling and synchronization term. The simulated voltage phases converge to discrete values as the maxcut value increases.
+Imagine a PCB that plugs into your laptop. It has bespoke hardware architecture that remains an open problem. However, existing technologies can be utilized for design, simulation, and fabrication. You provide your problem matrix and it returns solution samples.
+
+The Kuramoto model can be formulated as a stochastic differential equation with a coupling and synchronization term. The simulated voltage phases converge to discrete values as the objective value (e.g., MaxCut) increases. Machine learning software frameworks can be built on this primitive. The coupled network evolves to the low-energy steady state.  
+
 ![](/kuramoto.png)
 
-In-memory computation. Different fundamental architecture
-Spread in oscillators natural frequency contributes a linear term in the global Lyapunov function
+This personal project is in early stages. I use a variety of development machines and tools.
 
-Developing locally on Macbook. Simulation jobs will be sent to my local Linux server.
+Macbook
+- Research
+- MATLAB/C++
+- Arduino and IoT prototyping
 
-- MATLAB interface to the Arduino, waveform generator, oscilloscope, etc.
-- ```diffrax``` for GPU acceleration; I can formulate Kuramoto for ```thermox```
-- Multisim, LTSpice for SPICE-level simulation of PCB
+Windows machine
+- Instrument control
+- Multisim/KiCAD for PCB design
 
-**Oscillator**
-- Transistor inverting amplifier with feedback (Colpitts/Hartley)
-- Cross-Coupled Differential-Pair (SN74HC04N)
-- Logic Phase-Locked Loop With VCO (SN74LV4046AN/SN74LV4046ANG4); can use XOR comparator with ref for phase readout
+Linux Server
+- ```diffrax```/```CUDA``` for GPU simulations
+- ```thermox``` to explore linear algebra primitives
 
-**Programmatic Coupling**
-Coupling based on problem encoding. Can't interfere with oscillators. 
-Use digital pins to select channel. Use analog A0 to write
-Some of these models are deprecated for boardboard
-- Digital potentiometer (MCP4251; 2 channel, 8bit, ~$1), (AD5206; 6 channel, 8bit, ~$3)
+# Overview
 
-Two approaches:
-- Analog multiplexor (SN74HC138N; 1x3:8, <$1), (CD74HC4067; 1x4:16, ~$1), (CD74HC4515E; 1x4:16, ~$1), (MC74HC154DWR2; 1x4:16, <$1)
-- Digital port expander (MCP23S17; SPI, 16 outputs)
+I'm focused on electronic oscillators mainly for scale. Ising machines are a [novel device](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf) with full-stack research oppertunities.
 
-**Quality Factor**
-Perturbation characteristics of the oscillator. Various definitions across hardware 
+**Oscillator** \
+Transistor inverting amplifier with feedback (Colpitts/Hartley)
 
-**Synchronization Schedule**
-Encode problem weights coefficien the tendencies of the network
-Map binary optimization problems to synchronization tendencies to encode problem.
-Sub-harmonic Injection Locking (SHIL) external signal. Some prototypes converge naturally.
+Cross-Coupled Differential-Pair
+- SN74HC04N 
+
+Logic Phase-Locked Loop With VCO 
+- SN74LV4046AN; XOR comparator
+
+Quality Factor
+- hardware-specific definitions 
+
+Noise Models
+- Intenional injection
+
+**Coupling** \
+Encodes input matrix as resistive network
+
+Weight considerations: binary/float/sign; precision
+
+Digital potentiometers
+- MCP4251; 2 channel, 8bit, ~$1
+- AD5206; 6 channel, 8bit, ~$3
+
+Expand Arduino Pins
+- Analog multiplexor
+    - SN74HC138N; 1x3:8, <$1
+    - CD74HC4067; 1x4:16, ~$1
+    - MC74HC154DWR2; 1x4:16, <$1
+
+- Digital port expander
+    - MCP23S17; SPI, 16 outputs
+
+**Synchronization** \
+Annealing Perturbation
+- Level of programmatic control is unclear
+
+Sub-Harmonic Injection Locking (SHIL)
+- Binarize signals; Explore alternatives, re: V2 model
 
 # References
 
-There are many designs in the literature. However, I'm focused on electronic oscillators mainly for their ease of fabrication. Ising machines are a [novel computing architecture](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-12pdf) so there is much to explore.
+Interest in FPGA emulations
+- Purdue P
+    - Trying to obtain MATLAB code
+- DIMPLE
+    - Runs on AWS
+    - "One important part I haven't thought about is how to write software to leverage this design"
 
 ![](/tech-for-ising-machines.png)
 ![](/phase-lock-devices.png)
 
-![](/mit-breadboard-lc.png)
+![](/mohseniFig1.png)
+![](/mohseniFig2.png)
+![](/mohseniTable1.png)
+
 ![](/ising-projection.png)
 ![](/circ-graph-comparison.png)
+
+![](/mit-breadboard-lc.png)
 - MIT Lincoln Lab
 - 4 fully-connected nodes with cross bar array of digital pots (AD5272)
 - coupling polarity controlled by output polarity of the differential summing amplifier(THS4140)
@@ -72,8 +110,7 @@ There are many designs in the literature. However, I'm focused on electronic osc
 
 ![](/wangFig334.png)
 ![](/wangFig331.png)
--  full adder using cross-coupled
-CMOS LC oscillators
+-  full adder using cross-coupled CMOS LC oscillators
 - transistor arrays (ALD1106/ALD1107), 10m inductors, 6.8nF capacitors for ~10kHz
 - SYNC input at 20kHz
 - fixed inductors and rotary potentiometers
@@ -142,18 +179,18 @@ CMOS LC oscillators
 
 ![](/moyTable1.png)
 ![](/moyFig2.png)
-- 
 
 ![](/graberTable1.png)
 ![](/graberFig8.png)
 
-![](/brim.png)
+![](/sharmaFig3.png)
 ![](/tmb.png)
-- adds support for cubic interactions
-- proposes "tanh-make-break" heuristic; incoming current at each node is related to its M and B
-- allows multiple nodes to flip in parallel without synchronization 
+- Supports cubic interactions
+- Proposes "tanh-make-break" annealing heuristic; incoming current at each node is related to its M and B
+- Allows multiple nodes to flip in parallel without synchronization 
 
-- DIMPLE
-- FPGA emulation of ising machine for FPGA, runs on AWS
-- "One important part of this system that I haven't thought about at all is how to actually write software to leverage this design"
+![](/caiFig1.png)
+![](/caiFig3.png)
+![](/caiTable.png)
+- uses intrinsic noise in memristor Hopfield neural network
 

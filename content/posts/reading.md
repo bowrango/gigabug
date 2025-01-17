@@ -40,7 +40,7 @@ A collection of interesting papers, mostly for myself to keep track.
 [CS 269Q Lecture Notes](https://cs269q.stanford.edu/lectures/lecture12.pdf)
 
 [Graph-Coupled Oscillator Networks](https://arxiv.org/abs/2202.02296)
-- see how the Kuromoto/Adler equations fit into this framework
+- How the Kuromoto/Adler equations fit into this framework?
 
 [Graph Neural Diffusion](https://arxiv.org/abs/2106.10934)
 
@@ -384,7 +384,7 @@ A collection of interesting papers, mostly for myself to keep track.
 - Instead of forcing close-to-binary states, focus on computational capability of the dynamical model driving the machine
 
 [Ising machines as hardware solvers of combinatorial optimization problems](https://arxiv.org/abs/2204.00276)
-- comparison table
+- Comparison table
 
 [Augmenting an electronic Ising machine to effectively solve boolean satisfiability](https://www.nature.com/articles/s41598-023-49966-6.pdf)
 - cross-bar arrays for cubic terms
@@ -396,11 +396,11 @@ A collection of interesting papers, mostly for myself to keep track.
 [Stability diagram for the forced Kuramoto model](https://arxiv.org/pdf/0807.4717)
 
 [Quantum collective motion of macroscopic mechanical oscillators](https://arxiv.org/pdf/2407.02453)
--  first time for macroscopic mechanical oscillators to be put in quantum ground state (?)
+- first time for macroscopic mechanical oscillators to be put in quantum ground state (?)
 
 [All-to-all reconfigurability with sparse and higher-order Ising machines](https://arxiv.org/pdf/2312.08748)
 - Kerem Y. Camsari (2024)
-- adaptive parallel tempering algorithm demonstrates competitive algorithmic and prefactor advantages
+- adaptive parallel tempering algorithm
 
 [Electrical and Wave Digital Modeling of CMOS-Based Ring Oscillators](https://www.researchgate.net/profile/Bakr-Al-Beattie/publication/377312212_Electrical_and_Wave_Digital_Modeling_of_CMOS-Based_Ring_Oscillators/links/65a5190ed5ce0e3f94cc5c26/Electrical-and-Wave-Digital-Modeling-of-CMOS-Based-Ring-Oscillators.pdf)
 
@@ -408,6 +408,8 @@ A collection of interesting papers, mostly for myself to keep track.
 - MATLAB triangular Lyapunov example
 
 [A Performance Study of the 2D Ising Model on GPUs](https://arxiv.org/abs/1906.06297)
+- NVIDIA 2019
+- Code available
 
 [A mixed-signal oscillatory neural network for scalable analog computations in phase domain](https://iopscience.iop.org/article/10.1088/2634-4386/ace9f5/pdf)
 - "Due to area constraints, we only implement negative weights that we program by placing discrete capacitors Cij manually.
@@ -443,3 +445,18 @@ the waveforms and innate phase sensitivities of the oscillators.
 [Self-contained relaxation-based dynamical Ising machines](https://arxiv.org/pdf/2305.06414)
 - 2024
 - V2 model
+
+[On the sample complexity of quantum Boltzmann machine learning](https://www.nature.com/articles/s42005-024-01763-x)
+- 2024
+
+[Design of a 10GHz Clock Distribution Network Using Coupled Standing-Wave Oscillators](https://cecs.uci.edu/~papers/compendium94-03/papers/2003/dac03/pdffiles/40_1.pdf)
+- 2003
+
+[Ising Machines: Theory and Practice](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2023/EECS-2023-138.pdf)
+- 2023
+- Uses low-rank decomposition for artifical dense connectivity
+- Sparsification of Coupling Matrices from MU-MIMO
+    - MATLAB ```scatteringchannelmtx```
+
+[Power-efficient combinatorial optimization using intrinsic noise in memristor Hopfield neural networks](https://link-springer-com.ezproxy.lib.purdue.edu/content/pdf/10.1038/s41928-020-0436-6)
+- 2020
