@@ -268,7 +268,11 @@ A collection of interesting papers, mostly for myself to keep track.
 - overview of experimental setup
 
 [Dependence of LC VCO Oscillation Frequency on Bias Current](https://web.engr.oregonstate.edu/~moon/research/files/iscas06_lc.pdf)
+- Wu 2006
 - more notes on cross-coupled LC CMOS
+
+[Quantum computing of reacting flows via Hamiltonian simulation](https://arxiv.org/pdf/2312.07893)
+- Lu 2024
 
 [Digitally Synthesized Stochastic Flash ADC Using Only Standard Digital Cells](https://www.benjamin.hershberg.com/wp-content/papercite-data/papers/2011-vlsi-stochastic-adc.pdf)
 - simple way to use digital gates to perform AD conversion, which usually requires analog components. 
@@ -278,6 +282,9 @@ A collection of interesting papers, mostly for myself to keep track.
 - 1.2V
 - integer weights
 - cross bar arrays
+
+[BarraCUDA: Bringing Electromagnetic Side Channel Into Play to Steal the Weights of Neural Networks from NVIDIA GPUs](https://arxiv.org/pdf/2312.07783v1)
+- Horvath 2023
 
 [Analog Coupled Oscillator Based Weighted Ising Machine](https://www.nature.com/articles/s41598-019-49699-5)
 - MIT Lincoln Lab, 2019
@@ -339,6 +346,7 @@ A collection of interesting papers, mostly for myself to keep track.
 [Stability and decay of Bloch oscillations in presence of time-dependent nonlinearity](https://arxiv.org/pdf/1109.2798)
 
 [Recent Advances in Coupled Oscillator Theory](https://arxiv.org/abs/2001.10620)
+- Ermentrout 2020
 
 [Creating electronic oscillator-based Ising machines without external injection locking](https://www.nature.com/articles/s41598-021-04057-2)
 - engineered feedback to generate two decay time constants which effectively generates 2nd harmonic internally; implemented using P-MOS (ALD1107)
@@ -370,6 +378,7 @@ A collection of interesting papers, mostly for myself to keep track.
 - suggested by twitter mutual
 
 [On computational capabilities of Ising machines based on nonlinear oscillators](https://arxiv.org/abs/2105.07591)
+- Erementchouk 2022
 - the Kuramoto model where we assume all oscillators have same period is the same as classic ferromagnetic XY model, which is rank-2 semidefinite programming problem (BZM)
 - two important results
     - Kuramoto systems are identical to BZM so we know they converge to 0.87 of optimal in polynomial time
@@ -394,6 +403,7 @@ A collection of interesting papers, mostly for myself to keep track.
 [A moment-based approach to the dynamical solution of the Kuramoto model](https://iopscience.iop.org/article/10.1088/0305-4470/30/23/010/pdf)
 
 [Stability diagram for the forced Kuramoto model](https://arxiv.org/pdf/0807.4717)
+- Childs 2018
 
 [Quantum collective motion of macroscopic mechanical oscillators](https://arxiv.org/pdf/2407.02453)
 - first time for macroscopic mechanical oscillators to be put in quantum ground state (?)
@@ -471,3 +481,14 @@ the waveforms and innate phase sensitivities of the oscillators.
 
 [A 144Kb Annealing System Composed of 9×16Kb Annealing Processor Chips with Scalable Chip-to-Chip Connections for Large-Scale Combinatorial Optimization Problems](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9365748)
 - Takemoto 2021
+
+[The Unbearable Slowness of Being: Why do we live at 10 bits/s?](https://arxiv.org/pdf/2408.10234)
+- Zheng 2024
+
+[Frequency tunable CMOS ring oscillator-based Ising machine](https://onlinelibrary.wiley.com/doi/abs/10.1002/cta.4256)
+- Nayan 2024
+- Proposes generalized algorithm for monitoring the states of the oscillator network 
+
+[Stocastic Simulated Quantum Annealing for Fast Solution of Combinatorial Optimization Problems](https://arxiv.org/pdf/2302.12454)
+- Onizawa 2023
+- MATLAB implementation
