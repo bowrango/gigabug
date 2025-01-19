@@ -3,14 +3,14 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body class="flex flex-col items-center min-h-screen bg-base-200 text-base-content">
+<body class="bg-base-200 text-base-content">
   <header class="w-full">
     {{ partial "header.html" . }}
   </header>
-  <main class="flex-grow w-full flex justify-center">
-    <div class="max-w-3xl w-full px-4 text-left">
+  <main class="container min-h-screen px-8 mx-auto">
+    <article class="prose dark:prose-invert max-w-prose mx-auto md:prose-lg">
       {{ block "main" . }}{{ end }}
-    </div>
+    </article>
   </main>
   <footer class="w-full">
     {{ partial "footer.html" . }}
