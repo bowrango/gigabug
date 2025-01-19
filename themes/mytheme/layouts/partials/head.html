@@ -15,12 +15,23 @@ onload="renderMathInElement(document.body);"></script>
   <meta charset="UTF-8">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-  </h1>
-</body>
+<body class="text-center">
+    <h1 class="text-3xl font-bold underline">
+    </h1>
+  </body>
 </html>
 
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+<div class="flex justify-center mt-6">
+    <img class="w-10 h-auto rounded" src="/headshot.png">
+</div>
+
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "selector"
+    }
+  </script>
+{{ partialCached "head/js.html" . }}
