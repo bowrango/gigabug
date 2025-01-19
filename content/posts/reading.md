@@ -520,3 +520,12 @@ the waveforms and innate phase sensitivities of the oscillators.
 
 [A Noise-Shifting Differential Colpitts VCO](https://chic.caltech.edu/wp-content/uploads/2013/05/NoiseShifting_JSSC.pdf)
 - Aparicio 2002
+
+[Phase Drift in Networks of Coupled Colpitts Oscillators](https://www.researchgate.net/publication/350550739_Phase_Drift_in_Networks_of_Coupled_Colpitts_Oscillators)
+- Coria 2021
+
+[Studies on the Dynamics of two Mutually Coupled Colpitts Oscillators](https://ijritcc.org/index.php/ijritcc/article/view/1654/1654)
+- Sarkar 2018
+
+[An Efficient Analysis of Amplitude and Phase Dynamics in Networked MEMS-Colpitts Oscillators](https://asmedigitalcollection.asme.org/computationalnonlinear/article-abstract/20/1/011002/1207163/An-Efficient-Analysis-of-Amplitude-and-Phase?redirectedFrom=PDF)
+- Rahimpour 2025
