@@ -340,7 +340,7 @@ A collection of interesting papers, mostly for myself to keep track.
 
 [QASMTrans: A QASM based Quantum Transpiler Framework for NISQ Devices](https://arxiv.org/abs/2308.07581)
 - integrated this with MATLAB
-- does sabre with a modified lookahead heuristic
+- SABRE with a modified lookahead heuristic
 - t|ket> would be better but has complicated license 
 
 [Stability and decay of Bloch oscillations in presence of time-dependent nonlinearity](https://arxiv.org/pdf/1109.2798)
@@ -355,7 +355,7 @@ A collection of interesting papers, mostly for myself to keep track.
 - 8V
 
 [Oscillator-based optimization: design, emulation, and implementation](https://link.springer.com/article/10.1140/epjb/s10051-023-00644-6)
-- 2024
+- Beattie 2024
 - 20 oscillators on large PCB coupled with resistors on separate breadboard
 - parallel algo for MATLAB wave digital simulation
 - details on technical implementation
@@ -368,71 +368,80 @@ A collection of interesting papers, mostly for myself to keep track.
 - 2.56 mW
 
 [CMOS-Compatible Ising Machines built using Bistable Latches Coupled through Ferroelectric Transistor Arrays](https://arxiv.org/pdf/2205.14729)
-- comparison table
+- Mallick 2022
+- Uses SN74HC05 CMOS latches
+- MATLAB interface to SPICE
 
 [Spintronic devices as next-generation computation accelerators](https://arxiv.org/pdf/2403.13564v1)
-- comparison table
-- MTJ p-bits a strong competitor in the world
+- Gonzalez 2024
+- Comparison table
 
 [Silicon microring resonators](https://www.photonics.intec.ugent.be/download/pub_3105.pdf)
-- suggested by twitter mutual
+- Suggested by twitter mutual
 
 [On computational capabilities of Ising machines based on nonlinear oscillators](https://arxiv.org/abs/2105.07591)
 - Erementchouk 2022
-- the Kuramoto model where we assume all oscillators have same period is the same as classic ferromagnetic XY model, which is rank-2 semidefinite programming problem (BZM)
-- two important results
-    - Kuramoto systems are identical to BZM so we know they converge to 0.87 of optimal in polynomial time
-    - Rounding problem requires correctly choosing phase direction to get 0.87. The anisotropic state can be destroyed by methods used to stabilize Kuramoto systems (like SHIL!)
+- Kuramoto model that assumes oscillators have same period is the ferromagnetic XY model, which is rank-2 semidefinite programming problem (BZM)
+    - Kuramoto systems are identical to BZM so they converge to 0.87 of optimal in polynomial time
+    - Rounding problem requires correctly choosing phase direction. The anisotropic state can be destroyed  by methods used to stabilize Kuramoto systems (like SHIL!)
 
 [Self-contained relaxation-based dynamical Ising machines](https://arxiv.org/abs/2305.06414)
-- proposes model to solve Kuramoto rounding problem. No matter which spin orientation it will always be the optimal rounding.
-- stochastic perturbations will converge to the optimal solution almost surely in superpolynomial time
+- Erementchouk 2023
+- Proposes V2 model to solve Kuramoto rounding problem. No matter which spin orientation it will always be the optimal rounding.
+- Stochastic perturbations will converge to the optimal solution almost surely in superpolynomial time
 - DIMPLE fits this model
 
 [Custom CMOS Ising Machine Based on Relaxed Burer-Monteiro-Zhang Heuristic](https://ieeexplore.ieee.org/document/10187692)
+- Shukla and Erementchouk 2023
 - Instead of forcing close-to-binary states, focus on computational capability of the dynamical model driving the machine
 
 [Ising machines as hardware solvers of combinatorial optimization problems](https://arxiv.org/abs/2204.00276)
+- Mohseni and McMahon 2022
 - Comparison table
 
 [Augmenting an electronic Ising machine to effectively solve boolean satisfiability](https://www.nature.com/articles/s41598-023-49966-6.pdf)
-- cross-bar arrays for cubic terms
+- Sharma 2023
+- Cross-bar arrays for cubic terms
 
 [100,000-spin coherent Ising machine](https://www.science.org/doi/epdf/10.1126/sciadv.abh0952) 
+- Honjo 2021
+- 5km fiber optic cable
 
 [A moment-based approach to the dynamical solution of the Kuramoto model](https://iopscience.iop.org/article/10.1088/0305-4470/30/23/010/pdf)
+- Perez and Ritort 1997
 
 [Stability diagram for the forced Kuramoto model](https://arxiv.org/pdf/0807.4717)
 - Childs 2018
 
 [Quantum collective motion of macroscopic mechanical oscillators](https://arxiv.org/pdf/2407.02453)
-- first time for macroscopic mechanical oscillators to be put in quantum ground state (?)
+- Chegnizadeh 2024
+- First time for macroscopic mechanical oscillators to be put in quantum ground state (?)
 
 [All-to-all reconfigurability with sparse and higher-order Ising machines](https://arxiv.org/pdf/2312.08748)
 - Kerem Y. Camsari (2024)
 - adaptive parallel tempering algorithm
 
 [Electrical and Wave Digital Modeling of CMOS-Based Ring Oscillators](https://www.researchgate.net/profile/Bakr-Al-Beattie/publication/377312212_Electrical_and_Wave_Digital_Modeling_of_CMOS-Based_Ring_Oscillators/links/65a5190ed5ce0e3f94cc5c26/Electrical-and-Wave-Digital-Modeling-of-CMOS-Based-Ring-Oscillators.pdf)
+- Beattie 2023
 
 [Deriving Dense Linear Algebra Libraries](https://www.cs.utexas.edu/~flame/pubs/FAC.pdf)
-- MATLAB triangular Lyapunov example
+- Bientinesi
+- Triangular Lyapunov example in MATLAB
 
 [A Performance Study of the 2D Ising Model on GPUs](https://arxiv.org/abs/1906.06297)
 - NVIDIA 2019
 - Code available
 
 [A mixed-signal oscillatory neural network for scalable analog computations in phase domain](https://iopscience.iop.org/article/10.1088/2634-4386/ace9f5/pdf)
-- "Due to area constraints, we only implement negative weights that we program by placing discrete capacitors Cij manually.
+- Delacour 2023
 
 [Non-binary dynamical Ising machines for combinatorial optimization](https://arxiv.org/pdf/2412.08481)
-- 2024
-- This work aims to revisit the notion of whether continuous spins, as internal vari-
-ables of Ising machines, need to converge to binary values at all, and, consequently, to
-identify dynamical continuous-spin systems that can solve inherently discrete problems
-without converging to binary states.
+- Shukla and Erementchouk 2024
+- Explores whether continuous spins need to converge to binary values at all
 
 [Limits of CMOS and Prospects for Adiabatic/Reversible CMOS](https://www.sandia.gov/app/uploads/sites/210/2023/11/Comet23-slides_SAND.pdf)
-- Vaire Computing, Micheal Frank (2023)
+- Micheal Frank 2023
+- Vaire Computing
 
 [A 1,968-node coupled ring oscillator circuit for combinatorial optimization problem solving](http://www.ee.umn.edu/groups/VLSIresearch/papers/2022/NatureElectronics22_Ising.pdf)
 - Moy 2024
@@ -441,7 +450,7 @@ without converging to binary states.
 - Ahmed 2021
 
 [Quantum Boltzmann machine learning of ground-state energies](https://arxiv.org/pdf/2410.12935)
-- 2024
+- Patel 2024
 
 [A Versatile & Adjustable 400 Node CMOS Oscillator Based Ising Machine to Investigate and Optimize the Internal Computing Principle](https://ieeexplore.ieee.org/document/9908118)
 - Graber 2022
@@ -468,9 +477,10 @@ the waveforms and innate phase sensitivities of the oscillators.
 - 2003
 
 [Ising Machines: Theory and Practice](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2023/EECS-2023-138.pdf)
-- Sagan and Roychowdhury (2023)
-- Uses low-rank decomposition for artifical dense connectivity
-- Sparsification of Coupling Matrices from MU-MIMO
+- Sagan and Roychowdhury 2023
+- Cross-bar array for trucated SVD of coupling matrix
+- Novel scheme for positive/negative weights
+- MU-MIMO application example
     - MATLAB ```scatteringchannelmtx```
 
 [Power-efficient combinatorial optimization using intrinsic noise in memristor Hopfield neural networks](https://link-springer-com.ezproxy.lib.purdue.edu/content/pdf/10.1038/s41928-020-0436-6)
@@ -492,3 +502,21 @@ the waveforms and innate phase sensitivities of the oscillators.
 [Stocastic Simulated Quantum Annealing for Fast Solution of Combinatorial Optimization Problems](https://arxiv.org/pdf/2302.12454)
 - Onizawa 2023
 - MATLAB implementation
+
+[See Through Walls with Wi-Fi!](https://people.csail.mit.edu/fadel/papers/wivi-paper.pdf)
+- Adib and Katabi
+
+[A Study of Phase Noise in Colpitts and LC-Tank CMOS Oscillators](https://ieeexplore.ieee.org/document/1425718)
+- Andreani 2005
+
+[Hyperchaos in coupled Colpitts oscillators](https://www.sciencedirect.com/science/article/abs/pii/S0960077902003739)
+- Cenys 2003
+
+[A 350uW 2GHz FBAR transformer coupled Colpitts oscillator with close-in phase noise reduction](https://ieeexplore.ieee.org/abstract/document/7993636)
+- Woo 2017
+
+[Complex Dynamics and Synchronization in a System of Magnetically Coupled Colpitts Oscillators](https://onlinelibrary.wiley.com/doi/10.1155/2017/5483956)
+- Kana 2017
+
+[A Noise-Shifting Differential Colpitts VCO](https://chic.caltech.edu/wp-content/uploads/2013/05/NoiseShifting_JSSC.pdf)
+- Aparicio 2002
