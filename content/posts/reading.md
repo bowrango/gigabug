@@ -529,3 +529,9 @@ the waveforms and innate phase sensitivities of the oscillators.
 
 [An Efficient Analysis of Amplitude and Phase Dynamics in Networked MEMS-Colpitts Oscillators](https://asmedigitalcollection.asme.org/computationalnonlinear/article-abstract/20/1/011002/1207163/An-Efficient-Analysis-of-Amplitude-and-Phase?redirectedFrom=PDF)
 - Rahimpour 2025
+
+[Simulation and implementation of improved chaotic Colpitts circuit for UWB communications](https://ieeexplore.ieee.org/document/5670661)
+- Quyen 2010
+
+[A Memristor-Based Colpitts Oscillator Circuit](https://www.mdpi.com/2227-7390/10/24/4820)
+- Zhou 2022
