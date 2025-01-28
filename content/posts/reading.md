@@ -535,3 +535,6 @@ the waveforms and innate phase sensitivities of the oscillators.
 
 [A Memristor-Based Colpitts Oscillator Circuit](https://www.mdpi.com/2227-7390/10/24/4820)
 - Zhou 2022
+
+[Constructive Proof of Global Lyapunov Function as Potential Function](https://arxiv.org/pdf/1012.2721)
+- Yuan 2010
