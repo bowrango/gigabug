@@ -8,7 +8,7 @@ draft = false
 
 Ising machines are novel analog computers designed to solve combinatorial optimization problems and have general machine learning applications. The Ising model is a mathematical model from statistical thermodynamics that doesn't describe a real physical system. However, as an abstract energy function, it becomes useful for constructing natural physics-based solvers. The energy function, known generally as the Hamiltonian, is
 $$
-H(s) = -s^{T}Js
+H(s) = \frac{-s^{T}Js}{2}
 $$
 where vector s is the discrete spin variables and matrix J is the interaction graph. Each spin variable can be +1 or -1 and $J(i,j)$ is the coupling strength between spin i and spin j. Finding the configuration of spins with the lowest energy is difficult. In fact, finding this configuration is equally difficult as problems that are NP-Hard. These kinds of problems span many applications from scheduling, logisitics, finance, etc. 
 
@@ -18,13 +18,12 @@ The matrix representation of the combinatorial problem is mapped to the coupling
 However, from statistical thermodynamics, we know the probability of a spin configuration at equilibirum follows the Boltzmann distribution
 
 $$
-p_{s} = \frac{e^{-H(s) / k_b T}}{\sum_{s} e^{-H(s) / k_b T}}
+p_{i} = \frac{e^{-H(s_{i}) / k_{b} T}}{\sum_{} e^{-H(s_{j}) / k_b T}}
 $$
 
 The probability of each configutation is proportional to its energy. We hope to measure the high quality solutions more often. 
 
 The Ising machine is a device to realize a system that follow this distribution.
-
 
 The problem is encoded on a physical network of coupled oscillators to leverage the natural convergence to an equilibrium state representing a solution. Many of the classically difficult combinatorial optimization problems (MaxCut, Subset Sum, etc.) can be encoded using a programmable coupling network. These types of problems are ubiquitous in practical applications such as finance, optimal logistics and scheduling, chip routing, and communication networks. As Moore’s Law nears its limits, these physics-based computers become an attractive potential for speed and power advantages over conventional algorithms run on traditional computers. Ising machines are an emerging area of research with fundamental open questions.
 
@@ -35,45 +34,6 @@ These devices are natural physics-inspired solvers that operate at room-temperat
 The Kuramoto model can be formulated as a stochastic differential equation with a coupling and synchronization term. The simulated voltage phases converge to discrete values as the objective value (e.g., MaxCut) increases. Machine learning software frameworks can be built on this primitive. The coupled network evolves to the low-energy steady state.  
 
 ![](/kuramoto.png)
-
-# Design
-
-The device will have electronic 3-port oscillators in conjunction with a motherboard for coupling and measurement.  The oscillators should be 2-layer 1”x1” PCBs with 0402 passives to minimize costs while the primary cost of the system should be the motherboard. Parasitics will likely limit <1MHz speeds.
-
-**Oscillator**
-I was interested in the SN74LV4046 because it seemed well equiped with an oscillator and XOR phase comparator. A seeming improvement on the paper's use of separate comparator chip. However [these chips have too much variability](https://groups.io/g/LTspice/message/152592) and won't scale.
-Main paper used SN74HC04N inverter chips in a cross-coupled configuration.
-Colpitts designs have been made on protoboard as a testbed for the perturbation signal. 
-
-**Coupling**
-Use 4 mosfet-resistor binary combinations per coupler to get 15-level coupling. The MCP23017 port expander gives 16 additional GPIO so it can control 4 couplers. An alternative setup could use DACs with MOSFETs to dynamically control the channel resistance between the two channels, which would then massively reduce complexity. 
-
-Weight considerations: binary/float/sign; precision
-
-Resistive coupling will not use digital potentiometer.
-Originally considered
-- MCP4251; 2 channel, 8bit, ~$1
-- AD5206; 6 channel, 8bit, ~$3
-
-They are painful to use in any serious application (thermally nonlinear, spotty dynamic range, noisy etc.).
-
-**Perturbation** \
-External synchronization signal 
-- Level of programmatic control is unclear
-
-Sub-Harmonic Injection Locking (SHIL)
-- Binarize signals; Explore alternatives, re: V2 model
-
-**Measurement**
-The more difficult section is the measurement. It seems only oscillator phase needs to be measured. In that case, the most expensive component will be a phase measurement circuit. The AD8302 gain/phase detector is a $15 IC that has very good bandwidth and will support speed scaling above 1MHz all the way up to the GHz bands. Cost scaling is limited.
-
-From the AD8302, we need 2x good quality 4-channel ADCs. The MAX11122x are 12-bit SPI-based ADCs.  Dual-SPI buses or dual CS will be required here.
-
-After proof of concept, we can jump to 16-bit or more, but we are working a delicate balancing act between bandwidth, accuracy, and speed.
-
-The MAX ADC has a max sampling rate of 1.5MHz.  You may think that this is underbuilt for frequency up-scaling, but it is fine since the AD8302 is handling the brunt of the frequency-to-voltage conversion.  If the MAX ADC’s sampling rate is too slow, we will likely have hit other speed bottlenecks, so I would recommend not worrying about it at this time.
-
-Waveform generator for reference. Use Siglent SDG1032X
 
 **Software**
 Development Tools
@@ -92,6 +52,8 @@ Linux Server
 - ```thermox``` to explore linear algebra primitives
 
 # References
+
+Notes on state-of-the-art
 
 FPGA
 - Purdue P
