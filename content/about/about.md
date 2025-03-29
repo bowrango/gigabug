@@ -6,6 +6,8 @@ draft = false
 
 #### what we do
 
+Hello
+
 Gigabug Computer develops novel printed circuit boards to make physics-based computing more accessible. We aim to have the first commerically available circuit to accelerate adoptation of this emerging compute paradigm.
 
 Modern advances in artificial intelligence drive the need for specialized hardware to accelerate hard optimization problems. Recently, the search to scale compute “beyond Moore” has focused research on coupled oscillator systems. These so-called Ising machines are physical devices that minimize the energy potential $$H = - \mathbf{s}^T \mathbf{J} \mathbf{s}$$ by the evolution of the system to equilibrium through an annealing process. The discrete spin variables are represented in a physical system, such as lasers, photonics, electronics, nanomagnets, qubits, or fully digital programs. However, there remains fundamental engineering challenges to scale these systems towards commericial use and 
