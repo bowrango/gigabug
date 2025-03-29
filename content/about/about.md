@@ -1,25 +1,17 @@
 +++
-title = 'about'
+title = 'Home'
 date = 2024-09-04T21:28:27-04:00
 draft = false
 +++
 
-Welcome to the personal website of Matt Bowring.
+#### what we do
 
-I'm an engineer, graduate student, and do'er of things. Currently building an [Ising machine](https://gigabug.org/posts/ising/) to study analog probabilistic logic. See my [resume](/about/matt-bowring-resume.pdf) for work experience.
+Gigabug Computer develops novel printed circuit boards to make physics-based computing more accessible. We aim to have the first commerically available circuit to accelerate adoptation of this emerging compute paradigm.
 
-Stay tuned for more.
-```
+Modern advances in artificial intelligence drive the need for specialized hardware to accelerate hard optimization problems. Recently, the search to scale compute “beyond Moore” has focused research on coupled oscillator systems. These so-called Ising machines are physical devices that minimize the energy potential $$H = - \mathbf{s}^T \mathbf{J} \mathbf{s}$$ by the evolution of the system to equilibrium through an annealing process. The discrete spin variables are represented in a physical system, such as lasers, photonics, electronics, nanomagnets, qubits, or fully digital programs. However, there remains fundamental engineering challenges to scale these systems towards commericial use and 
 
+make them competitive with traditional computing architectures. 
 
-                     .
-     .-o"88b.      .'
-    o    `8,8;   .' .'
-   :   o .\\  _.' .:-"
-   :O  .'\_\`"  '  ._.
-    \."|-| | .  _.-"
-  _.-" | `  _.-"
--" `.   _.-"
-' . _.-"
-l42"
-```
+The key feature of oscillator-based hardware is the energy efficieny in representing computation as a natural physical process. This can also bring performance improvements by leveraging computing in-memory and other intrisic properties of the physical oscillator.
+
+#### references
