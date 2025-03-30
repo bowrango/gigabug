@@ -1,31 +1,40 @@
 <!doctype html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-<head>
-  {{ partial "head.html" . }}
-</head>
-<body class="bg-base-200 text-base-content">
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      renderMathInElement(document.body, {
-            delimiters: [
-                { left: "$", right: "$", display: false },
-                { left: "$$", right: "$$", display: true }
-            ]
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="bg-[url(/bug8_schematic_rot_blur.png)] min-h-screen bg-no-repeat bg-center p-2">
+    <header class="max-w-prose rounded-lg mx-auto bg-opacity-80 bg-base-200 p-4">
+      {{ partial "header.html" . }}
+    </header>
+    <main class="py-2 prose dark:prose-invert mx-auto max-w-prose
+                prose-headings:text-center
+                prose-headings:mb-5 prose-headings:mt-3 prose-ul:leading-snug">  
+      <!-- Main Container with Centered Content -->
+      <div class="mx-auto py-2 px-6 rounded-lg bg-opacity-80 bg-base-200 ">
+        <!-- Main Content Area -->
+        <div>
+          {{ block "main" . }}{{ end }}
+        </div>
+      </div>
+    </main>
+    <footer class="max-w-prose rounded-lg mx-auto bg-opacity-80 bg-base-200">
+      {{ partial "footer.html" . }}
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$", right: "$", display: false },
+            { left: "$$", right: "$$", display: true }
+          ]
         });
-    });
-</script>
-
-  <header class="w-full">
-    {{ partial "header.html" . }}
-  </header>
-  <main class="container min-h-screen px-8 mx-auto">
-    <article class="prose dark:prose-invert max-w-prose mx-auto md:prose-lg">
-      {{ block "main" . }}{{ end }}
-    </article>
-  </main>
-  <footer class="w-full">
-    {{ partial "footer.html" . }}
-  </footer>
-</body>
+      });
+    </script>
+    <script>
+      tailwind.config = {
+        darkMode: "class"
+      }
+    </script>
+  </body>
 </html>
