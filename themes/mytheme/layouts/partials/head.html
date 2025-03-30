@@ -15,13 +15,6 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio,line-clamp,container-queries"></script>
-<script>
-    tailwind.config = {
-      daisyui: {
-        themes: ["dim", "garden"]
-      },
-      darkMode: "selector"
-    }
-  </script>
+<script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio,container-queries"></script>
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 {{ partialCached "head/js.html" . }}
