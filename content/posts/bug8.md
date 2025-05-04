@@ -1,5 +1,5 @@
 +++
-title = 'bug8 (coming soon)'
+title = 'bug8'
 date = 2025-03-29T13:44:15-04:00
 draft = false
 +++
