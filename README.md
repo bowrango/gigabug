@@ -1,3 +1,2 @@
-Website source.
-
-Developed with Hugo and hosted on Cloudflare Pages
+Source for the Gigabug Computer website 
+https://gigabug.org
