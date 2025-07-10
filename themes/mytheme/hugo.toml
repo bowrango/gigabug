@@ -1,13 +1,13 @@
-baseURL = 'https://mattbowring.com/'
+baseURL = 'https://gigabug.org/'
 languageCode = 'en-US'
 
 [[menus.main]]
-name = 'Home'
+name = 'About'
 pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Products'
+name = 'Research'
 pageRef = '/posts'
 weight = 20
 
