@@ -1,6 +1,6 @@
 +++
 title = 'bug8'
-date = 2025-03-29T13:44:15-04:00
+date = 2025-07-17T13:44:15-04:00
 draft = false
 +++
 
@@ -12,7 +12,7 @@ The bug8 is a proof-of-concept research platform for novel analog computing syst
 \begin{equation}
     \mathbf{x}^* = \arg\min_{\mathbf{x} \in ({0, 1})^N} x^{T}\mathbf{J}x
 \end{equation}
-to the problem matrix $\mathbf{J}$ using phase dynamics of the coupled electronic oscillators. In fact, [these dynamics actually perform Lagrange Multiplier optimization](https://arxiv.org/pdf/2007.05882). This simple quadratic function represents some of the most difficult problems for modern computers and is extensible to probabilistic energy-based models. It brings compute closer to the hardware.
+to the problem matrix $\mathbf{J}$ using phase dynamics of the coupled electronic oscillators. In fact, [these dynamics actually perform Lagrange Multiplier optimization](https://arxiv.org/pdf/2007.05882) with constraints to enfore This simple quadratic function represents some of the most difficult problems for modern computers and is extensible to probabilistic energy-based models. It brings compute closer to the hardware.
 
 Each binary variable of the input problem graph is represented by the phase of an analog LC oscillator. The oscillators are fully-connected with a programmable resistive network to encode the $\mathbf{J}$ matrix coefficients.
 
