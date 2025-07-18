@@ -1,1 +1,1 @@
-Please send inquiries to matt@gigabug.org
+Please send inquiries to matt at this domain.
