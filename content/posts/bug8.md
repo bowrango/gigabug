@@ -18,7 +18,7 @@ Each binary variable of the input problem graph is represented by the phase of a
 
 ![](/schematic.png)
 
-This principle can be demonstrated with a simple breadboard experiment. In this example, 10K ohm resistors connect the variable $x_3$ (blue) to $x_1$ (yellow), $x_2$ (purple), and $x_4$ (green) which themselves share no connections. Probes measure the voltage waveform at the inductor at each oscillator. The oscilloscope shows the set of variables $\{x_1, x_2, x_4\}$ are mis-aligned with $\{x_3\}$, which indicates the optimal solution $\mathbf{x}^{*}=[1, 1, 0, 1]$ or equivalently $\mathbf{x}^{*}=[0, 0, 1, 0]$. In the context of the [MaxCut](https://en.wikipedia.org/wiki/Maximum_cut) problem, this corresponds to "cutting all the resistors" which forms the optimal partition for this graph. The natural circuit dynamics perform the computation "for free".
+This principle can be demonstrated with a simple breadboard experiment. In this example, 10K ohm resistors connect the variable $x_3$ (blue) to $x_1$ (yellow), $x_2$ (purple), and $x_4$ (green) which themselves share no connections. Probes measure the voltage waveform at the inductor at each oscillator. The oscilloscope shows the set of variables $\{x_1, x_2, x_4\}$ are mis-aligned with $\{x_3\}$, which indicates the optimal solution $\mathbf{x}^{\*}=[1, 1, 0, 1]$ or equivalently $\mathbf{x}^{\*}=[0, 0, 1, 0]$. In the context of the [MaxCut](https://en.wikipedia.org/wiki/Maximum_cut) problem, this corresponds to "cutting all the resistors" which forms the optimal partition for this graph. The natural circuit dynamics perform the computation "for free".
 
 ![](/experiment.png)
 
